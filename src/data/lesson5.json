@@ -24,72 +24,913 @@
     ]
   },
   "vocab": [
-    { "w": "過ごす", "r": "すごす", "vi": "trải qua, sống (thời gian)" },
-    { "w": "一周する", "r": "いっしゅうする", "vi": "đi một vòng" },
-    { "w": "造る", "r": "つくる", "note": "→造られる", "vi": "xây dựng, tạo nên" },
-    { "w": "漂う", "r": "ただよう", "note": "→漂わせる", "vi": "lan tỏa, phảng phất" },
-    { "w": "浴びる", "r": "あびる", "vi": "tắm, đón (nắng)" },
-    { "w": "読書する", "r": "どくしょする", "vi": "đọc sách" },
-    { "w": "訪れる", "r": "おとずれる", "vi": "ghé thăm" },
-    { "w": "包む", "r": "つつむ", "note": "→包まれる 空気に包まれる", "vi": "bao bọc, bao trùm" },
-    { "w": "半ば", "r": "なかば", "vi": "giữa, nửa chừng" },
-    { "w": "散歩コース", "r": "さんぽこーす", "vi": "tuyến đi dạo" },
-    { "w": "休日", "r": "きゅうじつ", "vi": "ngày nghỉ" },
-    { "w": "気配", "r": "けはい", "vi": "dấu hiệu, dáng vẻ" },
-    { "w": "最初", "r": "さいしょ", "vi": "đầu tiên" },
-    { "w": "通り抜け禁止", "r": "とおりぬけきんし", "vi": "cấm đi xuyên qua" },
-    { "w": "進入止め", "r": "しんにゅうどめ", "vi": "rào chắn không cho vào" },
-    { "w": "大小", "r": "だいしょう", "vi": "lớn và nhỏ" },
-    { "w": "たたずまい", "r": "たたずまい", "vi": "dáng vẻ, khung cảnh" },
-    { "w": "池沿い", "r": "いけぞい", "vi": "men theo bờ ao" },
-    { "w": "小道", "r": "こみち", "vi": "đường nhỏ" },
-    { "w": "ベンチ", "r": "べんち", "vi": "ghế dài" },
-    { "w": "落ち葉", "r": "おちば", "vi": "lá rụng" },
-    { "w": "日", "r": "ひ", "note": "～を浴びる", "vi": "ánh nắng" },
-    { "w": "最後", "r": "さいご", "vi": "cuối cùng" },
-    { "w": "息抜き", "r": "いきぬき", "vi": "nghỉ ngơi, thư giãn" },
-    { "w": "住まい", "r": "すまい", "vi": "nơi ở" },
-    { "w": "穏やか(な)", "r": "おだやか", "vi": "yên bình, ôn hòa" },
-    { "w": "幾分", "r": "いくぶん", "vi": "phần nào, đôi chút" },
-    { "w": "何だか", "r": "なんだか", "vi": "không hiểu sao, có vẻ" }
+    {
+      "w": "過ごす",
+      "r": "すごす",
+      "vi": "trải qua, sống (thời gian)",
+      "src": "list"
+    },
+    {
+      "w": "一周する",
+      "r": "いっしゅうする",
+      "vi": "đi một vòng",
+      "src": "list"
+    },
+    {
+      "w": "造る",
+      "r": "つくる",
+      "note": "→造られる",
+      "vi": "xây dựng, tạo nên",
+      "src": "list"
+    },
+    {
+      "w": "漂う",
+      "r": "ただよう",
+      "note": "→漂わせる",
+      "vi": "lan tỏa, phảng phất",
+      "src": "list"
+    },
+    {
+      "w": "浴びる",
+      "r": "あびる",
+      "vi": "tắm, đón (nắng)",
+      "src": "list"
+    },
+    {
+      "w": "読書する",
+      "r": "どくしょする",
+      "vi": "đọc sách",
+      "src": "list"
+    },
+    {
+      "w": "訪れる",
+      "r": "おとずれる",
+      "vi": "ghé thăm",
+      "src": "list"
+    },
+    {
+      "w": "包む",
+      "r": "つつむ",
+      "note": "→包まれる 空気に包まれる",
+      "vi": "bao bọc, bao trùm",
+      "src": "list"
+    },
+    {
+      "w": "半ば",
+      "r": "なかば",
+      "vi": "giữa, nửa chừng",
+      "src": "list"
+    },
+    {
+      "w": "散歩コース",
+      "r": "さんぽこーす",
+      "vi": "tuyến đi dạo",
+      "src": "list"
+    },
+    {
+      "w": "休日",
+      "r": "きゅうじつ",
+      "vi": "ngày nghỉ",
+      "src": "list"
+    },
+    {
+      "w": "気配",
+      "r": "けはい",
+      "vi": "dấu hiệu, dáng vẻ",
+      "src": "list"
+    },
+    {
+      "w": "最初",
+      "r": "さいしょ",
+      "vi": "đầu tiên",
+      "src": "list"
+    },
+    {
+      "w": "通り抜け禁止",
+      "r": "とおりぬけきんし",
+      "vi": "cấm đi xuyên qua",
+      "src": "list"
+    },
+    {
+      "w": "進入止め",
+      "r": "しんにゅうどめ",
+      "vi": "rào chắn không cho vào",
+      "src": "list"
+    },
+    {
+      "w": "大小",
+      "r": "だいしょう",
+      "vi": "lớn và nhỏ",
+      "src": "list"
+    },
+    {
+      "w": "たたずまい",
+      "r": "たたずまい",
+      "vi": "dáng vẻ, khung cảnh",
+      "src": "list"
+    },
+    {
+      "w": "池沿い",
+      "r": "いけぞい",
+      "vi": "men theo bờ ao",
+      "src": "list"
+    },
+    {
+      "w": "小道",
+      "r": "こみち",
+      "vi": "đường nhỏ",
+      "src": "list"
+    },
+    {
+      "w": "ベンチ",
+      "r": "べんち",
+      "vi": "ghế dài",
+      "src": "list"
+    },
+    {
+      "w": "落ち葉",
+      "r": "おちば",
+      "vi": "lá rụng",
+      "src": "list"
+    },
+    {
+      "w": "日",
+      "r": "ひ",
+      "note": "～を浴びる",
+      "vi": "ánh nắng",
+      "src": "list"
+    },
+    {
+      "w": "最後",
+      "r": "さいご",
+      "vi": "cuối cùng",
+      "src": "list"
+    },
+    {
+      "w": "息抜き",
+      "r": "いきぬき",
+      "vi": "nghỉ ngơi, thư giãn",
+      "src": "list"
+    },
+    {
+      "w": "住まい",
+      "r": "すまい",
+      "vi": "nơi ở",
+      "src": "list"
+    },
+    {
+      "w": "穏やか(な)",
+      "r": "おだやか",
+      "vi": "yên bình, ôn hòa",
+      "src": "list"
+    },
+    {
+      "w": "幾分",
+      "r": "いくぶん",
+      "vi": "phần nào, đôi chút",
+      "src": "list"
+    },
+    {
+      "w": "何だか",
+      "r": "なんだか",
+      "vi": "không hiểu sao, có vẻ",
+      "src": "list"
+    },
+    {
+      "w": "明らか(な)",
+      "r": "あきらか(な)",
+      "vi": "rõ ràng",
+      "src": "index"
+    },
+    {
+      "w": "位置",
+      "r": "いち",
+      "vi": "vị trí",
+      "src": "index"
+    },
+    {
+      "w": "いよいよ",
+      "r": "いよいよ",
+      "vi": "cuối cùng thì, càng lúc càng",
+      "src": "index"
+    },
+    {
+      "w": "色づく",
+      "r": "いろづく",
+      "vi": "chuyển màu, nhuốm màu",
+      "src": "index"
+    },
+    {
+      "w": "丘",
+      "r": "おか",
+      "vi": "đồi",
+      "src": "index"
+    },
+    {
+      "w": "浮き橋",
+      "r": "うきはし",
+      "vi": "cầu phao",
+      "src": "index"
+    },
+    {
+      "w": "海山",
+      "r": "うみやま",
+      "vi": "biển và núi",
+      "src": "index"
+    },
+    {
+      "w": "おじぎ",
+      "r": "おじぎ",
+      "vi": "cúi chào",
+      "src": "index"
+    },
+    {
+      "w": "大型",
+      "r": "おおがた",
+      "vi": "cỡ lớn",
+      "src": "index"
+    },
+    {
+      "w": "画家",
+      "r": "がか",
+      "vi": "họa sĩ",
+      "src": "index"
+    },
+    {
+      "w": "輝く",
+      "r": "かがやく",
+      "vi": "tỏa sáng",
+      "src": "index"
+    },
+    {
+      "w": "学習",
+      "r": "がくしゅう",
+      "vi": "học tập",
+      "src": "index"
+    },
+    {
+      "w": "囲む",
+      "r": "かこむ",
+      "vi": "bao quanh",
+      "src": "index"
+    },
+    {
+      "w": "旗手",
+      "r": "きしゅ",
+      "vi": "người cầm cờ",
+      "src": "index"
+    },
+    {
+      "w": "価値観",
+      "r": "かちかん",
+      "vi": "quan niệm giá trị",
+      "src": "index"
+    },
+    {
+      "w": "かつて",
+      "r": "かつて",
+      "vi": "ngày xưa, từng",
+      "src": "index"
+    },
+    {
+      "w": "寄付",
+      "r": "きふ",
+      "vi": "quyên góp",
+      "src": "index"
+    },
+    {
+      "w": "近況",
+      "r": "きんきょう",
+      "vi": "tình hình gần đây",
+      "src": "index"
+    },
+    {
+      "w": "近年",
+      "r": "きんねん",
+      "vi": "những năm gần đây",
+      "src": "index"
+    },
+    {
+      "w": "皇居",
+      "r": "こうきょ",
+      "vi": "Hoàng cung",
+      "src": "index"
+    },
+    {
+      "w": "高層ビル",
+      "r": "こうそうびる",
+      "vi": "tòa nhà cao tầng",
+      "src": "index"
+    },
+    {
+      "w": "クリスマスソング",
+      "r": "くりすますそんぐ",
+      "vi": "bài hát Giáng sinh",
+      "src": "index"
+    },
+    {
+      "w": "くれぐれも",
+      "r": "くれぐれも",
+      "vi": "xin hãy (nhắn nhủ kỹ lưỡng)",
+      "src": "index"
+    },
+    {
+      "w": "ゲームソフト",
+      "r": "げーむそふと",
+      "vi": "phần mềm trò chơi",
+      "src": "index"
+    },
+    {
+      "w": "国旗",
+      "r": "こっき",
+      "vi": "quốc kỳ",
+      "src": "index"
+    },
+    {
+      "w": "化粧する",
+      "r": "けしょうする",
+      "vi": "trang điểm",
+      "src": "index"
+    },
+    {
+      "w": "現在",
+      "r": "げんざい",
+      "vi": "hiện tại",
+      "src": "index"
+    },
+    {
+      "w": "五輪",
+      "r": "ごりん",
+      "vi": "Olympic (năm vòng)",
+      "src": "index"
+    },
+    {
+      "w": "最新",
+      "r": "さいしん",
+      "vi": "mới nhất",
+      "src": "index"
+    },
+    {
+      "w": "坂",
+      "r": "さか",
+      "vi": "con dốc",
+      "src": "index"
+    },
+    {
+      "w": "支払い",
+      "r": "しはらい",
+      "vi": "thanh toán",
+      "src": "index"
+    },
+    {
+      "w": "サポートする",
+      "r": "さぽーとする",
+      "vi": "hỗ trợ",
+      "src": "index"
+    },
+    {
+      "w": "産業",
+      "r": "さんぎょう",
+      "vi": "công nghiệp",
+      "src": "index"
+    },
+    {
+      "w": "しかも",
+      "r": "しかも",
+      "vi": "hơn nữa",
+      "src": "index"
+    },
+    {
+      "w": "住宅街",
+      "r": "じゅうたくがい",
+      "vi": "khu dân cư",
+      "src": "index"
+    },
+    {
+      "w": "首都",
+      "r": "しゅと",
+      "vi": "thủ đô",
+      "src": "index"
+    },
+    {
+      "w": "商店街",
+      "r": "しょうてんがい",
+      "vi": "phố mua sắm",
+      "src": "index"
+    },
+    {
+      "w": "正面",
+      "r": "しょうめん",
+      "vi": "chính diện, phía trước",
+      "src": "index"
+    },
+    {
+      "w": "済ませる",
+      "r": "すませる",
+      "vi": "làm xong, giải quyết xong",
+      "src": "index"
+    },
+    {
+      "w": "進出",
+      "r": "しんしゅつ",
+      "vi": "tiến ra, mở rộng sang",
+      "src": "index"
+    },
+    {
+      "w": "ずらりと",
+      "r": "ずらりと",
+      "vi": "thành hàng dài",
+      "src": "index"
+    },
+    {
+      "w": "生活環境",
+      "r": "せいかつかんきょう",
+      "vi": "môi trường sống",
+      "src": "index"
+    },
+    {
+      "w": "新緑",
+      "r": "しんりょく",
+      "vi": "màu xanh non đầu hè",
+      "src": "index"
+    },
+    {
+      "w": "接する",
+      "r": "せっする",
+      "vi": "tiếp xúc, giáp",
+      "src": "index"
+    },
+    {
+      "w": "設置する",
+      "r": "せっちする",
+      "vi": "lắp đặt",
+      "src": "index"
+    },
+    {
+      "w": "太平洋",
+      "r": "たいへいよう",
+      "vi": "Thái Bình Dương",
+      "src": "index"
+    },
+    {
+      "w": "選手団",
+      "r": "せんしゅだん",
+      "vi": "đoàn vận động viên",
+      "src": "index"
+    },
+    {
+      "w": "先輩",
+      "r": "せんぱい",
+      "vi": "đàn anh, tiền bối",
+      "src": "index"
+    },
+    {
+      "w": "漂わせる",
+      "r": "ただよわせる",
+      "vi": "tỏa ra, để thoang thoảng",
+      "src": "index"
+    },
+    {
+      "w": "増加する",
+      "r": "ぞうかする",
+      "vi": "tăng lên",
+      "src": "index"
+    },
+    {
+      "w": "タワーマンション",
+      "r": "たわーまんしょん",
+      "vi": "chung cư cao tầng",
+      "src": "index"
+    },
+    {
+      "w": "団体",
+      "r": "だんたい",
+      "vi": "đoàn thể, tổ chức",
+      "src": "index"
+    },
+    {
+      "w": "団地",
+      "r": "だんち",
+      "vi": "khu chung cư",
+      "src": "index"
+    },
+    {
+      "w": "ターゲットにする",
+      "r": "たーげっとにする",
+      "vi": "nhắm vào làm mục tiêu",
+      "src": "index"
+    },
+    {
+      "w": "大企業",
+      "r": "だいきぎょう",
+      "vi": "doanh nghiệp lớn",
+      "src": "index"
+    },
+    {
+      "w": "中央部",
+      "r": "ちゅうおうぶ",
+      "vi": "khu vực trung tâm",
+      "src": "index"
+    },
+    {
+      "w": "中高生",
+      "r": "ちゅうこうせい",
+      "vi": "học sinh cấp 2, cấp 3",
+      "src": "index"
+    },
+    {
+      "w": "中心部",
+      "r": "ちゅうしんぶ",
+      "vi": "vùng trung tâm",
+      "src": "index"
+    },
+    {
+      "w": "鉄道",
+      "r": "てつどう",
+      "vi": "đường sắt",
+      "src": "index"
+    },
+    {
+      "w": "東西南北",
+      "r": "とうざいなんぼく",
+      "vi": "đông tây nam bắc",
+      "src": "index"
+    },
+    {
+      "w": "東西",
+      "r": "とうざい",
+      "vi": "đông tây",
+      "src": "index"
+    },
+    {
+      "w": "得意げ(な)",
+      "r": "とくいげ(な)",
+      "vi": "vẻ tự mãn",
+      "src": "index"
+    },
+    {
+      "w": "農家",
+      "r": "のうか",
+      "vi": "nhà nông",
+      "src": "index"
+    },
+    {
+      "w": "斜め",
+      "r": "ななめ",
+      "vi": "chéo, xiên",
+      "src": "index"
+    },
+    {
+      "w": "激しい",
+      "r": "はげしい",
+      "vi": "dữ dội",
+      "src": "index"
+    },
+    {
+      "w": "バスターミナル",
+      "r": "ばすたーみなる",
+      "vi": "bến xe buýt",
+      "src": "index"
+    },
+    {
+      "w": "日本酒",
+      "r": "にほんしゅ",
+      "vi": "rượu sake",
+      "src": "index"
+    },
+    {
+      "w": "発展する",
+      "r": "はってんする",
+      "vi": "phát triển",
+      "src": "index"
+    },
+    {
+      "w": "広がる",
+      "r": "ひろがる",
+      "vi": "lan rộng, mở rộng",
+      "src": "index"
+    },
+    {
+      "w": "風景",
+      "r": "ふうけい",
+      "vi": "phong cảnh",
+      "src": "index"
+    },
+    {
+      "w": "ピアス",
+      "r": "ぴあす",
+      "vi": "khuyên tai",
+      "src": "index"
+    },
+    {
+      "w": "麓",
+      "r": "ふもと",
+      "vi": "chân núi",
+      "src": "index"
+    },
+    {
+      "w": "ブランコ",
+      "r": "ぶらんこ",
+      "vi": "xích đu",
+      "src": "index"
+    },
+    {
+      "w": "日増しに",
+      "r": "ひましに",
+      "vi": "ngày càng",
+      "src": "index"
+    },
+    {
+      "w": "閉会式",
+      "r": "へいかいしき",
+      "vi": "lễ bế mạc",
+      "src": "index"
+    },
+    {
+      "w": "皆",
+      "r": "みな",
+      "vi": "mọi người",
+      "src": "index"
+    },
+    {
+      "w": "向かい",
+      "r": "むかい",
+      "vi": "phía đối diện",
+      "src": "index"
+    },
+    {
+      "w": "本番",
+      "r": "ほんばん",
+      "vi": "buổi chính thức",
+      "src": "index"
+    },
+    {
+      "w": "全く",
+      "r": "まったく",
+      "vi": "hoàn toàn",
+      "src": "index"
+    },
+    {
+      "w": "面積",
+      "r": "めんせき",
+      "vi": "diện tích",
+      "src": "index"
+    },
+    {
+      "w": "満開",
+      "r": "まんかい",
+      "vi": "nở rộ",
+      "src": "index"
+    },
+    {
+      "w": "列島",
+      "r": "れっとう",
+      "vi": "quần đảo",
+      "src": "index"
+    },
+    {
+      "w": "路線",
+      "r": "ろせん",
+      "vi": "tuyến đường (xe, tàu)",
+      "src": "index"
+    },
+    {
+      "w": "ユニセックスファッション",
+      "r": "ゆにせっくすふぁっしょん",
+      "vi": "thời trang unisex",
+      "src": "index"
+    },
+    {
+      "w": "江戸城跡",
+      "r": "えどじょうあと",
+      "vi": "di tích thành Edo",
+      "src": "index"
+    },
+    {
+      "w": "都市化",
+      "r": "としか",
+      "vi": "đô thị hóa",
+      "src": "index"
+    },
+    {
+      "w": "地域",
+      "r": "ちいき",
+      "vi": "khu vực, vùng",
+      "src": "extra"
+    },
+    {
+      "w": "郊外",
+      "r": "こうがい",
+      "vi": "ngoại ô",
+      "src": "extra"
+    },
+    {
+      "w": "住民",
+      "r": "じゅうみん",
+      "vi": "cư dân",
+      "src": "extra"
+    },
+    {
+      "w": "交通",
+      "r": "こうつう",
+      "vi": "giao thông",
+      "src": "extra"
+    },
+    {
+      "w": "便利(な)",
+      "r": "べんり(な)",
+      "vi": "tiện lợi",
+      "src": "extra"
+    },
+    {
+      "w": "賑やか(な)",
+      "r": "にぎやか(な)",
+      "vi": "náo nhiệt",
+      "src": "extra",
+      "tip": "Đối lập: 静か(な) = yên tĩnh."
+    },
+    {
+      "w": "緑",
+      "r": "みどり",
+      "vi": "màu xanh lá; cây xanh",
+      "src": "extra"
+    },
+    {
+      "w": "公園",
+      "r": "こうえん",
+      "vi": "công viên",
+      "src": "extra"
+    },
+    {
+      "w": "設備",
+      "r": "せつび",
+      "vi": "trang thiết bị",
+      "src": "extra"
+    },
+    {
+      "w": "施設",
+      "r": "しせつ",
+      "vi": "cơ sở, công trình",
+      "src": "extra",
+      "tip": "公共施設 = công trình công cộng."
+    },
+    {
+      "w": "環境",
+      "r": "かんきょう",
+      "vi": "môi trường",
+      "src": "extra"
+    },
+    {
+      "w": "隣接する",
+      "r": "りんせつする",
+      "vi": "giáp ranh, kề bên",
+      "src": "extra"
+    },
+    {
+      "w": "広場",
+      "r": "ひろば",
+      "vi": "quảng trường, khoảng đất rộng",
+      "src": "extra"
+    },
+    {
+      "w": "歩道",
+      "r": "ほどう",
+      "vi": "vỉa hè",
+      "src": "extra"
+    },
+    {
+      "w": "景色",
+      "r": "けしき",
+      "vi": "cảnh sắc",
+      "src": "extra"
+    },
+    {
+      "w": "眺め",
+      "r": "ながめ",
+      "vi": "tầm nhìn, cảnh ngắm",
+      "src": "extra"
+    },
+    {
+      "w": "名所",
+      "r": "めいしょ",
+      "vi": "danh thắng",
+      "src": "extra"
+    },
+    {
+      "w": "観光客",
+      "r": "かんこうきゃく",
+      "vi": "khách du lịch",
+      "src": "extra"
+    },
+    {
+      "w": "人口",
+      "r": "じんこう",
+      "vi": "dân số",
+      "src": "extra"
+    }
   ],
   "questions": [
     {
       "type": "tf",
       "prompt": "内容が正しいものに○、正しくないものに×を書きなさい。",
       "items": [
-        { "text": "9月の半ばを過ぎると、朝晩幾分涼しくなる。", "answer": true },
-        { "text": "三井公園には毎日散歩に行く。", "answer": false },
-        { "text": "三井公園は自転車に乗って通り抜けできる。", "answer": false },
-        { "text": "公園のベンチに座って、本を読む人がいる。", "answer": true },
-        { "text": "公園はスポーツをする人が訪れる。", "answer": false }
+        {
+          "text": "9月の半ばを過ぎると、朝晩幾分涼しくなる。",
+          "answer": true
+        },
+        {
+          "text": "三井公園には毎日散歩に行く。",
+          "answer": false
+        },
+        {
+          "text": "三井公園は自転車に乗って通り抜けできる。",
+          "answer": false
+        },
+        {
+          "text": "公園のベンチに座って、本を読む人がいる。",
+          "answer": true
+        },
+        {
+          "text": "公園はスポーツをする人が訪れる。",
+          "answer": false
+        }
       ]
     },
     {
       "type": "fill",
       "prompt": "から言葉を選び、段落の内容を完成しなさい。(例：第1段落 a：季節の（挨拶）。)",
-      "wordBank": ["入口", "ベンチ", "池", "感想", "子供たち", "休日"],
+      "wordBank": [
+        "入口",
+        "ベンチ",
+        "池",
+        "感想",
+        "子供たち",
+        "休日"
+      ],
       "items": [
-        { "text": "第2段落 b：（　）の朝、よく行く三井公園。", "answer": "休日" },
-        { "text": "第3段落 c：公園の（　）の様子。", "answer": "入口" },
-        { "text": "第4段落 d：小さい（　）の説明。", "answer": "池" },
-        { "text": "第5段落 e：小道を少し行ったところにある（　）。", "answer": "ベンチ" },
-        { "text": "第6段落 f：（　）が遊んでいる様子。", "answer": "子供たち" },
-        { "text": "第7段落 g：公園についての（　）。", "answer": "感想" }
+        {
+          "text": "第2段落 b：（　）の朝、よく行く三井公園。",
+          "answer": "休日"
+        },
+        {
+          "text": "第3段落 c：公園の（　）の様子。",
+          "answer": "入口"
+        },
+        {
+          "text": "第4段落 d：小さい（　）の説明。",
+          "answer": "池"
+        },
+        {
+          "text": "第5段落 e：小道を少し行ったところにある（　）。",
+          "answer": "ベンチ"
+        },
+        {
+          "text": "第6段落 f：（　）が遊んでいる様子。",
+          "answer": "子供たち"
+        },
+        {
+          "text": "第7段落 g：公園についての（　）。",
+          "answer": "感想"
+        }
       ]
     },
     {
       "type": "classify",
       "prompt": "a〜gの段落を意味と内容から3つに分けなさい。",
-      "categories": ["初めに", "詳しい説明", "意見・感想"],
+      "categories": [
+        "初めに",
+        "詳しい説明",
+        "意見・感想"
+      ],
       "items": [
-        { "text": "a(第1段落)", "answer": 0 },
-        { "text": "b(第2段落)", "answer": 1 },
-        { "text": "c(第3段落)", "answer": 1 },
-        { "text": "d(第4段落)", "answer": 1 },
-        { "text": "e(第5段落)", "answer": 1 },
-        { "text": "f(第6段落)", "answer": 1 },
-        { "text": "g(第7段落)", "answer": 2 }
+        {
+          "text": "a(第1段落)",
+          "answer": 0
+        },
+        {
+          "text": "b(第2段落)",
+          "answer": 1
+        },
+        {
+          "text": "c(第3段落)",
+          "answer": 1
+        },
+        {
+          "text": "d(第4段落)",
+          "answer": 1
+        },
+        {
+          "text": "e(第5段落)",
+          "answer": 1
+        },
+        {
+          "text": "f(第6段落)",
+          "answer": 1
+        },
+        {
+          "text": "g(第7段落)",
+          "answer": 2
+        }
       ]
     }
   ]

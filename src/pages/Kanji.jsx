@@ -74,7 +74,8 @@ export default function Kanji() {
         const matchWords = item.words.some(
           ([w, r]) => w.includes(q) || normalizeKana(r).includes(qKana)
         );
-        return matchK || matchOn || matchKun || matchWords;
+        const matchHv = (item.hv || '').toLowerCase().includes(q) || (item.mean || '').toLowerCase().includes(q);
+        return matchK || matchOn || matchKun || matchWords || matchHv;
       });
     }
 
@@ -294,10 +295,10 @@ export default function Kanji() {
       {/* Header */}
       <div className="page-header">
         <h1 className="page-title">
-          <span className="page-title-icon">🈯</span> Học & Luyện tập Hán tự (Kanji)
+          Học & Luyện tập Hán tự (Kanji)
         </h1>
         <p className="page-subtitle">
-          Tổng hợp 193 chữ Hán trung cấp trong 8 bài học. Tra cứu âm On, âm Kun, từ ví dụ và luyện tập đa dạng.
+          Tổng hợp 193 chữ Hán trung cấp trong 8 bài học. Tra cứu âm Hán Việt, âm On・Kun, nghĩa, mẹo nhớ, từ ví dụ và luyện tập đa dạng.
         </p>
       </div>
 
@@ -315,7 +316,7 @@ export default function Kanji() {
             <input
               type="text"
               className="search-input"
-              placeholder="Tìm chữ Kanji, âm On, Kun hoặc từ ví dụ..."
+              placeholder="Tìm chữ Kanji, Hán Việt, âm On/Kun, từ ví dụ..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
@@ -403,6 +404,7 @@ export default function Kanji() {
                     </div>
 
                     <div className="tile-character">{item.k}</div>
+                    {item.hv && <div className="tile-hv">{item.hv.split(',')[0]}</div>}
 
                     <div className="tile-readings">
                       {primaryOn && <span className="reading-on">{primaryOn}</span>}
@@ -464,6 +466,12 @@ export default function Kanji() {
                   <div className="flashcard-face flashcard-back">
                     <span className="card-badge">Bài {currentFlashcard.lesson}</span>
                     <div className="kanji-back-char-small">{currentFlashcard.k}</div>
+                    {(currentFlashcard.hv || currentFlashcard.mean) && (
+                      <div className="modal-meaning">
+                        {currentFlashcard.hv && <span className="hv-pill">{currentFlashcard.hv}</span>}
+                        {currentFlashcard.mean && <span className="mean-text">{currentFlashcard.mean}</span>}
+                      </div>
+                    )}
 
                     <div className="kanji-back-readings-box">
                       <div className="reading-line">
@@ -495,6 +503,9 @@ export default function Kanji() {
                       </div>
                     </div>
 
+                    {currentFlashcard.tip && (
+                      <p className="kanji-tip"><Icon name="sparkle" size={16} /> <span>{currentFlashcard.tip}</span></p>
+                    )}
                     <div className="card-click-hint">Bấm để lật lại ↶</div>
                   </div>
                 </div>
@@ -900,6 +911,17 @@ export default function Kanji() {
                 </button>
               </div>
             </div>
+
+            {/* Hán Việt, nghĩa, mẹo */}
+            {(currentModalKanji.hv || currentModalKanji.mean) && (
+              <div className="modal-meaning">
+                {currentModalKanji.hv && <span className="hv-pill" title="Âm Hán Việt">{currentModalKanji.hv}</span>}
+                {currentModalKanji.mean && <span className="mean-text">{currentModalKanji.mean}</span>}
+              </div>
+            )}
+            {currentModalKanji.tip && (
+              <p className="kanji-tip"><Icon name="sparkle" size={16} /> <span><strong>Mẹo nhớ:</strong> {currentModalKanji.tip}</span></p>
+            )}
 
             {/* Readings */}
             <div className="modal-readings-grid">

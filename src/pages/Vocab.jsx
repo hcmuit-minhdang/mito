@@ -14,6 +14,7 @@ export default function Vocab() {
 
   // Filters
   const [selectedLessons, setSelectedLessons] = useState([1, 2, 3, 4, 5, 6, 7, 8]);
+  const [source, setSource] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [onlyUnknown, setOnlyUnknown] = useState(false);
 
@@ -62,6 +63,10 @@ export default function Vocab() {
   const filteredVocab = useMemo(() => {
     let list = getVocabByLesson(selectedLessons);
 
+    if (source !== 'all') {
+      list = list.filter((v) => v.src === source);
+    }
+
     if (searchQuery.trim()) {
       const q = searchQuery.trim().toLowerCase();
       const qKana = normalizeKana(searchQuery);
@@ -79,7 +84,7 @@ export default function Vocab() {
     }
 
     return list;
-  }, [selectedLessons, searchQuery, onlyUnknown, isVocabKnown]);
+  }, [selectedLessons, source, searchQuery, onlyUnknown, isVocabKnown]);
 
   // Synchronize flashcards when filtered vocab changes
   useEffect(() => {
@@ -274,7 +279,7 @@ export default function Vocab() {
           Ôn luyện từ vựng trung cấp
         </h1>
         <p className="page-subtitle">
-          Tổng hợp 262 từ vựng từ 8 bài học 『中級を学ぼう』. Học theo danh sách, flashcard, trắc nghiệm và gõ cách đọc.
+          Tổng hợp {allVocab.length} từ vựng từ 8 bài học 『中級を学ぼう』, gồm từ trong phần ことば, từ lấy từ bảng 索引 cuối sách và từ bổ sung theo chủ đề cho N3–N2. Học theo danh sách, flashcard, trắc nghiệm và gõ cách đọc.
         </p>
       </div>
 
@@ -285,6 +290,26 @@ export default function Vocab() {
           onChange={setSelectedLessons}
           multiple={true}
         />
+
+        <div className="source-filter" role="group" aria-label="Nguồn từ vựng">
+          <span className="filter-title">Nguồn:</span>
+          {[
+            ['all', 'Tất cả'],
+            ['list', `Từ khóa bài (${allVocab.filter((v) => v.src === 'list').length})`],
+            ['index', `Từ trong 索引 (${allVocab.filter((v) => v.src === 'index').length})`],
+            ['extra', `Bổ sung N3–N2 (${allVocab.filter((v) => v.src === 'extra').length})`],
+          ].map(([id, label]) => (
+            <button
+              key={id}
+              type="button"
+              className={`filter-pill ${source === id ? 'active' : ''}`}
+              aria-pressed={source === id}
+              onClick={() => setSource(id)}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
 
         <div className="filter-controls-row">
           <div className="search-input-wrap">
@@ -389,6 +414,8 @@ export default function Vocab() {
                   >
                     <div className="card-top-row">
                       <span className="lesson-mini-badge">Bài {v.lessonId}</span>
+                      {v.src === 'index' && <span className="src-badge" title="Từ lấy từ bảng 索引 cuối sách">索引</span>}
+                      {v.src === 'extra' && <span className="src-badge src-badge-extra" title="Từ bổ sung theo chủ đề bài, hợp N3–N2 (ngoài sách)">N3–N2</span>}
                       <div className="card-top-actions">
                         <SpeakButton text={v.w} size="sm" />
                         <button
@@ -415,6 +442,7 @@ export default function Vocab() {
 
                     {/* Note if available */}
                     {v.note && <div className="vocab-note"><Icon name="note" size={14} /> {v.note}</div>}
+                    {v.tip && <div className="vocab-tip"><Icon name="sparkle" size={14} /> {v.tip}</div>}
 
                     {/* Meaning */}
                     <div

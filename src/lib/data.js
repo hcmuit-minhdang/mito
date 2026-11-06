@@ -31,7 +31,7 @@ export function getLesson(id) {
 }
 
 /**
- * Flattened array of all vocab across all lessons (262 items).
+ * Flattened array of all vocab across all lessons (từ trong bài + từ mở rộng từ 索引 của sách).
  * ID format per spec: `${lesson.id}:${index}`
  */
 export const allVocab = lessons.flatMap((l) =>
@@ -43,6 +43,8 @@ export const allVocab = lessons.flatMap((l) =>
     r: v.r,
     note: v.note || '',
     vi: v.vi,
+    src: v.src || 'list',
+    tip: v.tip || '',
   }))
 );
 
@@ -67,6 +69,9 @@ export const allKanji = kanjiLessons.flatMap((kl) =>
     on: k.on || [],
     kun: k.kun || [],
     words: k.words || [],
+    hv: k.hv || '',
+    mean: k.mean || '',
+    tip: k.tip || '',
   }))
 );
 

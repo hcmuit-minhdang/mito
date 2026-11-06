@@ -20,73 +20,920 @@
     ]
   },
   "vocab": [
-    { "w": "たまる", "r": "たまる", "note": "ストレスが～", "vi": "tích tụ, dồn lại" },
-    { "w": "リラックスする", "r": "りらっくすする", "note": "→リラックスさせる", "vi": "thư giãn" },
-    { "w": "落ち着く", "r": "おちつく", "note": "心が～", "vi": "bình tĩnh, lắng lại" },
-    { "w": "いやす", "r": "いやす", "note": "→いやされる", "vi": "xoa dịu, chữa lành" },
-    { "w": "合わせる", "r": "あわせる", "note": "歌に～", "vi": "hòa theo, kết hợp" },
-    { "w": "演奏する", "r": "えんそうする", "note": "楽器を～", "vi": "biểu diễn (nhạc cụ)" },
-    { "w": "とる", "r": "とる", "note": "コミュニケーションを～", "vi": "thực hiện, giữ (giao tiếp)" },
-    { "w": "もたらす", "r": "もたらす", "note": "効果を～", "vi": "mang lại" },
-    { "w": "注目する", "r": "ちゅうもくする", "note": "→注目される", "vi": "chú ý, quan tâm" },
-    { "w": "効果", "r": "こうか", "vi": "hiệu quả" },
-    { "w": "寂しさ", "r": "さびしさ", "vi": "nỗi cô đơn, buồn tẻ" },
-    { "w": "波", "r": "なみ", "vi": "sóng" },
-    { "w": "鳴き声", "r": "なきごえ", "vi": "tiếng kêu (động vật)" },
-    { "w": "ストレス解消", "r": "すとれすかいしょう", "vi": "giải tỏa căng thẳng" },
-    { "w": "音楽療法", "r": "おんがくりょうほう", "vi": "liệu pháp âm nhạc" },
-    { "w": "手遊び", "r": "てあそび", "vi": "trò chơi bằng tay (vỗ tay, v.v.)" },
-    { "w": "楽器", "r": "がっき", "vi": "nhạc cụ" },
-    { "w": "いやし", "r": "いやし", "vi": "sự xoa dịu, chữa lành" },
-    { "w": "演歌", "r": "えんか", "vi": "enka (dân ca Nhật hiện đại)" },
-    { "w": "コミュニケーション", "r": "こみゅにけーしょん", "vi": "giao tiếp" },
-    { "w": "療法士", "r": "りょうほうし", "vi": "nhà trị liệu" },
-    { "w": "事例", "r": "じれい", "vi": "trường hợp, ví dụ thực tế" },
-    { "w": "現代", "r": "げんだい", "vi": "hiện đại" },
-    { "w": "今後", "r": "こんご", "vi": "từ nay về sau" },
-    { "w": "さまざま(な)", "r": "さまざま", "vi": "đa dạng, nhiều loại" },
-    { "w": "効果的(な)", "r": "こうかてき", "vi": "có hiệu quả" },
-    { "w": "例えば", "r": "たとえば", "vi": "ví dụ như" },
-    { "w": "最も", "r": "もっとも", "vi": "nhất" },
-    { "w": "次第に", "r": "しだいに", "vi": "dần dần" },
-    { "w": "したがって", "r": "したがって", "vi": "do đó, vì vậy" }
+    {
+      "w": "たまる",
+      "r": "たまる",
+      "note": "ストレスが～",
+      "vi": "tích tụ, dồn lại",
+      "src": "list"
+    },
+    {
+      "w": "リラックスする",
+      "r": "りらっくすする",
+      "note": "→リラックスさせる",
+      "vi": "thư giãn",
+      "src": "list"
+    },
+    {
+      "w": "落ち着く",
+      "r": "おちつく",
+      "note": "心が～",
+      "vi": "bình tĩnh, lắng lại",
+      "src": "list"
+    },
+    {
+      "w": "いやす",
+      "r": "いやす",
+      "note": "→いやされる",
+      "vi": "xoa dịu, chữa lành",
+      "src": "list"
+    },
+    {
+      "w": "合わせる",
+      "r": "あわせる",
+      "note": "歌に～",
+      "vi": "hòa theo, kết hợp",
+      "src": "list"
+    },
+    {
+      "w": "演奏する",
+      "r": "えんそうする",
+      "note": "楽器を～",
+      "vi": "biểu diễn (nhạc cụ)",
+      "src": "list"
+    },
+    {
+      "w": "とる",
+      "r": "とる",
+      "note": "コミュニケーションを～",
+      "vi": "thực hiện, giữ (giao tiếp)",
+      "src": "list"
+    },
+    {
+      "w": "もたらす",
+      "r": "もたらす",
+      "note": "効果を～",
+      "vi": "mang lại",
+      "src": "list"
+    },
+    {
+      "w": "注目する",
+      "r": "ちゅうもくする",
+      "note": "→注目される",
+      "vi": "chú ý, quan tâm",
+      "src": "list"
+    },
+    {
+      "w": "効果",
+      "r": "こうか",
+      "vi": "hiệu quả",
+      "src": "list"
+    },
+    {
+      "w": "寂しさ",
+      "r": "さびしさ",
+      "vi": "nỗi cô đơn, buồn tẻ",
+      "src": "list"
+    },
+    {
+      "w": "波",
+      "r": "なみ",
+      "vi": "sóng",
+      "src": "list"
+    },
+    {
+      "w": "鳴き声",
+      "r": "なきごえ",
+      "vi": "tiếng kêu (động vật)",
+      "src": "list"
+    },
+    {
+      "w": "ストレス解消",
+      "r": "すとれすかいしょう",
+      "vi": "giải tỏa căng thẳng",
+      "src": "list"
+    },
+    {
+      "w": "音楽療法",
+      "r": "おんがくりょうほう",
+      "vi": "liệu pháp âm nhạc",
+      "src": "list"
+    },
+    {
+      "w": "手遊び",
+      "r": "てあそび",
+      "vi": "trò chơi bằng tay (vỗ tay, v.v.)",
+      "src": "list"
+    },
+    {
+      "w": "楽器",
+      "r": "がっき",
+      "vi": "nhạc cụ",
+      "src": "list"
+    },
+    {
+      "w": "いやし",
+      "r": "いやし",
+      "vi": "sự xoa dịu, chữa lành",
+      "src": "list"
+    },
+    {
+      "w": "演歌",
+      "r": "えんか",
+      "vi": "enka (dân ca Nhật hiện đại)",
+      "src": "list"
+    },
+    {
+      "w": "コミュニケーション",
+      "r": "こみゅにけーしょん",
+      "vi": "giao tiếp",
+      "src": "list"
+    },
+    {
+      "w": "療法士",
+      "r": "りょうほうし",
+      "vi": "nhà trị liệu",
+      "src": "list"
+    },
+    {
+      "w": "事例",
+      "r": "じれい",
+      "vi": "trường hợp, ví dụ thực tế",
+      "src": "list"
+    },
+    {
+      "w": "現代",
+      "r": "げんだい",
+      "vi": "hiện đại",
+      "src": "list"
+    },
+    {
+      "w": "今後",
+      "r": "こんご",
+      "vi": "từ nay về sau",
+      "src": "list"
+    },
+    {
+      "w": "さまざま(な)",
+      "r": "さまざま",
+      "vi": "đa dạng, nhiều loại",
+      "src": "list"
+    },
+    {
+      "w": "効果的(な)",
+      "r": "こうかてき",
+      "vi": "có hiệu quả",
+      "src": "list"
+    },
+    {
+      "w": "例えば",
+      "r": "たとえば",
+      "vi": "ví dụ như",
+      "src": "list"
+    },
+    {
+      "w": "最も",
+      "r": "もっとも",
+      "vi": "nhất",
+      "src": "list"
+    },
+    {
+      "w": "次第に",
+      "r": "しだいに",
+      "vi": "dần dần",
+      "src": "list"
+    },
+    {
+      "w": "したがって",
+      "r": "したがって",
+      "vi": "do đó, vì vậy",
+      "src": "list"
+    },
+    {
+      "w": "アクセス",
+      "r": "あくせす",
+      "vi": "truy cập; đường đến, cách đi đến",
+      "src": "index"
+    },
+    {
+      "w": "朝晩",
+      "r": "あさばん",
+      "vi": "sáng và tối",
+      "src": "index"
+    },
+    {
+      "w": "アドバイス",
+      "r": "あどばいす",
+      "vi": "lời khuyên",
+      "src": "index"
+    },
+    {
+      "w": "いらいらする",
+      "r": "いらいらする",
+      "vi": "bực bội, sốt ruột",
+      "src": "index"
+    },
+    {
+      "w": "うどん",
+      "r": "うどん",
+      "vi": "mì udon",
+      "src": "index"
+    },
+    {
+      "w": "笑顔",
+      "r": "えがお",
+      "vi": "gương mặt tươi cười",
+      "src": "index"
+    },
+    {
+      "w": "書き直す",
+      "r": "かきなおす",
+      "vi": "viết lại",
+      "src": "index"
+    },
+    {
+      "w": "気温",
+      "r": "きおん",
+      "vi": "nhiệt độ không khí",
+      "src": "index"
+    },
+    {
+      "w": "活発(な)",
+      "r": "かっぱつ(な)",
+      "vi": "năng động, sôi nổi",
+      "src": "index"
+    },
+    {
+      "w": "華道",
+      "r": "かどう",
+      "vi": "nghệ thuật cắm hoa",
+      "src": "index"
+    },
+    {
+      "w": "希望",
+      "r": "きぼう",
+      "vi": "hy vọng, nguyện vọng",
+      "src": "index"
+    },
+    {
+      "w": "カルチャーショック",
+      "r": "かるちゃーしょっく",
+      "vi": "sốc văn hóa",
+      "src": "index"
+    },
+    {
+      "w": "感覚",
+      "r": "かんかく",
+      "vi": "cảm giác",
+      "src": "index"
+    },
+    {
+      "w": "感情",
+      "r": "かんじょう",
+      "vi": "cảm xúc, tình cảm",
+      "src": "index"
+    },
+    {
+      "w": "完成する",
+      "r": "かんせいする",
+      "vi": "hoàn thành",
+      "src": "index"
+    },
+    {
+      "w": "口ずさむ",
+      "r": "くちずさむ",
+      "vi": "ngân nga, hát khe khẽ",
+      "src": "index"
+    },
+    {
+      "w": "高度(な)",
+      "r": "こうど(な)",
+      "vi": "trình độ cao, cao cấp",
+      "src": "index"
+    },
+    {
+      "w": "コスト",
+      "r": "こすと",
+      "vi": "chi phí",
+      "src": "index"
+    },
+    {
+      "w": "差",
+      "r": "さ",
+      "vi": "sự chênh lệch",
+      "src": "index"
+    },
+    {
+      "w": "資源",
+      "r": "しげん",
+      "vi": "tài nguyên",
+      "src": "index"
+    },
+    {
+      "w": "サイト",
+      "r": "さいと",
+      "vi": "trang web",
+      "src": "index"
+    },
+    {
+      "w": "再利用",
+      "r": "さいりよう",
+      "vi": "tái sử dụng",
+      "src": "index"
+    },
+    {
+      "w": "さえずり",
+      "r": "さえずり",
+      "vi": "tiếng chim hót líu lo",
+      "src": "index"
+    },
+    {
+      "w": "昨年",
+      "r": "さくねん",
+      "vi": "năm ngoái",
+      "src": "index"
+    },
+    {
+      "w": "サッカー好き",
+      "r": "さっかーずき",
+      "vi": "người mê bóng đá",
+      "src": "index"
+    },
+    {
+      "w": "習得する",
+      "r": "しゅうとくする",
+      "vi": "học được, nắm vững",
+      "src": "index"
+    },
+    {
+      "w": "省略する",
+      "r": "しょうりゃくする",
+      "vi": "lược bỏ, rút gọn",
+      "src": "index"
+    },
+    {
+      "w": "書道",
+      "r": "しょどう",
+      "vi": "thư pháp",
+      "src": "index"
+    },
+    {
+      "w": "誠実(な)",
+      "r": "せいじつ(な)",
+      "vi": "thành thật, chân thành",
+      "src": "index"
+    },
+    {
+      "w": "成長",
+      "r": "せいちょう",
+      "vi": "sự trưởng thành, tăng trưởng",
+      "src": "index"
+    },
+    {
+      "w": "精神",
+      "r": "せいしん",
+      "vi": "tinh thần",
+      "src": "index"
+    },
+    {
+      "w": "せせらぎ",
+      "r": "せせらぎ",
+      "vi": "tiếng suối róc rách",
+      "src": "index"
+    },
+    {
+      "w": "〜だけでなく〜も",
+      "r": "〜だけでなく〜も",
+      "vi": "không chỉ ~ mà cả ~",
+      "src": "index"
+    },
+    {
+      "w": "セラピー",
+      "r": "せらぴー",
+      "vi": "liệu pháp",
+      "src": "index"
+    },
+    {
+      "w": "そば",
+      "r": "そば",
+      "vi": "mì soba",
+      "src": "index"
+    },
+    {
+      "w": "それぞれ",
+      "r": "それぞれ",
+      "vi": "mỗi người/mỗi cái một, từng cái",
+      "src": "index"
+    },
+    {
+      "w": "段落",
+      "r": "だんらく",
+      "vi": "đoạn văn",
+      "src": "index"
+    },
+    {
+      "w": "〜代",
+      "r": "〜だい",
+      "vi": "thế hệ, độ tuổi (20代: người ở độ tuổi 20)",
+      "src": "index"
+    },
+    {
+      "w": "中級",
+      "r": "ちゅうきゅう",
+      "vi": "trung cấp",
+      "src": "index"
+    },
+    {
+      "w": "注文する",
+      "r": "ちゅうもんする",
+      "vi": "đặt hàng, gọi món",
+      "src": "index"
+    },
+    {
+      "w": "治療",
+      "r": "ちりょう",
+      "vi": "điều trị",
+      "src": "index"
+    },
+    {
+      "w": "追究する",
+      "r": "ついきゅうする",
+      "vi": "truy cứu, tìm hiểu đến cùng",
+      "src": "index"
+    },
+    {
+      "w": "テレビ離れ",
+      "r": "てれびばなれ",
+      "vi": "xu hướng rời xa tivi",
+      "src": "index"
+    },
+    {
+      "w": "〜道",
+      "r": "〜どう",
+      "vi": "đạo (nghệ thuật): 華道, 書道",
+      "src": "index"
+    },
+    {
+      "w": "つらい",
+      "r": "つらい",
+      "vi": "đau khổ, vất vả",
+      "src": "index"
+    },
+    {
+      "w": "ドキュメント",
+      "r": "どきゅめんと",
+      "vi": "tài liệu",
+      "src": "index"
+    },
+    {
+      "w": "程度",
+      "r": "ていど",
+      "vi": "mức độ",
+      "src": "index"
+    },
+    {
+      "w": "努力",
+      "r": "どりょく",
+      "vi": "nỗ lực",
+      "src": "index"
+    },
+    {
+      "w": "人間関係",
+      "r": "にんげんかんけい",
+      "vi": "quan hệ giữa người với người",
+      "src": "index"
+    },
+    {
+      "w": "内容",
+      "r": "ないよう",
+      "vi": "nội dung",
+      "src": "index"
+    },
+    {
+      "w": "配信",
+      "r": "はいしん",
+      "vi": "phát trực tuyến, phân phối",
+      "src": "index"
+    },
+    {
+      "w": "悩み",
+      "r": "なやみ",
+      "vi": "nỗi phiền muộn",
+      "src": "index"
+    },
+    {
+      "w": "ハウス栽培",
+      "r": "はうすさいばい",
+      "vi": "trồng trong nhà kính",
+      "src": "index"
+    },
+    {
+      "w": "日中",
+      "r": "にっちゅう",
+      "vi": "ban ngày",
+      "src": "index"
+    },
+    {
+      "w": "拍",
+      "r": "はく",
+      "vi": "phách, nhịp",
+      "src": "index"
+    },
+    {
+      "w": "励ます",
+      "r": "はげます",
+      "vi": "động viên, khích lệ",
+      "src": "index"
+    },
+    {
+      "w": "始め",
+      "r": "はじめ",
+      "vi": "lúc đầu, sự bắt đầu",
+      "src": "index"
+    },
+    {
+      "w": "半袖",
+      "r": "はんそで",
+      "vi": "áo tay ngắn",
+      "src": "index"
+    },
+    {
+      "w": "プラス",
+      "r": "ぷらす",
+      "vi": "cộng; mặt tích cực",
+      "src": "index"
+    },
+    {
+      "w": "秘訣",
+      "r": "ひけつ",
+      "vi": "bí quyết",
+      "src": "index"
+    },
+    {
+      "w": "文章",
+      "r": "ぶんしょう",
+      "vi": "bài văn, văn bản",
+      "src": "index"
+    },
+    {
+      "w": "平均",
+      "r": "へいきん",
+      "vi": "trung bình",
+      "src": "index"
+    },
+    {
+      "w": "報告",
+      "r": "ほうこく",
+      "vi": "báo cáo",
+      "src": "index"
+    },
+    {
+      "w": "ホームページ",
+      "r": "ほーむぺーじ",
+      "vi": "trang chủ, website",
+      "src": "index"
+    },
+    {
+      "w": "結ぶ",
+      "r": "むすぶ",
+      "vi": "buộc, kết nối",
+      "src": "index"
+    },
+    {
+      "w": "マイナス",
+      "r": "まいなす",
+      "vi": "trừ; mặt tiêu cực",
+      "src": "index"
+    },
+    {
+      "w": "待合室",
+      "r": "まちあいしつ",
+      "vi": "phòng chờ",
+      "src": "index"
+    },
+    {
+      "w": "まとまり",
+      "r": "まとまり",
+      "vi": "sự gắn kết, thống nhất",
+      "src": "index"
+    },
+    {
+      "w": "求める",
+      "r": "もとめる",
+      "vi": "đòi hỏi, tìm kiếm",
+      "src": "index"
+    },
+    {
+      "w": "八百屋",
+      "r": "やおや",
+      "vi": "cửa hàng rau củ",
+      "src": "index"
+    },
+    {
+      "w": "友人",
+      "r": "ゆうじん",
+      "vi": "bạn bè",
+      "src": "index"
+    },
+    {
+      "w": "予想する",
+      "r": "よそうする",
+      "vi": "dự đoán",
+      "src": "index"
+    },
+    {
+      "w": "喜び",
+      "r": "よろこび",
+      "vi": "niềm vui",
+      "src": "index"
+    },
+    {
+      "w": "リズム",
+      "r": "りずむ",
+      "vi": "nhịp điệu",
+      "src": "index"
+    },
+    {
+      "w": "リズム感",
+      "r": "りずむかん",
+      "vi": "cảm giác nhịp điệu",
+      "src": "index"
+    },
+    {
+      "w": "視聴",
+      "r": "しちょう",
+      "vi": "xem và nghe",
+      "src": "index"
+    },
+    {
+      "w": "スタッフ",
+      "r": "すたっふ",
+      "vi": "nhân viên",
+      "src": "index"
+    },
+    {
+      "w": "テーマ",
+      "r": "てーま",
+      "vi": "chủ đề",
+      "src": "index"
+    },
+    {
+      "w": "フェスティバル",
+      "r": "ふぇすてぃばる",
+      "vi": "lễ hội",
+      "src": "index"
+    },
+    {
+      "w": "メディア",
+      "r": "めでぃあ",
+      "vi": "truyền thông, phương tiện",
+      "src": "index"
+    },
+    {
+      "w": "ロック",
+      "r": "ろっく",
+      "vi": "nhạc rock",
+      "src": "index"
+    },
+    {
+      "w": "リーダーシップ",
+      "r": "りーだーしっぷ",
+      "vi": "khả năng lãnh đạo",
+      "src": "index"
+    },
+    {
+      "w": "気分",
+      "r": "きぶん",
+      "vi": "tâm trạng, cảm giác trong người",
+      "src": "extra"
+    },
+    {
+      "w": "疲れる",
+      "r": "つかれる",
+      "vi": "mệt",
+      "src": "extra"
+    },
+    {
+      "w": "眠る",
+      "r": "ねむる",
+      "vi": "ngủ",
+      "src": "extra"
+    },
+    {
+      "w": "安心する",
+      "r": "あんしんする",
+      "vi": "yên tâm",
+      "src": "extra"
+    },
+    {
+      "w": "緊張する",
+      "r": "きんちょうする",
+      "vi": "căng thẳng, hồi hộp",
+      "src": "extra",
+      "tip": "緊張 = khẩn TRƯƠNG (căng ra). Hay đi với 緊張がほぐれる = bớt căng thẳng."
+    },
+    {
+      "w": "落ち込む",
+      "r": "おちこむ",
+      "vi": "chán nản, suy sụp",
+      "src": "extra"
+    },
+    {
+      "w": "癒し",
+      "r": "いやし",
+      "vi": "sự chữa lành, xoa dịu",
+      "src": "extra",
+      "tip": "Danh từ của いやす (đã có trong bài)."
+    },
+    {
+      "w": "騒音",
+      "r": "そうおん",
+      "vi": "tiếng ồn",
+      "src": "extra"
+    },
+    {
+      "w": "静寂",
+      "r": "せいじゃく",
+      "vi": "sự tĩnh lặng",
+      "src": "extra"
+    },
+    {
+      "w": "旋律",
+      "r": "せんりつ",
+      "vi": "giai điệu",
+      "src": "extra"
+    },
+    {
+      "w": "合唱",
+      "r": "がっしょう",
+      "vi": "hợp xướng",
+      "src": "extra"
+    },
+    {
+      "w": "演奏会",
+      "r": "えんそうかい",
+      "vi": "buổi hòa nhạc",
+      "src": "extra"
+    },
+    {
+      "w": "音程",
+      "r": "おんてい",
+      "vi": "cao độ (độ chuẩn của nốt)",
+      "src": "extra"
+    },
+    {
+      "w": "歌詞",
+      "r": "かし",
+      "vi": "lời bài hát",
+      "src": "extra"
+    },
+    {
+      "w": "ため息",
+      "r": "ためいき",
+      "vi": "tiếng thở dài",
+      "src": "extra"
+    },
+    {
+      "w": "気晴らし",
+      "r": "きばらし",
+      "vi": "giải khuây",
+      "src": "extra"
+    },
+    {
+      "w": "ぐっすり",
+      "r": "ぐっすり",
+      "vi": "(ngủ) say, sâu giấc",
+      "src": "extra"
+    },
+    {
+      "w": "そわそわ",
+      "r": "そわそわ",
+      "vi": "bồn chồn, không yên",
+      "src": "extra"
+    },
+    {
+      "w": "のんびり",
+      "r": "のんびり",
+      "vi": "thong thả, thư thái",
+      "src": "extra"
+    },
+    {
+      "w": "ゆったり",
+      "r": "ゆったり",
+      "vi": "thoải mái, rộng rãi, thư thả",
+      "src": "extra"
+    },
+    {
+      "w": "心地よい",
+      "r": "ここちよい",
+      "vi": "dễ chịu, thoải mái",
+      "src": "extra"
+    },
+    {
+      "w": "発散する",
+      "r": "はっさんする",
+      "vi": "giải tỏa, xả (căng thẳng)",
+      "src": "extra",
+      "tip": "ストレスを発散する = xả stress."
+    },
+    {
+      "w": "気持ち",
+      "r": "きもち",
+      "vi": "cảm xúc, tâm trạng",
+      "src": "extra"
+    },
+    {
+      "w": "感動する",
+      "r": "かんどうする",
+      "vi": "cảm động",
+      "src": "extra"
+    }
   ],
   "questions": [
     {
       "type": "tf",
       "prompt": "内容が正しいものに○、正しくないものに×を書きなさい。",
       "items": [
-        { "text": "「音楽療法」は音楽を利用して、ストレス解消や体を元気にすることだ。", "answer": true },
-        { "text": "「音楽療法」の方法は音楽を聞くことだけだ。", "answer": false },
-        { "text": "「音楽療法」の音楽は何でもよい。", "answer": false }
+        {
+          "text": "「音楽療法」は音楽を利用して、ストレス解消や体を元気にすることだ。",
+          "answer": true
+        },
+        {
+          "text": "「音楽療法」の方法は音楽を聞くことだけだ。",
+          "answer": false
+        },
+        {
+          "text": "「音楽療法」の音楽は何でもよい。",
+          "answer": false
+        }
       ]
     },
     {
       "type": "match",
       "prompt": "段落の内容を右から選び、線で結びなさい。",
-      "left": ["第1段落", "第2段落", "第3段落", "第4段落", "第5段落"],
-      "right": [
-        { "key": "a", "text": "「音楽療法」の方法" },
-        { "key": "b", "text": "「音楽療法」の事例" },
-        { "key": "c", "text": "「音楽療法」の意味" },
-        { "key": "d", "text": "「音楽療法」の今後" },
-        { "key": "e", "text": "「音楽療法」に効果的な音楽" }
+      "left": [
+        "第1段落",
+        "第2段落",
+        "第3段落",
+        "第4段落",
+        "第5段落"
       ],
-      "answers": ["c", "a", "e", "b", "d"]
+      "right": [
+        {
+          "key": "a",
+          "text": "「音楽療法」の方法"
+        },
+        {
+          "key": "b",
+          "text": "「音楽療法」の事例"
+        },
+        {
+          "key": "c",
+          "text": "「音楽療法」の意味"
+        },
+        {
+          "key": "d",
+          "text": "「音楽療法」の今後"
+        },
+        {
+          "key": "e",
+          "text": "「音楽療法」に効果的な音楽"
+        }
+      ],
+      "answers": [
+        "c",
+        "a",
+        "e",
+        "b",
+        "d"
+      ]
     },
     {
       "type": "tf",
       "prompt": "5行目「このように」はどういう意味ですか。正しいものに○、正しくないものに×を書きなさい。",
       "items": [
-        { "text": "スポーツをして、体を元気にする。", "answer": false },
-        { "text": "音楽を聞いて、心をいやす。", "answer": true },
-        { "text": "自然の中の音を聞いて、心をいやす。", "answer": true }
+        {
+          "text": "スポーツをして、体を元気にする。",
+          "answer": false
+        },
+        {
+          "text": "音楽を聞いて、心をいやす。",
+          "answer": true
+        },
+        {
+          "text": "自然の中の音を聞いて、心をいやす。",
+          "answer": true
+        }
       ]
     },
     {
       "type": "choice",
       "prompt": "どんな音楽を聞いたらリラックスできますか。正しくないものはどれですか。",
-      "options": ["クラシックが好きな人はクラシックを聞く。", "自分の好きな音楽を聞く。", "嫌いな音楽でも聞く。"],
+      "options": [
+        "クラシックが好きな人はクラシックを聞く。",
+        "自分の好きな音楽を聞く。",
+        "嫌いな音楽でも聞く。"
+      ],
       "answer": 2
     }
   ]

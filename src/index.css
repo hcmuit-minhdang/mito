@@ -3005,3 +3005,52 @@ rt {
   .reading-sticky-toolbar { position: static; }
   .reading-paragraph-wrap { padding: var(--s-4) var(--s-4) var(--s-4) calc(var(--s-4) + 2px); border-left-width: 3px; }
 }
+
+/* --------------------------------------------------------------------------
+   20. Từ mở rộng, Hán Việt, mẹo nhớ
+   -------------------------------------------------------------------------- */
+.source-filter { display: flex; align-items: center; gap: var(--s-2); flex-wrap: wrap; margin-bottom: var(--s-4); }
+
+.src-badge {
+  display: inline-flex; align-items: center;
+  padding: 0 0.5rem; margin-left: var(--s-2);
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.04em;
+  color: var(--primary); background: var(--primary-light);
+  border-radius: var(--radius-sm);
+}
+
+.vocab-tip, .kanji-tip {
+  display: flex; gap: var(--s-2); align-items: flex-start;
+  padding: var(--s-2) var(--s-3);
+  font-size: var(--fs-sm); line-height: 1.55;
+  color: var(--text-main);
+  background: var(--primary-light);
+  border-left: 3px solid var(--primary);
+  border-radius: var(--radius-sm);
+  text-align: left;
+}
+.vocab-tip .icon, .kanji-tip .icon { margin-top: 3px; color: var(--primary); }
+
+.modal-meaning { display: flex; align-items: baseline; justify-content: center; flex-wrap: wrap; gap: var(--s-3); margin: var(--s-2) 0 var(--s-4); }
+.hv-pill {
+  padding: 0.1rem 0.7rem;
+  font-size: var(--fs-md); font-weight: 700; letter-spacing: 0.06em;
+  color: var(--seal); background: var(--seal-light);
+  border-radius: var(--radius-full);
+}
+.mean-text { font-size: var(--fs-md); color: var(--text-main); font-weight: 500; }
+.kanji-tip { margin-bottom: var(--s-4); }
+.flashcard-back .kanji-tip { max-width: 460px; font-size: var(--fs-xs); }
+.flashcard-back .modal-meaning { margin: 0; }
+
+.tile-hv { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; color: var(--text-muted); }
+.src-badge-extra { color: var(--success-text); background: var(--success-light); }
+
+/* Thẻ ghi nhớ đủ cao cho mặt sau của kanji (Hán Việt + On/Kun + từ ví dụ + mẹo) */
+.flashcard-scene, .flashcard-inner { min-height: 520px; }
+.flashcard-face { justify-content: safe center; overflow: auto; }
+.kanji-back-char-small { font-size: 2.6rem; }
+.flashcard-face.flashcard-back { padding-top: 3.4rem; }
+@media (max-width: 480px) {
+  .flashcard-scene, .flashcard-inner { min-height: 560px; }
+}

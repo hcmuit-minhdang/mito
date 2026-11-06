@@ -15,7 +15,7 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="footer-inner">
         <p className="footer-disclaimer">
-          <Icon name="warning" size={16} className="footer-warn-icon" /> <em>Nghĩa tiếng Việt và đáp án câu hỏi do AI soạn từ nội dung sách (sách gốc không kèm bản dịch và đáp án trong file này), hãy đối chiếu lại với sách/giáo viên.</em>
+          <Icon name="warning" size={16} className="footer-warn-icon" /> <em>Nghĩa tiếng Việt, đáp án câu hỏi, âm Hán Việt và mẹo nhớ do AI soạn (sách gốc không kèm bản dịch và đáp án trong file này). Từ có nhãn 索引 lấy từ bảng tra cuối sách; từ nhãn N3–N2 là phần bổ sung ngoài sách. Hãy đối chiếu lại với sách/giáo viên.</em>
         </p>
 
         <div className="footer-actions">
