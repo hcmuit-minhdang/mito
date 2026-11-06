@@ -1,0 +1,100 @@
+{
+  "id": 6,
+  "title": "この日{ひ}に食{た}べなきゃ、意味{いみ}がない！",
+  "titleVi": "Phải ăn vào ngày này, nếu không thì chẳng có ý nghĩa!",
+  "bookPages": "89-108",
+  "reading": {
+    "paragraphs": [
+      "日本{にほん}では1年中{ねんじゅう}うなぎのかば焼{や}きが買{か}える。しかし、「土用{どよう}のうしの日{ひ}」(7月{がつ}20日{はつか}前後{ぜんご})にはその売{う}り上{あ}げが年平均{ねんへいきん}の20数倍{すうばい}にも跳{は}ね上{あ}がるのだ。多{おお}くの人{ひと}にとって、土用{どよう}のうしの日{ひ}は「うなぎを食{た}べずにはいられない日{ひ}」ということだろう。",
+      "土用{どよう}のうしの日{ひ}にうなぎを食{た}べる習慣{しゅうかん}は江戸時代{えどじだい}の「夏{なつ}ばて防止{ぼうし}にはうなぎがよい」という宣伝{せんでん}コピーから生{う}まれたらしい。本当{ほんとう}だとしたら、200年以上{ねんいじょう}もその効果{こうか}が続{つづ}いていることになる。",
+      "短{みじか}い期間{きかん}に売{う}り上{あ}げが集中{しゅうちゅう}するものは、うなぎの他{ほか}に「バレンタインデーのチョコレート」「クリスマスのケーキ」などがあるが、最近{さいきん}定着{ていちゃく}しつつあるのが、「節分{せつぶん}の太巻{ふとま}きずし」だ。これは元{もと}関西{かんさい}にあった「恵方巻{えほうま}き」を食{た}べるという習慣{しゅうかん}だ。「節分{せつぶん}の日{ひ}に恵方{えほう}[縁起{えんぎ}のいい方向{ほうこう}]を向{む}いて、太巻{ふとま}きずしを一気{いっき}に食{た}べると、その年{とし}に幸運{こううん}が訪{おとず}れる」と言{い}われている。この関西{かんさい}の習慣{しゅうかん}を、大手{おおて}コンビニチェーンが関東{かんとう}に持{も}ち込{こ}んで、広{ひろ}めたのだ。",
+      "商業主義{しょうぎょうしゅぎ}から生{う}まれる新{あたら}しい食生活{しょくせいかつ}の習慣{しゅうかん}は、「土用{どよう}のうしの日{ひ}のうなぎ」のように、200年後{ねんご}も残{のこ}っているだろうか。"
+    ],
+    "translationVi": [
+      "Ở Nhật, quanh năm đều mua được lươn nướng kabayaki. Nhưng vào 「ngày Dõu (Doyo no ushi no hi)」 (khoảng ngày 20 tháng 7), doanh số của nó tăng vọt gấp hơn 20 lần mức trung bình năm. Với nhiều người, ngày Doyo no ushi có lẽ là \"ngày không thể không ăn lươn\".",
+      "Thói quen ăn lươn vào ngày Doyo no ushi dường như bắt nguồn từ một câu quảng cáo thời Edo: 「ăn lươn tốt để phòng chống mệt mỏi mùa hè」. Nếu điều đó là thật thì hiệu quả đó đã kéo dài hơn 200 năm.",
+      "Những món có doanh số tập trung trong thời gian ngắn, ngoài lươn còn có 「sô-cô-la ngày Valentine」, 「bánh Giáng sinh」, v.v., và gần đây đang dần phổ biến là 「sushi cuộn lớn ngày Setsubun」. Đây là thói quen ăn 「Ehomaki」 vốn có ở vùng Kansai. Người ta nói rằng 「vào ngày Setsubun, nếu quay mặt về hướng Ehō [hướng may mắn] và ăn một hơi hết cuộn sushi lớn, năm đó sẽ có may mắn đến」. Thói quen của vùng Kansai này đã được các chuỗi cửa hàng tiện lợi lớn mang vào vùng Kanto và quảng bá rộng rãi.",
+      "Liệu những thói quen ăn uống mới sinh ra từ chủ nghĩa thương mại có còn tồn tại sau 200 năm, như 「lươn ngày Doyo no ushi」 không?"
+    ]
+  },
+  "vocab": [
+    { "w": "跳ね上がる", "r": "はねあがる", "vi": "tăng vọt, nhảy lên" },
+    { "w": "集中する", "r": "しゅうちゅうする", "vi": "tập trung" },
+    { "w": "定着する", "r": "ていちゃくする", "vi": "định hình, bén rễ, phổ biến" },
+    { "w": "向く", "r": "むく", "vi": "quay về, hướng về" },
+    { "w": "訪れる", "r": "おとずれる", "vi": "đến, ghé đến" },
+    { "w": "持ち込む", "r": "もちこむ", "vi": "mang vào, đưa vào" },
+    { "w": "広める", "r": "ひろめる", "vi": "quảng bá, truyền bá" },
+    { "w": "1年中", "r": "いちねんじゅう", "vi": "quanh năm" },
+    { "w": "うなぎ", "r": "うなぎ", "vi": "lươn" },
+    { "w": "うなぎのかば焼き", "r": "うなぎのかばやき", "vi": "lươn nướng sốt kabayaki" },
+    { "w": "土用のうしの日", "r": "どようのうしのひ", "vi": "ngày Dõu mùa hè (ngày ăn lươn)" },
+    { "w": "売り上げ", "r": "うりあげ", "vi": "doanh thu, doanh số" },
+    { "w": "年平均", "r": "ねんへいきん", "vi": "trung bình năm" },
+    { "w": "数倍", "r": "すうばい", "vi": "gấp mấy lần" },
+    { "w": "江戸時代", "r": "えどじだい", "vi": "thời Edo" },
+    { "w": "夏ばて", "r": "なつばて", "vi": "mệt mỏi vì nóng mùa hè" },
+    { "w": "防止", "r": "ぼうし", "note": "夏ばて～", "vi": "phòng chống, ngăn ngừa" },
+    { "w": "宣伝コピー", "r": "せんでんこぴー", "vi": "câu quảng cáo" },
+    { "w": "効果", "r": "こうか", "vi": "hiệu quả" },
+    { "w": "期間", "r": "きかん", "vi": "thời gian, kỳ hạn" },
+    { "w": "節分", "r": "せつぶん", "vi": "Setsubun (ngày chuyển mùa, 3/2)" },
+    { "w": "太巻きずし", "r": "ふとまきずし", "vi": "sushi cuộn lớn" },
+    { "w": "元", "r": "もと", "vi": "ban đầu, vốn là" },
+    { "w": "関西", "r": "かんさい", "vi": "vùng Kansai" },
+    { "w": "恵方巻き", "r": "えほうまき", "vi": "ehomaki (sushi cuộn hướng may mắn)" },
+    { "w": "恵方", "r": "えほう", "vi": "hướng may mắn của năm" },
+    { "w": "方向", "r": "ほうこう", "vi": "phương hướng" },
+    { "w": "幸運", "r": "こううん", "note": "～が訪れる", "vi": "vận may" },
+    { "w": "大手", "r": "おおて", "vi": "công ty lớn" },
+    { "w": "コンビニチェーン", "r": "こんびにちぇーん", "vi": "chuỗi cửa hàng tiện lợi" },
+    { "w": "関東", "r": "かんとう", "vi": "vùng Kanto" },
+    { "w": "商業", "r": "しょうぎょう", "vi": "thương mại" },
+    { "w": "主義", "r": "しゅぎ", "note": "商業～", "vi": "chủ nghĩa" },
+    { "w": "食生活", "r": "しょくせいかつ", "vi": "thói quen ăn uống" },
+    { "w": "縁起のいい", "r": "えんぎのいい", "vi": "may mắn, điềm lành" },
+    { "w": "一気に", "r": "いっきに", "vi": "một hơi, một mạch" }
+  ],
+  "questions": [
+    {
+      "type": "tf",
+      "prompt": "内容が正しいものに○、正しくないものに×を書きなさい。",
+      "items": [
+        { "text": "日本ではうなぎは夏しか買えない。", "answer": false },
+        { "text": "多くの日本人は、土用のうしの日にはうなぎを食べずにいられない。", "answer": true },
+        { "text": "うなぎを食べる習慣は100年前からだ。", "answer": false },
+        { "text": "「節分の太巻きずし」は関東から関西に広まった。", "answer": false },
+        { "text": "日本には特別な日に特別なものを食べる習慣がある。", "answer": true }
+      ]
+    },
+    {
+      "type": "fill",
+      "prompt": "から言葉を選び、段落の内容を完成しなさい。",
+      "wordBank": ["理由", "効果", "うなぎ", "食生活", "食べ物"],
+      "items": [
+        { "text": "第1段落：「土用のうしの日」は（　）を食べずにはいられない日。", "answer": "うなぎ" },
+        { "text": "第2段落：「土用のうしの日」にうなぎを食べるようになった（　）。", "answer": "理由" },
+        { "text": "第3段落：短い期間に売り上げが集中する（　）。", "answer": "食べ物" },
+        { "text": "第4段落：新しい（　）の習慣のこれから。", "answer": "食生活" }
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "11行目の「その効果」の「その」は何ですか。",
+      "options": ["夏ばて防止", "宣伝コピー", "江戸時代"],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "prompt": "14行目の「これ」は何ですか。",
+      "options": ["バレンタインデーのチョコレート", "クリスマスのケーキ", "節分の太巻きずし"],
+      "answer": 2
+    },
+    {
+      "type": "choice",
+      "prompt": "16行目の「その年」はいつですか。",
+      "options": ["太巻きずしを食べた次の年", "太巻きずしを食べた年", "毎年"],
+      "answer": 1
+    }
+  ]
+}
