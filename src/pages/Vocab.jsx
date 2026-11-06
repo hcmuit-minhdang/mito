@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import Icon from '../components/Icon';
 import { allVocab, getVocabByLesson } from '../lib/data';
 import { useProgress } from '../lib/progress';
@@ -14,8 +15,15 @@ export default function Vocab() {
 
   // Filters
   const [selectedLessons, setSelectedLessons] = useState([1, 2, 3, 4, 5, 6, 7, 8]);
-  const [source, setSource] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
+  const [params] = useSearchParams();
+  const [source, setSource] = useState(params.get('src') || 'all');
+  const [searchQuery, setSearchQuery] = useState(params.get('q') || '');
+
+  // Đồng bộ khi đi vào từ ô tìm kiếm trên header hoặc liên kết gợi ý
+  useEffect(() => {
+    setSearchQuery(params.get('q') || '');
+    setSource(params.get('src') || 'all');
+  }, [params]);
   const [onlyUnknown, setOnlyUnknown] = useState(false);
 
   // Active Tab

@@ -1,5 +1,5 @@
-import React from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { NavLink, Link, useNavigate } from 'react-router-dom';
 import { useProgress } from '../lib/progress';
 import Icon from './Icon';
 
@@ -12,12 +12,20 @@ const NAV = [
 
 export default function Header() {
   const { settings, toggleTheme } = useProgress();
+  const navigate = useNavigate();
+  const [q, setQ] = useState('');
 
   const isDark =
     settings.theme === 'dark' ||
     (settings.theme === 'system' &&
       typeof window !== 'undefined' &&
       window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+  function handleSearch(e) {
+    e.preventDefault();
+    const term = q.trim();
+    navigate(term ? `/vocab?q=${encodeURIComponent(term)}` : '/vocab');
+  }
 
   return (
     <>
@@ -31,6 +39,17 @@ export default function Header() {
               <span className="brand-subtitle">Tiếng Nhật trung cấp</span>
             </span>
           </Link>
+
+          <form className="header-search" role="search" onSubmit={handleSearch}>
+            <Icon name="search" size={18} />
+            <input
+              type="search"
+              value={q}
+              onChange={(e) => setQ(e.target.value)}
+              placeholder="Tìm từ vựng, hiragana, nghĩa..."
+              aria-label="Tìm từ vựng"
+            />
+          </form>
 
           <nav className="site-nav desktop-nav" aria-label="Menu chính">
             {NAV.map((item) => (
@@ -59,7 +78,6 @@ export default function Header() {
         </div>
       </header>
 
-      {/* Điều hướng dưới cùng cho điện thoại: 4 mục, có icon + nhãn */}
       <nav className="bottom-nav" aria-label="Menu trên điện thoại">
         {NAV.map((item) => (
           <NavLink

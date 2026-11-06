@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import Icon from '../components/Icon';
 import { allKanji, getKanjiByLesson } from '../lib/data';
 import { useProgress } from '../lib/progress';
@@ -15,7 +16,11 @@ export default function Kanji() {
 
   // Filters
   const [selectedLessons, setSelectedLessons] = useState([1, 2, 3, 4, 5, 6, 7, 8]);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [params] = useSearchParams();
+  const [searchQuery, setSearchQuery] = useState(params.get('q') || '');
+  useEffect(() => {
+    setSearchQuery(params.get('q') || '');
+  }, [params]);
   const [onlyUnknown, setOnlyUnknown] = useState(false);
 
   // Active Tab
