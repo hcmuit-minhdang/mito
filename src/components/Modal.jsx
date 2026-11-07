@@ -1,11 +1,31 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 export default function Modal({ isOpen, onClose, title, children, className = '' }) {
   const modalRef = useRef(null);
   const prevFocusedRef = useRef(null);
+  const [closing, setClosing] = useState(false);
+
+  function handleClose() {
+    if (closing) return;
+    const prefersReducedMotion =
+      typeof window !== 'undefined' &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) {
+      onClose();
+      return;
+    }
+    setClosing(true);
+    setTimeout(() => {
+      setClosing(false);
+      onClose();
+    }, 200);
+  }
 
   useEffect(() => {
-    if (!isOpen) return;
+    if (!isOpen) {
+      setClosing(false);
+      return;
+    }
 
     // Remember currently focused element to restore upon close
     prevFocusedRef.current = document.activeElement;
@@ -26,7 +46,7 @@ export default function Modal({ isOpen, onClose, title, children, className = ''
     function handleKeyDown(e) {
       if (e.key === 'Escape') {
         e.preventDefault();
-        onClose();
+        handleClose();
         return;
       }
 
@@ -69,14 +89,18 @@ export default function Modal({ isOpen, onClose, title, children, className = ''
         prevFocusedRef.current.focus();
       }
     };
-  }, [isOpen, onClose]);
+  }, [isOpen]);
 
-  if (!isOpen) return null;
+  if (!isOpen && !closing) return null;
 
   return (
-    <div className="modal-backdrop" onClick={onClose} role="presentation">
+    <div
+      className={`modal-backdrop ${closing ? 'is-closing' : ''}`}
+      onClick={handleClose}
+      role="presentation"
+    >
       <div
-        className={`modal-box ${className}`.trim()}
+        className={`modal-box ${closing ? 'is-closing' : ''} ${className}`.trim()}
         ref={modalRef}
         onClick={(e) => e.stopPropagation()}
         role="dialog"
@@ -87,7 +111,7 @@ export default function Modal({ isOpen, onClose, title, children, className = ''
         <button
           type="button"
           className="modal-close-btn"
-          onClick={onClose}
+          onClick={handleClose}
           aria-label="Đóng cửa sổ"
           title="Đóng (Esc)"
         >

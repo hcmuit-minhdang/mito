@@ -20,6 +20,23 @@ function ScrollToTop() {
   return null;
 }
 
+function AnimatedRoutes() {
+  const location = useLocation();
+
+  return (
+    <div key={location.pathname} className="route-enter">
+      <Routes location={location}>
+        <Route path="/" element={<Home />} />
+        <Route path="/vocab" element={<Vocab />} />
+        <Route path="/kanji" element={<Kanji />} />
+        <Route path="/reading" element={<ReadingList />} />
+        <Route path="/reading/:id" element={<Reading />} />
+        <Route path="*" element={<Home />} />
+      </Routes>
+    </div>
+  );
+}
+
 export default function App() {
   return (
     <ProgressProvider>
@@ -28,14 +45,7 @@ export default function App() {
         <div className="app-layout">
           <Header />
           <main className="main-content" id="main-content">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/vocab" element={<Vocab />} />
-              <Route path="/kanji" element={<Kanji />} />
-              <Route path="/reading" element={<ReadingList />} />
-              <Route path="/reading/:id" element={<Reading />} />
-              <Route path="*" element={<Home />} />
-            </Routes>
+            <AnimatedRoutes />
           </main>
           <Footer />
         </div>
