@@ -5,9 +5,11 @@ import { lessons, getLessonTotalQuestions } from '../lib/data';
 import { useProgress } from '../lib/progress';
 import Ruby from '../components/Ruby';
 import ProgressBar from '../components/ProgressBar';
+import { useReveal } from '../lib/useReveal';
 
 export default function ReadingList() {
   const { getReadingScore } = useProgress();
+  useReveal([]);
 
   return (
     <div className="reading-list-page container page-content">
@@ -21,14 +23,14 @@ export default function ReadingList() {
       </div>
 
       <div className="reading-grid">
-        {lessons.map((lesson) => {
+        {lessons.map((lesson, idx) => {
           const totalQ = getLessonTotalQuestions(lesson.id);
           const savedScore = getReadingScore(lesson.id);
           const paragraphsCount = lesson.reading?.paragraphs?.length || 0;
           const vocabCount = lesson.vocab?.length || 0;
 
           return (
-            <div key={lesson.id} className="reading-card">
+            <div key={lesson.id} className="reading-card reveal" style={{ '--i': idx }}>
               <div className="reading-card-header">
                 <span className="lesson-badge">Bài {lesson.id}</span>
                 <span className="pages-tag">Trang {lesson.bookPages}</span>

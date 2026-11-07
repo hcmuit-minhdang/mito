@@ -398,6 +398,7 @@ export default function Kanji() {
                     key={item.id}
                     type="button"
                     className={`kanji-tile-card ${isKnown ? 'is-known' : ''}`}
+                    style={{ '--i': idx }}
                     onClick={() => setModalKanjiIndex(idx)}
                     title={`Chữ ${item.k} (Bài ${item.lesson}) - Bấm xem chi tiết`}
                   >

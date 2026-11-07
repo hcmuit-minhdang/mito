@@ -2,8 +2,10 @@ import React, { useMemo, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { lessons, allKanji, allVocab, kanjiLessons } from '../lib/data';
 import { useProgress } from '../lib/progress';
+import { useReveal } from '../lib/useReveal';
 import Ruby from '../components/Ruby';
 import Icon from '../components/Icon';
+import CountUp from '../components/CountUp';
 import heroImg from '../assets/hero-maple.jpg';
 import toriiImg from '../assets/torii.svg';
 import sakuraA from '../assets/sakura-a.svg';
@@ -11,11 +13,14 @@ import sakuraB from '../assets/sakura-b.svg';
 import sakuraC from '../assets/sakura-c.svg';
 
 const PETALS = [
-  { src: sakuraA, left: '62%', top: '14%', rot: 0, delay: '0s' },
-  { src: sakuraB, left: '72%', top: '30%', rot: -40, delay: '1.2s' },
-  { src: sakuraC, left: '81%', top: '52%', rot: -80, delay: '2.4s' },
-  { src: sakuraA, left: '90%', top: '70%', rot: -120, delay: '0.6s' },
-  { src: sakuraB, left: '55%', top: '78%', rot: 40, delay: '1.8s' },
+  { src: sakuraA, left: '10%', size: 18, delay: '0s', duration: '11s', sway: '30px', rotStart: 0, rotEnd: 240 },
+  { src: sakuraB, left: '24%', size: 14, delay: '3.2s', duration: '14s', sway: '-25px', rotStart: -40, rotEnd: 200 },
+  { src: sakuraC, left: '38%', size: 22, delay: '1.5s', duration: '10s', sway: '40px', rotStart: 25, rotEnd: 290 },
+  { src: sakuraA, left: '52%', size: 16, delay: '5.8s', duration: '13s', sway: '-30px', rotStart: -70, rotEnd: 190 },
+  { src: sakuraB, left: '68%', size: 20, delay: '0.8s', duration: '12s', sway: '35px', rotStart: 15, rotEnd: 275 },
+  { src: sakuraC, left: '79%', size: 15, delay: '4.2s', duration: '15s', sway: '-28px', rotStart: -30, rotEnd: 220 },
+  { src: sakuraA, left: '88%', size: 21, delay: '2.1s', duration: '11.5s', sway: '32px', rotStart: 45, rotEnd: 310 },
+  { src: sakuraB, left: '96%', size: 17, delay: '6.5s', duration: '13.5s', sway: '-35px', rotStart: -50, rotEnd: 210 },
 ];
 
 function Meter({ label, value, text, tone }) {
@@ -51,6 +56,8 @@ export default function Home() {
   const { stats, recent } = useProgress();
   const [filter, setFilter] = useState('all');
   const pct = (a, b) => (b ? Math.round((a / b) * 100) : 0);
+
+  useReveal([filter]);
 
   const lessonRows = useMemo(
     () =>
@@ -97,7 +104,11 @@ export default function Home() {
       desc: 'Danh sách, thẻ ghi nhớ, trắc nghiệm và gõ cách đọc cho cả từ trong bài lẫn từ N3–N2.',
       tags: [`${allVocab.length} từ`, 'Flashcard', 'Trắc nghiệm'],
       value: pct(stats.knownVocabCount, stats.totalVocabCount),
-      text: `${stats.knownVocabCount}/${stats.totalVocabCount} từ đã thuộc`,
+      text: (
+        <>
+          <CountUp to={stats.knownVocabCount} duration={900} />/{stats.totalVocabCount} từ đã thuộc
+        </>
+      ),
     },
     {
       to: '/kanji',
@@ -105,7 +116,11 @@ export default function Home() {
       desc: '193 chữ với âm Hán Việt, âm On・Kun, mẹo nhớ và từ ví dụ.',
       tags: ['Hán Việt', 'Mẹo nhớ', 'On・Kun'],
       value: pct(stats.knownKanjiCount, stats.totalKanjiCount),
-      text: `${stats.knownKanjiCount}/${stats.totalKanjiCount} chữ đã thuộc`,
+      text: (
+        <>
+          <CountUp to={stats.knownKanjiCount} duration={900} />/{stats.totalKanjiCount} chữ đã thuộc
+        </>
+      ),
     },
     {
       to: '/reading',
@@ -113,7 +128,11 @@ export default function Home() {
       desc: 'Bài đọc có furigana bật/tắt, bản dịch, tra từ tức thì, đọc to và 6 dạng câu hỏi.',
       tags: ['Furigana', 'Bản dịch', 'Đọc to'],
       value: pct(readingDone, lessons.length),
-      text: `${readingDone}/${lessons.length} bài đã làm`,
+      text: (
+        <>
+          <CountUp to={readingDone} duration={900} />/{lessons.length} bài đã làm
+        </>
+      ),
     },
   ];
 
@@ -121,32 +140,44 @@ export default function Home() {
     <div className="home-page">
       {/* ---------- Hero ---------- */}
       <section className="hero" aria-labelledby="hero-title">
-        <img className="hero-img" src={heroImg} alt="" width="1920" height="1280" fetchpriority="high" decoding="async" />
+        <div className="hero-img-wrap" aria-hidden="true">
+          <img className="hero-img" src={heroImg} alt="" width="1920" height="1280" fetchpriority="high" decoding="async" />
+        </div>
         <div className="hero-overlay" aria-hidden="true" />
         <div className="hero-petals" aria-hidden="true">
           {PETALS.map((p, i) => (
-            <img
+            <span
               key={i}
-              className="petal"
-              src={p.src}
-              alt=""
-              style={{ left: p.left, top: p.top, '--rot': `${p.rot}deg`, animationDelay: p.delay }}
-            />
+              className="petal m-petal"
+              aria-hidden="true"
+              style={{
+                left: p.left,
+                width: `${p.size}px`,
+                height: `${p.size}px`,
+                animationDuration: p.duration,
+                animationDelay: p.delay,
+                '--sway': p.sway,
+                '--rot-start': `${p.rotStart}deg`,
+                '--rot-end': `${p.rotEnd}deg`,
+              }}
+            >
+              <img src={p.src} alt="" />
+            </span>
           ))}
         </div>
 
         <div className="container hero-inner">
           <span className="hero-accent" aria-hidden="true" />
-          <p className="hero-eyebrow">
+          <p className="hero-eyebrow m-hero-enter" style={{ animationDelay: '0ms' }}>
             <span lang="ja">中級前期</span> · Tiếng Nhật trung cấp
           </p>
-          <h1 id="hero-title" className="hero-title">
+          <h1 id="hero-title" className="hero-title m-hero-enter" style={{ animationDelay: '90ms' }}>
             Chinh phục tiếng Nhật trung cấp, <span lang="ja">中級を学ぼう</span>
           </h1>
-          <p className="hero-lead">
+          <p className="hero-lead m-hero-enter" style={{ animationDelay: '180ms' }}>
             Từ vựng, chữ Hán và đọc hiểu theo từng bài của giáo trình — mỗi ngày một ít, tiến độ được lưu ngay trên máy bạn.
           </p>
-          <div className="hero-actions">
+          <div className="hero-actions m-hero-enter" style={{ animationDelay: '270ms' }}>
             {recent ? (
               <button type="button" className="btn btn-primary btn-large" onClick={handleResumeRecent}>
                 Học tiếp: {recent.title || 'bài gần nhất'} →
@@ -171,7 +202,12 @@ export default function Home() {
             </div>
             <div className="featured-grid">
               {skills.map((s, i) => (
-                <Link key={s.to} to={s.to} className="featured-card">
+                <Link
+                  key={s.to}
+                  to={s.to}
+                  className="featured-card reveal"
+                  style={{ '--i': i }}
+                >
                   <div className="featured-band">
                     <span className="featured-badge">★ Kỹ năng</span>
                     <span className="featured-num" aria-hidden="true">0{i + 1}</span>
@@ -200,7 +236,7 @@ export default function Home() {
 
               <div className="side-panel">
                 <div className="side-panel-head">
-                  <img src={toriiImg} alt="" width="38" height="32" />
+                  <img src={toriiImg} alt="" width="38" height="32" className="torii-float" />
                   <span>Dành riêng cho bạn</span>
                 </div>
                 <div className="side-panel-body">
@@ -270,8 +306,12 @@ export default function Home() {
               </div>
 
               <ol className="post-list">
-                {visibleRows.map(({ lesson, st }) => (
-                  <li key={lesson.id} className="post-card">
+                {visibleRows.map(({ lesson, st }, i) => (
+                  <li
+                    key={lesson.id}
+                    className="post-card reveal"
+                    style={{ '--i': i }}
+                  >
                     <div className="post-head">
                       <span className="post-avatar" aria-hidden="true">{lesson.id}</span>
                       <div className="post-info">
@@ -280,12 +320,22 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="toc-meters">
-                      <Meter label="Từ vựng" value={st.vocabPercent} text={`${st.vocabKnown}/${st.vocabTotal}`} tone="ink" />
-                      <Meter label="Kanji" value={st.kanjiPercent} text={`${st.kanjiKnown}/${st.kanjiTotal}`} tone="seal" />
+                      <Meter
+                        label="Từ vựng"
+                        value={st.vocabPercent}
+                        text={<><CountUp to={st.vocabKnown} duration={900} />/{st.vocabTotal}</>}
+                        tone="ink"
+                      />
+                      <Meter
+                        label="Kanji"
+                        value={st.kanjiPercent}
+                        text={<><CountUp to={st.kanjiKnown} duration={900} />/{st.kanjiTotal}</>}
+                        tone="seal"
+                      />
                       <Meter
                         label="Đọc hiểu"
                         value={st.readingPercent || 0}
-                        text={st.readingScore != null ? `${st.readingScore}/${st.readingTotal}` : '—'}
+                        text={st.readingScore != null ? <><CountUp to={st.readingScore} duration={900} />/{st.readingTotal}</> : '—'}
                         tone="moss"
                       />
                     </div>

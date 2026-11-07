@@ -1,0 +1,227 @@
+/* Motion styles for Home view */
+
+/* 1. Hero Ken Burns */
+.hero-img-wrap {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero-img-wrap .hero-img,
+.hero-img {
+  animation: m-kenburns 18s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes m-kenburns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+/* 1. Hero Text Entrance */
+@keyframes m-hero-enter {
+  from {
+    opacity: 0;
+    transform: translateY(var(--motion-dist));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.m-hero-enter,
+.hero-title,
+.hero-lead,
+.hero-actions {
+  animation: m-hero-enter var(--motion-dur-enter) var(--motion-ease) both;
+}
+
+.hero-eyebrow.m-hero-enter,
+.hero-eyebrow {
+  animation: m-hero-enter var(--motion-dur-enter) var(--motion-ease) both;
+  animation-delay: 0ms;
+}
+
+.hero-title.m-hero-enter,
+.hero-title {
+  animation-delay: 90ms;
+}
+
+.hero-lead.m-hero-enter,
+.hero-lead {
+  animation-delay: 180ms;
+}
+
+.hero-actions.m-hero-enter,
+.hero-actions {
+  animation-delay: 270ms;
+}
+
+/* 2. Sakura Petals Falling */
+@keyframes m-petal-fall {
+  0% {
+    transform: translate3d(0, -60px, 0) rotate(var(--rot-start, 0deg));
+  }
+  25% {
+    transform: translate3d(var(--sway, 25px), 160px, 0) rotate(calc(var(--rot-start, 0deg) + 70deg));
+  }
+  50% {
+    transform: translate3d(calc(var(--sway, 25px) * -0.6), 330px, 0) rotate(calc(var(--rot-start, 0deg) + 140deg));
+  }
+  75% {
+    transform: translate3d(var(--sway, 25px), 500px, 0) rotate(calc(var(--rot-start, 0deg) + 210deg));
+  }
+  100% {
+    transform: translate3d(calc(var(--sway, 25px) * -0.3), 680px, 0) rotate(var(--rot-end, 280deg));
+  }
+}
+
+.hero-petals {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.petal.m-petal {
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+  opacity: 0.65;
+  animation-name: m-petal-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+.petal.m-petal img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* 3. Torii Float */
+@keyframes m-torii-float {
+  from {
+    transform: translateY(-6px);
+  }
+  to {
+    transform: translateY(6px);
+  }
+}
+
+.side-panel-head img,
+.torii-float {
+  animation: m-torii-float 5s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+/* 5. Meter Progress Grow */
+@keyframes m-grow {
+  from {
+    width: 0;
+  }
+}
+
+.meter-fill {
+  animation: m-grow 900ms var(--motion-ease) both;
+  transition: width 900ms var(--motion-ease);
+}
+
+/* 6. Card Hover & Image Zoom */
+.featured-card,
+.post-card {
+  transition: transform var(--motion-dur-hover) var(--motion-ease),
+              box-shadow var(--motion-dur-hover) var(--motion-ease),
+              border-color var(--motion-dur-hover) var(--motion-ease);
+}
+
+.featured-card:hover,
+.post-card:hover,
+.reveal.is-visible.featured-card:hover,
+.reveal.is-visible.post-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(140, 28, 28, 0.08);
+  transition-duration: var(--motion-dur-hover);
+  transition-delay: 0s;
+}
+
+.featured-card:active,
+.post-card:active {
+  transform: translateY(-2px) scale(1.005);
+}
+
+.featured-card img,
+.post-card img {
+  transition: transform var(--motion-dur-hover) var(--motion-ease);
+}
+
+.featured-card:hover img,
+.post-card:hover img {
+  transform: scale(1.06);
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  .hero-img-wrap .hero-img,
+  .hero-img {
+    animation: none !important;
+    transform: none !important;
+  }
+
+  .m-hero-enter,
+  .hero-eyebrow,
+  .hero-title,
+  .hero-lead,
+  .hero-actions {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .hero-petals,
+  .petal,
+  .m-petal {
+    animation: none !important;
+    display: none !important;
+  }
+
+  .side-panel-head img,
+  .torii-float {
+    animation: none !important;
+    transform: none !important;
+  }
+
+  .meter-fill {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .featured-card,
+  .post-card,
+  .featured-card:hover,
+  .post-card:hover,
+  .reveal.is-visible.featured-card:hover,
+  .reveal.is-visible.post-card:hover {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    box-shadow: var(--shadow-lg) !important;
+  }
+
+  .featured-card img,
+  .post-card img,
+  .featured-card:hover img,
+  .post-card:hover img {
+    transition: none !important;
+    transform: none !important;
+  }
+}

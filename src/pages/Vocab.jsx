@@ -9,6 +9,7 @@ import SpeakButton from '../components/SpeakButton';
 import LessonFilter from '../components/LessonFilter';
 import Tabs from '../components/Tabs';
 import ProgressBar from '../components/ProgressBar';
+import { useReveal } from '../lib/useReveal';
 
 export default function Vocab() {
   const { isVocabKnown, toggleVocabKnown, setVocabKnown, setRecent } = useProgress();
@@ -93,6 +94,8 @@ export default function Vocab() {
 
     return list;
   }, [selectedLessons, source, searchQuery, onlyUnknown, isVocabKnown]);
+
+  useReveal([filteredVocab.length, activeTab]);
 
   // Synchronize flashcards when filtered vocab changes
   useEffect(() => {
@@ -410,7 +413,7 @@ export default function Vocab() {
             </div>
           ) : (
             <div className="vocab-cards-grid">
-              {filteredVocab.map((v) => {
+              {filteredVocab.map((v, idx) => {
                 const isKnown = isVocabKnown(v.id);
                 const isReadingRevealed = !hideReading || revealedItems[`${v.id}_r`];
                 const isMeaningRevealed = !hideMeaning || revealedItems[`${v.id}_vi`];
@@ -418,7 +421,8 @@ export default function Vocab() {
                 return (
                   <div
                     key={v.id}
-                    className={`vocab-item-card ${isKnown ? 'is-known' : ''}`}
+                    className={`vocab-item-card reveal ${isKnown ? 'is-known' : ''}`}
+                    style={{ '--i': idx }}
                   >
                     <div className="card-top-row">
                       <span className="lesson-mini-badge">Bài {v.lessonId}</span>

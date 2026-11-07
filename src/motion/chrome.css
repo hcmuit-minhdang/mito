@@ -1,0 +1,203 @@
+/* Chrome Motion: Page transition, Header, Brand, Theme toggle, Modal */
+
+/* (a) Page transition */
+@keyframes m-routeEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(var(--motion-dist));
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
+.route-enter {
+  animation: m-routeEnter 450ms var(--motion-ease) both;
+}
+
+/* (b) Header intro & Nav links */
+@keyframes m-headerSlideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.site-header {
+  animation: m-headerSlideDown 500ms var(--motion-ease) both;
+}
+
+@keyframes m-navLinkIntro {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.nav-link {
+  animation: m-navLinkIntro 450ms var(--motion-ease) both;
+}
+
+.nav-link:nth-child(1) { animation-delay: 60ms; }
+.nav-link:nth-child(2) { animation-delay: 120ms; }
+.nav-link:nth-child(3) { animation-delay: 180ms; }
+.nav-link:nth-child(4) { animation-delay: 240ms; }
+.nav-link:nth-child(5) { animation-delay: 300ms; }
+.nav-link:nth-child(6) { animation-delay: 360ms; }
+.nav-link:nth-child(7) { animation-delay: 420ms; }
+.nav-link:nth-child(8) { animation-delay: 480ms; }
+.nav-link:nth-child(9) { animation-delay: 540ms; }
+.nav-link:nth-child(10) { animation-delay: 600ms; }
+
+/* (c) Brand seal & Theme toggle */
+@keyframes m-sealPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+}
+
+.brand-seal {
+  animation: m-sealPulse 3.2s ease-in-out infinite;
+  transition: transform 500ms var(--motion-ease);
+}
+
+.brand-seal:hover,
+.site-brand:hover .brand-seal {
+  animation: none;
+  transform: rotate(360deg);
+}
+
+.theme-toggle-btn {
+  transition: color var(--transition-fast), background-color var(--transition-fast), transform var(--motion-dur-hover) var(--motion-ease);
+}
+
+.theme-toggle-btn:hover {
+  transform: rotate(20deg);
+}
+
+.theme-toggle-btn:active {
+  transform: rotate(180deg);
+}
+
+/* (d) Modal */
+@keyframes m-modalBackdropIn {
+  0% {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+  }
+  100% {
+    opacity: 1;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+}
+
+@keyframes m-modalBackdropOut {
+  0% {
+    opacity: 1;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+  100% {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+  }
+}
+
+@keyframes m-modalBoxOpen {
+  0% {
+    opacity: 0;
+    transform: scale(0.86);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes m-modalBoxClose {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.86);
+  }
+}
+
+.modal-backdrop {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  animation: m-modalBackdropIn 380ms var(--motion-ease) forwards;
+}
+
+.modal-backdrop.is-closing {
+  animation: m-modalBackdropOut 200ms ease-out forwards;
+}
+
+.modal-box {
+  animation: m-modalBoxOpen 380ms var(--motion-ease) forwards;
+}
+
+.modal-box.is-closing {
+  animation: m-modalBoxClose 200ms ease-out forwards;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .route-enter,
+  .site-header,
+  .nav-link,
+  .brand-seal,
+  .brand-seal:hover,
+  .site-brand:hover .brand-seal,
+  .theme-toggle-btn,
+  .theme-toggle-btn:hover,
+  .theme-toggle-btn:active,
+  .modal-backdrop,
+  .modal-backdrop.is-closing,
+  .modal-box,
+  .modal-box.is-closing {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .route-enter,
+  .site-header,
+  .nav-link,
+  .brand-seal,
+  .theme-toggle-btn,
+  .modal-box {
+    transform: none !important;
+  }
+
+  .route-enter,
+  .nav-link,
+  .modal-backdrop,
+  .modal-box {
+    opacity: 1 !important;
+  }
+
+  .route-enter {
+    filter: none !important;
+  }
+}

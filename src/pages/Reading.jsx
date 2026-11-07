@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, useRef } from 'react';
+import React, { useState, useEffect, useLayoutEffect, useMemo, useRef } from 'react';
 import Icon from '../components/Icon';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { getLesson, lessons } from '../lib/data';
@@ -7,6 +7,7 @@ import { speakParagraphs, stopSpeaking, isSpeechSupported } from '../lib/speech'
 import Ruby from '../components/Ruby';
 import SpeakButton from '../components/SpeakButton';
 import Questions from './reading/Questions';
+import { useReveal } from '../lib/useReveal';
 
 function makeVocabRegex(cleanW) {
   const chars = Array.from(cleanW);
@@ -116,6 +117,16 @@ export default function Reading() {
       });
     }
   }, [lesson, setRecent]);
+
+  useLayoutEffect(() => {
+    const qCards = document.querySelectorAll('.question-card');
+    qCards.forEach((card, idx) => {
+      card.classList.add('reveal');
+      card.style.setProperty('--i', Math.min(idx, 4));
+    });
+  }, [lessonId]);
+
+  useReveal([lessonId, showTranslation, showVocabAccordion]);
 
   // If invalid lesson id, redirect to list
   if (!lesson) {
@@ -296,7 +307,8 @@ export default function Reading() {
               <React.Fragment key={pIdx}>
                 <div
                   id={`paragraph-${pIdx}`}
-                  className={`reading-paragraph-wrap ${isPlayingThis ? 'paragraph-speaking' : ''}`}
+                  className={`reading-paragraph-wrap reveal ${isPlayingThis ? 'paragraph-speaking' : ''}`}
+                  style={{ '--i': Math.min(pIdx, 4) }}
                 >
                   <div className="paragraph-badge">第{pIdx + 1}段落</div>
                   <p className="paragraph-text-ja">
@@ -358,7 +370,7 @@ export default function Reading() {
 
                   {/* Vietnamese translation */}
                   {showTranslation && translation && (
-                    <div className="paragraph-translation-vi">
+                    <div className="paragraph-translation-vi reveal" style={{ '--i': Math.min(pIdx, 4) }}>
                       <span className="trans-label" aria-label="Bản dịch tiếng Việt">VI</span> {translation}
                     </div>
                   )}
@@ -399,7 +411,7 @@ export default function Reading() {
         </article>
 
         {/* Vocab of Lesson Accordion */}
-        <section className="lesson-vocab-accordion">
+        <section className="lesson-vocab-accordion reveal" style={{ '--i': 1 }}>
           <button
             type="button"
             className="accordion-toggle-btn"

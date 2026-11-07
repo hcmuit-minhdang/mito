@@ -1,0 +1,233 @@
+/* ==========================================================================
+   Motion Styles: Lists & Content Pages (Job C)
+   Kanji Grid, Vocab, Reading List, Reading Detail Page
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Kanji Grid (.kanji-tile-card)
+   - Entrance pop: scale(0.7) -> 1 with small overshoot cubic-bezier(.34, 1.56, .64, 1)
+   - Delay: min(calc(var(--i, 0) * 18ms), 700ms)
+   - Hover: scale(1.12) rotate(-2deg) + shadow
+   - Active: scale(0.96)
+   -------------------------------------------------------------------------- */
+@keyframes m-kanjiPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.kanji-tile-card {
+  position: relative;
+  animation: m-kanjiPop 380ms cubic-bezier(.34, 1.56, .64, 1) both;
+  animation-delay: min(calc(var(--i, 0) * 18ms), 700ms) !important;
+  transition: transform var(--motion-dur-hover) var(--motion-ease),
+              box-shadow var(--motion-dur-hover) var(--motion-ease),
+              border-color var(--motion-dur-hover) var(--motion-ease),
+              background-color var(--motion-dur-hover) var(--motion-ease);
+  will-change: transform;
+}
+
+.kanji-tile-card:hover {
+  transform: scale(1.12) rotate(-2deg);
+  box-shadow: 0 10px 24px rgba(140, 28, 28, 0.22), var(--shadow-md);
+  border-color: var(--primary, #8C1C1C);
+  z-index: 2;
+}
+
+.kanji-tile-card:active {
+  transform: scale(0.96);
+  transition-duration: 90ms;
+}
+
+/* --------------------------------------------------------------------------
+   2. Reading List Cards (.reading-card)
+   - Entrance: .reveal with --i stagger
+   - Hover: translateY(-6px) + shadow
+   - Arrow/chevron inside nudges right 4px
+   -------------------------------------------------------------------------- */
+.reading-card {
+  animation: none !important; /* Disables older cardItemFadeIn from index.css */
+  transition: transform var(--motion-dur-hover) var(--motion-ease),
+              box-shadow var(--motion-dur-hover) var(--motion-ease),
+              border-color var(--motion-dur-hover) var(--motion-ease);
+  will-change: transform;
+}
+
+.reading-card.is-visible {
+  transition: transform var(--motion-dur-hover) var(--motion-ease),
+              box-shadow var(--motion-dur-hover) var(--motion-ease),
+              border-color var(--motion-dur-hover) var(--motion-ease);
+  transition-delay: 0s;
+}
+
+.reading-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(140, 28, 28, 0.16), var(--shadow-lg);
+  border-color: var(--primary, #8C1C1C);
+}
+
+.reading-card .btn .icon,
+.reading-card .btn svg,
+.reading-card .reading-card-footer svg {
+  transition: transform var(--motion-dur-hover) var(--motion-ease);
+  will-change: transform;
+}
+
+.reading-card:hover .btn .icon,
+.reading-card:hover .btn svg,
+.reading-card:hover .reading-card-footer svg {
+  transform: translateX(4px);
+}
+
+/* --------------------------------------------------------------------------
+   3. Vocab Page
+   - Toolbar / filters block fades in
+   - Cards get .reveal + --i stagger
+   - Hover background slide-in highlight
+   -------------------------------------------------------------------------- */
+@keyframes m-vocabToolbarFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.vocab-filter-panel {
+  animation: m-vocabToolbarFade var(--motion-dur-enter) var(--motion-ease) both;
+}
+
+.vocab-item-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--motion-dur-hover) var(--motion-ease),
+              box-shadow var(--motion-dur-hover) var(--motion-ease),
+              border-color var(--motion-dur-hover) var(--motion-ease);
+  will-change: transform;
+}
+
+.vocab-item-card.is-visible {
+  transition: transform var(--motion-dur-hover) var(--motion-ease),
+              box-shadow var(--motion-dur-hover) var(--motion-ease),
+              border-color var(--motion-dur-hover) var(--motion-ease);
+  transition-delay: 0s;
+}
+
+/* Decorative background slide-in highlight on hover */
+.vocab-item-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(140, 28, 28, 0.08) 0%, rgba(140, 28, 28, 0.02) 65%, transparent 100%);
+  transform: translateX(-100%);
+  transition: transform var(--motion-dur-hover) var(--motion-ease);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.vocab-item-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.vocab-item-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary, #8C1C1C);
+  box-shadow: 0 10px 24px rgba(140, 28, 28, 0.12), var(--shadow-md);
+}
+
+.vocab-item-card:hover::before {
+  transform: translateX(0);
+}
+
+/* --------------------------------------------------------------------------
+   4. Reading Page Content
+   - Paragraphs, translation blocks, vocab accordion, and question blocks
+   - Sticky toolbar is untouched (preserves position: sticky)
+   -------------------------------------------------------------------------- */
+.reading-paragraph-wrap.is-visible {
+  transition: border-color var(--motion-dur-hover) var(--motion-ease),
+              box-shadow var(--motion-dur-hover) var(--motion-ease),
+              transform var(--motion-dur-hover) var(--motion-ease);
+  transition-delay: 0s;
+}
+
+.reading-paragraph-wrap:hover {
+  border-color: var(--primary, #8C1C1C);
+  box-shadow: 0 6px 18px rgba(140, 28, 28, 0.08);
+}
+
+.paragraph-translation-vi {
+  transition: opacity var(--motion-dur-enter) var(--motion-ease),
+              transform var(--motion-dur-enter) var(--motion-ease);
+}
+
+.lesson-vocab-accordion.is-visible {
+  transition: border-color var(--motion-dur-hover) var(--motion-ease),
+              box-shadow var(--motion-dur-hover) var(--motion-ease);
+  transition-delay: 0s;
+}
+
+.question-card.is-visible {
+  transition: border-color var(--motion-dur-hover) var(--motion-ease),
+              box-shadow var(--motion-dur-hover) var(--motion-ease),
+              transform var(--motion-dur-hover) var(--motion-ease);
+  transition-delay: 0s;
+}
+
+.question-card:hover {
+  border-color: var(--primary, #8C1C1C);
+  box-shadow: 0 8px 22px rgba(140, 28, 28, 0.1), var(--shadow-md);
+}
+
+/* --------------------------------------------------------------------------
+   5. Reduced Motion (Mandatory)
+   - Disable animations and transitions
+   - Make entrance-animated elements visible
+   - Avoid transform:none on resting transform elements (like ::before)
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .kanji-tile-card,
+  .reading-card,
+  .reading-card .btn .icon,
+  .reading-card .btn svg,
+  .reading-card .reading-card-footer svg,
+  .vocab-filter-panel,
+  .vocab-item-card,
+  .reading-paragraph-wrap,
+  .paragraph-translation-vi,
+  .lesson-vocab-accordion,
+  .question-card {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .kanji-tile-card,
+  .reading-card,
+  .reading-card .btn .icon,
+  .reading-card .btn svg,
+  .reading-card .reading-card-footer svg,
+  .vocab-filter-panel,
+  .vocab-item-card,
+  .reading-paragraph-wrap,
+  .paragraph-translation-vi,
+  .lesson-vocab-accordion,
+  .question-card {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+
+  /* Do NOT set transform:none on .vocab-item-card::before because resting state is translateX(-100%) */
+  .vocab-item-card::before {
+    display: none !important;
+    transition: none !important;
+  }
+}

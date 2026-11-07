@@ -1,0 +1,34 @@
+/* Motion Design Tokens & Reveal Foundation */
+:root {
+  --motion-dist: 28px;
+  --motion-dur-enter: 650ms;
+  --motion-dur-hover: 260ms;
+  --motion-ease: cubic-bezier(.22, 1, .36, 1);
+  --motion-stagger: 70ms;
+  --motion-stagger-cap: 700ms;
+}
+
+html.js-reveal .reveal:not(.is-visible) {
+  opacity: 0;
+  transform: translateY(var(--motion-dist)) scale(.98);
+}
+
+.reveal {
+  transition: opacity var(--motion-dur-enter) var(--motion-ease), transform var(--motion-dur-enter) var(--motion-ease);
+  transition-delay: min(calc(var(--i, 0) * var(--motion-stagger)), var(--motion-stagger-cap));
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.js-reveal .reveal:not(.is-visible),
+  .reveal,
+  .reveal.is-visible {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

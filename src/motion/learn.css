@@ -1,0 +1,285 @@
+/* Motion styles for Learn views & Interactions (Job D) */
+
+/* --------------------------------------------------------------------------
+   1. Tabs: Panel entrance animation
+   -------------------------------------------------------------------------- */
+@keyframes m-tabPanelEnter {
+  0% {
+    opacity: 0;
+    transform: translateX(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.tab-panel,
+.tabs-container + * {
+  animation: m-tabPanelEnter 320ms var(--motion-ease) both;
+}
+
+/* --------------------------------------------------------------------------
+   2. Buttons: Shine sweep on hover, hover lift, active scale
+   -------------------------------------------------------------------------- */
+@keyframes m-btnShine {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.btn,
+.btn-primary,
+.pill-link {
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--motion-dur-hover) var(--motion-ease),
+              box-shadow var(--motion-dur-hover) var(--motion-ease),
+              background-color var(--motion-dur-hover) var(--motion-ease),
+              border-color var(--motion-dur-hover) var(--motion-ease),
+              color var(--motion-dur-hover) var(--motion-ease);
+}
+
+.btn:hover:not(:disabled),
+.btn-primary:hover:not(:disabled),
+.pill-link:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active:not(:disabled),
+.btn-primary:active:not(:disabled),
+.pill-link:active {
+  transform: scale(0.97);
+}
+
+.btn::before,
+.btn-primary::before,
+.pill-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    110deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.35) 50%,
+    transparent 70%
+  );
+  transform: translateX(-100%);
+  pointer-events: none;
+  opacity: 0;
+  z-index: 1;
+}
+
+.btn:hover:not(:disabled)::before,
+.btn-primary:hover:not(:disabled)::before,
+.pill-link:hover::before {
+  animation: m-btnShine 600ms var(--motion-ease);
+}
+
+.btn:disabled::before,
+.btn-primary:disabled::before {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
+   3. Quiz feedback: Pop + expanding ring for correct, stronger shake for wrong
+   -------------------------------------------------------------------------- */
+@keyframes m-quizPop {
+  0% {
+    transform: scale(0.94);
+  }
+  45% {
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes m-quizRing {
+  0% {
+    box-shadow: 0 0 0 0 rgba(46, 150, 90, 0.7);
+  }
+  60% {
+    box-shadow: 0 0 0 10px rgba(46, 150, 90, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(46, 150, 90, 0);
+  }
+}
+
+@keyframes m-quizShake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  12.5% {
+    transform: translateX(-8px);
+  }
+  25% {
+    transform: translateX(8px);
+  }
+  37.5% {
+    transform: translateX(-8px);
+  }
+  50% {
+    transform: translateX(8px);
+  }
+  62.5% {
+    transform: translateX(-6px);
+  }
+  75% {
+    transform: translateX(6px);
+  }
+  87.5% {
+    transform: translateX(-3px);
+  }
+}
+
+.quiz-choice-btn.choice-correct,
+.choice-correct,
+.typing-input.status-correct,
+.typing-feedback-box.feedback-correct,
+.correct-feedback,
+.badge-correct,
+.tf-item-row.item-correct {
+  animation: m-quizPop 380ms var(--motion-ease), m-quizRing 600ms ease-out;
+}
+
+.quiz-choice-btn.choice-wrong,
+.choice-wrong,
+.typing-input.status-incorrect,
+.typing-feedback-box.feedback-incorrect,
+.incorrect-feedback,
+.badge-incorrect,
+.tf-item-row.item-incorrect {
+  animation: m-quizShake 400ms var(--motion-ease);
+}
+
+/* --------------------------------------------------------------------------
+   4. Progress bars: Width growth + subtle moving highlight
+   -------------------------------------------------------------------------- */
+@keyframes m-grow-w {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes m-progressHighlight {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.65;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.progress-fill {
+  position: relative;
+  overflow: hidden;
+  animation: m-grow-w 900ms var(--motion-ease) both;
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.45) 50%,
+    transparent 100%
+  );
+  transform: translateX(-100%);
+  pointer-events: none;
+  animation: m-progressHighlight 800ms var(--motion-ease) 900ms 1 normal forwards;
+}
+
+/* --------------------------------------------------------------------------
+   Reduced Motion
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .tab-panel,
+  .tabs-container + * {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .btn,
+  .btn-primary,
+  .pill-link {
+    transition: none !important;
+  }
+
+  .btn:hover:not(:disabled),
+  .btn-primary:hover:not(:disabled),
+  .pill-link:hover,
+  .btn:active:not(:disabled),
+  .btn-primary:active:not(:disabled),
+  .pill-link:active {
+    transform: none !important;
+  }
+
+  .btn::before,
+  .btn-primary::before,
+  .pill-link::before,
+  .btn:hover:not(:disabled)::before,
+  .btn-primary:hover:not(:disabled)::before,
+  .pill-link:hover::before {
+    animation: none !important;
+    display: none !important;
+  }
+
+  .quiz-choice-btn.choice-correct,
+  .choice-correct,
+  .typing-input.status-correct,
+  .typing-feedback-box.feedback-correct,
+  .correct-feedback,
+  .badge-correct,
+  .tf-item-row.item-correct,
+  .quiz-choice-btn.choice-wrong,
+  .choice-wrong,
+  .typing-input.status-incorrect,
+  .typing-feedback-box.feedback-incorrect,
+  .incorrect-feedback,
+  .badge-incorrect,
+  .tf-item-row.item-incorrect {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  .progress-fill {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .progress-fill::after {
+    animation: none !important;
+    display: none !important;
+  }
+}
