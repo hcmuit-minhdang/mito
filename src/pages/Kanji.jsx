@@ -28,6 +28,9 @@ export default function Kanji() {
 
   // Modal Detail Kanji state
   const [modalKanjiIndex, setModalKanjiIndex] = useState(null);
+  // Bản chụp danh sách lúc mở modal: giữ nguyên khi đánh dấu "đã thuộc" để modal không nhảy chữ
+  // (ví dụ khi đang bật "Chỉ hiện chữ chưa thuộc", danh sách lọc sẽ co lại).
+  const [modalKanjiList, setModalKanjiList] = useState([]);
 
   // Flashcard mode state
   const [cardIndex, setCardIndex] = useState(0);
@@ -65,8 +68,8 @@ export default function Kanji() {
     });
   }, [selectedLessons, setRecent]);
 
-  // Filtered Kanji List
-  const filteredKanji = useMemo(() => {
+  // Tập chữ theo bài / tìm kiếm (chưa áp dụng "chỉ hiện chưa thuộc")
+  const baseKanji = useMemo(() => {
     let list = getKanjiByLesson(selectedLessons);
 
     if (searchQuery.trim()) {
@@ -84,24 +87,53 @@ export default function Kanji() {
       });
     }
 
-    if (onlyUnknown) {
-      list = list.filter((item) => !isKanjiKnown(item.k));
-    }
-
     return list;
-  }, [selectedLessons, searchQuery, onlyUnknown, isKanjiKnown]);
+  }, [selectedLessons, searchQuery]);
 
-  // Words list extracted from current filtered kanji
+  // Filtered Kanji List
+  const filteredKanji = useMemo(
+    () => (onlyUnknown ? baseKanji.filter((item) => !isKanjiKnown(item.k)) : baseKanji),
+    [baseKanji, onlyUnknown, isKanjiKnown]
+  );
+
+  // Words list extracted from current filtered kanji.
+  // Một từ ghép có thể nằm dưới nhiều chữ (vd 音楽 ở cả 音 và 楽): giữ lần xuất hiện đầu để quiz
+  // và chế độ gõ không hỏi cùng một từ hai lần.
   const filteredWords = useMemo(() => {
-    return filteredKanji.flatMap((k) =>
-      k.words.map(([word, reading]) => ({
-        word,
-        reading,
-        kanji: k.k,
-        lesson: k.lesson,
-      }))
-    );
+    const seen = new Set();
+    const list = [];
+    for (const k of filteredKanji) {
+      for (const [word, reading] of k.words) {
+        const key = `${word}|${reading}`;
+        if (seen.has(key)) continue;
+        seen.add(key);
+        list.push({ word, reading, kanji: k.k, lesson: k.lesson });
+      }
+    }
+    return list;
   }, [filteredKanji]);
+
+  // Khi bộ lọc đổi (bài / tìm kiếm / bật-tắt "chưa thuộc"), bỏ các bài trắc nghiệm đã tạo để chúng
+  // không còn dùng câu hỏi của bộ lọc cũ. Khóa chỉ tính theo tập lọc GỐC (không phụ thuộc trạng
+  // thái đã thuộc): đánh dấu một chữ "đã thuộc" khi "chưa thuộc" đang bật không được làm mất bài.
+  const filteredKanjiKey = useMemo(
+    () => `${baseKanji.map((k) => k.id).join('|')}#${onlyUnknown}`,
+    [baseKanji, onlyUnknown]
+  );
+  useEffect(() => {
+    setReadingQuizQuestions([]);
+    setReadingQuizIndex(0);
+    setReadingQuizSelected(null);
+    setReadingQuizIsAnswered(false);
+    setReadingQuizScore(0);
+    setReadingQuizDone(false);
+    setChoiceQuizQuestions([]);
+    setChoiceQuizIndex(0);
+    setChoiceQuizSelected(null);
+    setChoiceQuizIsAnswered(false);
+    setChoiceQuizScore(0);
+    setChoiceQuizDone(false);
+  }, [filteredKanjiKey]);
 
   // Synchronize flashcard / typing items
   useEffect(() => {
@@ -141,23 +173,41 @@ export default function Kanji() {
 
   // Modal navigation
   const currentModalKanji =
-    modalKanjiIndex != null ? filteredKanji[modalKanjiIndex] : null;
+    modalKanjiIndex != null ? modalKanjiList[modalKanjiIndex] : null;
 
   function handleModalPrev() {
     if (modalKanjiIndex > 0) {
       setModalKanjiIndex(modalKanjiIndex - 1);
     } else {
-      setModalKanjiIndex(filteredKanji.length - 1);
+      setModalKanjiIndex(modalKanjiList.length - 1);
     }
   }
 
   function handleModalNext() {
-    if (modalKanjiIndex < filteredKanji.length - 1) {
+    if (modalKanjiIndex < modalKanjiList.length - 1) {
       setModalKanjiIndex(modalKanjiIndex + 1);
     } else {
       setModalKanjiIndex(0);
     }
   }
+
+  // Phím ← / → chuyển chữ trong modal (khớp gợi ý trên nút Trước/Sau)
+  const isModalOpen = modalKanjiIndex !== null;
+  useEffect(() => {
+    if (!isModalOpen) return;
+    function onKey(e) {
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        handleModalPrev();
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        handleModalNext();
+      }
+    }
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [isModalOpen, modalKanjiIndex, modalKanjiList.length]);
 
   // Reading Quiz Builder
   const startReadingQuiz = useCallback(() => {
@@ -220,9 +270,11 @@ export default function Kanji() {
 
     const selectedWords = shuffle(filteredWords).slice(0, 15);
     const questions = selectedWords.map((item) => {
+      // Loại các từ đồng âm với đề bài (vd はな: 鼻/花) khỏi đáp án nhiễu, vì nhìn cách đọc
+      // thì chúng cũng "đúng" và người học không thể phân biệt.
       const distractors = pickDistractors(
         item,
-        filteredWords,
+        filteredWords.filter((w) => w.reading !== item.reading),
         3,
         (w) => w.word
       ).map((w) => w.word);
@@ -399,7 +451,10 @@ export default function Kanji() {
                     type="button"
                     className={`kanji-tile-card ${isKnown ? 'is-known' : ''}`}
                     style={{ '--i': idx }}
-                    onClick={() => setModalKanjiIndex(idx)}
+                    onClick={() => {
+                      setModalKanjiList(filteredKanji);
+                      setModalKanjiIndex(idx);
+                    }}
                     title={`Chữ ${item.k} (Bài ${item.lesson}) - Bấm xem chi tiết`}
                   >
                     <div className="tile-top-bar">
@@ -890,7 +945,7 @@ export default function Kanji() {
                   ← Trước
                 </button>
                 <span className="modal-index-counter">
-                  {modalKanjiIndex + 1} / {filteredKanji.length}
+                  {modalKanjiIndex + 1} / {modalKanjiList.length}
                 </span>
                 <button
                   type="button"

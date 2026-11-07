@@ -2,6 +2,23 @@ import React, { useMemo } from 'react';
 import Icon from '../../components/Icon';
 import Ruby from '../../components/Ruby';
 
+/**
+ * Thứ tự khởi đầu hiển thị cho câu sắp xếp. Không để mục nào tình cờ nằm đúng vị trí đáp án,
+ * nếu không nộp bài mà chưa đụng vào gì vẫn được điểm. Thử xoay thứ tự gốc của đề; nếu không
+ * xoay nào thoát được thì dùng lại thứ tự gốc (đảo ngược nếu nó trùng hẳn đáp án).
+ * Dùng chung cho hiển thị (OrderQuestion) và chấm điểm (Questions).
+ */
+export function getInitialOrder(question) {
+  const keys = question.items.map((it) => it.key);
+  const matches = (arr) => arr.filter((k, i) => k === question.answer[i]).length;
+  if (matches(keys) === 0) return keys;
+  for (let r = 1; r < keys.length; r++) {
+    const rotated = keys.slice(r).concat(keys.slice(0, r));
+    if (matches(rotated) === 0) return rotated;
+  }
+  return matches(keys) === keys.length ? [...keys].reverse() : keys;
+}
+
 export default function OrderQuestion({
   question,
   userAnswer,
@@ -10,16 +27,8 @@ export default function OrderQuestion({
   showAnswers = false,
   results = [],
 }) {
-  // Deterministic initial order that is NOT equal to answer
-  const initialOrder = useMemo(() => {
-    const defaultKeys = question.items.map((it) => it.key);
-    // If default matches answer, reverse it
-    const isExact = defaultKeys.every((k, idx) => k === question.answer[idx]);
-    if (isExact) {
-      return [...defaultKeys].reverse();
-    }
-    return defaultKeys;
-  }, [question]);
+  // Thứ tự khởi đầu cố định, không có mục nào nằm sẵn đúng vị trí đáp án
+  const initialOrder = useMemo(() => getInitialOrder(question), [question]);
 
   const currentKeys = showAnswers ? question.answer : userAnswer || initialOrder;
 

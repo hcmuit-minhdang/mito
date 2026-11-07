@@ -4,7 +4,7 @@ import TfQuestion from './TfQuestion';
 import ChoiceQuestion from './ChoiceQuestion';
 import MatchQuestion from './MatchQuestion';
 import FillQuestion from './FillQuestion';
-import OrderQuestion from './OrderQuestion';
+import OrderQuestion, { getInitialOrder } from './OrderQuestion';
 import ClassifyQuestion from './ClassifyQuestion';
 
 export default function Questions({
@@ -66,10 +66,7 @@ export default function Questions({
         return { correct, expected: it.answer };
       });
     } else if (q.type === 'order') {
-      const defaultKeys = q.items.map((it) => it.key);
-      const isExact = defaultKeys.every((k, idx) => k === q.answer[idx]);
-      const initialOrder = isExact ? [...defaultKeys].reverse() : defaultKeys;
-      const currentOrder = ans || initialOrder;
+      const currentOrder = ans || getInitialOrder(q);
 
       itemResults = q.items.map((_, idx) => ({
         correct: currentOrder[idx] === q.answer[idx],

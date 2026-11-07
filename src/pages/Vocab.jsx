@@ -68,8 +68,8 @@ export default function Vocab() {
     });
   }, [selectedLessons, setRecent]);
 
-  // Filtered Vocab List
-  const filteredVocab = useMemo(() => {
+  // Tập từ theo bài / nguồn / tìm kiếm (chưa áp dụng "chỉ hiện chưa thuộc")
+  const baseVocab = useMemo(() => {
     let list = getVocabByLesson(selectedLessons);
 
     if (source !== 'all') {
@@ -88,14 +88,34 @@ export default function Vocab() {
       });
     }
 
-    if (onlyUnknown) {
-      list = list.filter((v) => !isVocabKnown(v.id));
-    }
-
     return list;
-  }, [selectedLessons, source, searchQuery, onlyUnknown, isVocabKnown]);
+  }, [selectedLessons, source, searchQuery]);
+
+  // Filtered Vocab List
+  const filteredVocab = useMemo(
+    () => (onlyUnknown ? baseVocab.filter((v) => !isVocabKnown(v.id)) : baseVocab),
+    [baseVocab, onlyUnknown, isVocabKnown]
+  );
 
   useReveal([filteredVocab.length, activeTab]);
+
+  // Khi bộ lọc đổi (bài / nguồn / tìm kiếm / bật-tắt "chưa thuộc"), bỏ bài trắc nghiệm đã tạo để
+  // không dùng câu hỏi của bộ lọc cũ. Khóa chỉ tính theo tập lọc GỐC (không phụ thuộc trạng thái
+  // đã thuộc): quiz tự đánh dấu "đã thuộc" giữa chừng và khi "chưa thuộc" đang bật, từ vừa thuộc
+  // bị loại khỏi filteredVocab, nhưng điều đó không được làm mất bài đang làm.
+  const filteredVocabKey = useMemo(
+    () => `${baseVocab.map((v) => v.id).join('|')}#${onlyUnknown}`,
+    [baseVocab, onlyUnknown]
+  );
+  useEffect(() => {
+    setQuizQuestions([]);
+    setQuizIndex(0);
+    setQuizSelectedOption(null);
+    setQuizIsAnswered(false);
+    setQuizScore(0);
+    setQuizWrongItems([]);
+    setQuizCompleted(false);
+  }, [filteredVocabKey]);
 
   // Synchronize flashcards when filtered vocab changes
   useEffect(() => {
