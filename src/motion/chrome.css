@@ -15,7 +15,7 @@
 }
 
 .route-enter {
-  animation: m-routeEnter 450ms var(--motion-ease) both;
+  animation: m-routeEnter 450ms var(--motion-ease) backwards;
 }
 
 /* (b) Header intro & Nav links */

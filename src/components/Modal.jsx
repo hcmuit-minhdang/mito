@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 
 export default function Modal({ isOpen, onClose, title, children, className = '' }) {
   const modalRef = useRef(null);
@@ -93,7 +94,7 @@ export default function Modal({ isOpen, onClose, title, children, className = ''
 
   if (!isOpen && !closing) return null;
 
-  return (
+  return createPortal(
     <div
       className={`modal-backdrop ${closing ? 'is-closing' : ''}`}
       onClick={handleClose}
@@ -123,5 +124,5 @@ export default function Modal({ isOpen, onClose, title, children, className = ''
         {children}
       </div>
     </div>
-  );
+  , document.body);
 }
