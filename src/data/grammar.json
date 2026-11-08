@@ -1,0 +1,1960 @@
+[
+ {
+  "id": "1-1",
+  "lesson": 1,
+  "no": 1,
+  "extra": false,
+  "pattern": "カタカナ語",
+  "meaningVi": "Từ ngoại lai viết bằng katakana. Cần nhớ cách đọc và nghĩa của từ gốc.",
+  "connection": [],
+  "notes": [],
+  "examples": [
+   {
+    "ja": "ストレスがたまった時{とき}に、音楽{おんがく}を聞{き}いて、気持{きも}ちをリラックスさせるという人{ひと}が多{おお}い。",
+    "vi": "Có nhiều người nói rằng khi bị tích tụ căng thẳng thì họ nghe nhạc để thư giãn tinh thần.",
+    "hl": "リラックス"
+   },
+   {
+    "ja": "いらいらした時{とき}はカラオケが一番{いちばん}だ。",
+    "vi": "Khi bực bội thì không gì bằng đi hát karaoke.",
+    "hl": "カラオケ"
+   },
+   {
+    "ja": "夏休{なつやす}みにはロック・フェスティバルに行{い}くつもりだ。",
+    "vi": "Kỳ nghỉ hè tôi định đi lễ hội nhạc rock.",
+    "hl": "ロック・フェスティバル"
+   }
+  ]
+ },
+ {
+  "id": "1-1a",
+  "lesson": 1,
+  "no": 1,
+  "extra": true,
+  "pattern": "Nって何ですか。……Nのことです。",
+  "meaningVi": "Hỏi nghĩa của một từ (A hỏi, B trả lời). Dùng trong văn nói. 「って」 = 「は」.",
+  "connection": [
+   "N + って何{なん}ですか",
+   "…… N のことです"
+  ],
+  "notes": [
+   "A: hỏi ý nghĩa. B: trả lời. Ngôn ngữ nói."
+  ],
+  "examples": [
+   {
+    "ja": "A：コンサートって何{なん}ですか。B：音楽会{おんがくかい}のことです。",
+    "vi": "A: Concert là gì vậy? B: Là buổi hòa nhạc.",
+    "hl": "って"
+   }
+  ]
+ },
+ {
+  "id": "1-2",
+  "lesson": 1,
+  "no": 2,
+  "extra": false,
+  "pattern": "〜だろう",
+  "meaningVi": "Thể thông thường của 「〜でしょう」. Dùng để phỏng đoán hoặc truyền đạt suy nghĩ của người nói một cách vòng vo, nhẹ nhàng.",
+  "connection": [
+   "普通形（Na／N だ は bỏ）+ だろう"
+  ],
+  "notes": [],
+  "examples": [
+   {
+    "ja": "「音楽療法{おんがくりょうほう}」の最{もっと}も簡単{かんたん}な方法{ほうほう}は「聞{き}く」ことだろう。",
+    "vi": "Có lẽ phương pháp đơn giản nhất của “liệu pháp âm nhạc” là “nghe”.",
+    "hl": "だろう"
+   },
+   {
+    "ja": "外国語{がいこくご}を習得{しゅうとく}するための一番{いちばん}いい方法{ほうほう}はその国{くに}へ行{い}くことだろう。",
+    "vi": "Có lẽ cách tốt nhất để học được ngoại ngữ là đến đất nước đó.",
+    "hl": "だろう"
+   },
+   {
+    "ja": "今度{こんど}の音楽会{おんがくかい}には有名{ゆうめい}な歌手{かしゅ}が出{で}るので、来場者{らいじょうしゃ}はきっと多{おお}いだろう。",
+    "vi": "Buổi hòa nhạc lần này có ca sĩ nổi tiếng biểu diễn nên chắc chắn lượng khán giả sẽ đông.",
+    "hl": "だろう"
+   }
+  ]
+ },
+ {
+  "id": "1-3",
+  "lesson": 1,
+  "no": 3,
+  "extra": false,
+  "pattern": "〜のだろうか",
+  "meaningVi": "Thể thông thường của 「〜のでしょうか」. Dùng trong văn viết. Nêu một nghi vấn, thắc mắc của mình một cách lịch sự.",
+  "connection": [
+   "普通形 (Na だ→な / N だ→な) + のだろうか"
+  ],
+  "notes": [
+   "Với Na và N, だ đổi thành な: 静{しず}かなのだろうか, 学生{がくせい}なのだろうか."
+  ],
+  "examples": [
+   {
+    "ja": "音楽療法{おんがくりょうほう}は、どんな音楽{おんがく}を聞{き}いたらいいのだろうか。",
+    "vi": "Với liệu pháp âm nhạc, nghe loại nhạc nào thì tốt nhỉ?",
+    "hl": "のだろうか"
+   },
+   {
+    "ja": "敬語{けいご}の使{つか}い方{かた}は難{むずか}しい。どうやったら覚{おぼ}えられるのだろうか。",
+    "vi": "Cách dùng kính ngữ rất khó. Làm thế nào thì nhớ được đây?",
+    "hl": "のだろうか"
+   },
+   {
+    "ja": "リラックスするためには、何{なに}をするのが効果的{こうかてき}なのだろうか。",
+    "vi": "Để thư giãn thì làm gì sẽ hiệu quả nhỉ?",
+    "hl": "のだろうか"
+   }
+  ]
+ },
+ {
+  "id": "1-4",
+  "lesson": 1,
+  "no": 4,
+  "extra": false,
+  "pattern": "〜わけがない",
+  "meaningVi": "Không thể nghĩ rằng ~. Chắc chắn không ~ (= 〜はずがない). Phủ định mạnh khả năng xảy ra.",
+  "connection": [
+   "普通形 (Na だ→な / N だ→の) + わけがない"
+  ],
+  "notes": [],
+  "examples": [
+   {
+    "ja": "嫌{きら}いな音楽{おんがく}を聞{き}いてもリラックスできるわけがない。（＝絶対{ぜったい}にリラックスできない）",
+    "vi": "Nghe loại nhạc mình ghét thì không thể nào thư giãn được. (= tuyệt đối không thể thư giãn)",
+    "hl": "わけがない"
+   },
+   {
+    "ja": "サッカー好{ず}きな彼{かれ}がこの試合{しあい}を見{み}ないわけがない。（＝必{かなら}ず見{み}る）",
+    "vi": "Anh ấy mê bóng đá thì không đời nào lại không xem trận này. (= nhất định sẽ xem)",
+    "hl": "わけがない"
+   },
+   {
+    "ja": "いつも忙{いそが}しそうに仕事{しごと}をしている彼女{かのじょ}が暇{ひま}なわけがない。（＝絶対{ぜったい}に暇{ひま}ではない）",
+    "vi": "Cô ấy lúc nào cũng làm việc bận rộn thì không thể nào rảnh được. (= tuyệt đối không rảnh)",
+    "hl": "わけがない"
+   }
+  ]
+ },
+ {
+  "id": "1-5",
+  "lesson": 1,
+  "no": 5,
+  "extra": false,
+  "pattern": "「わけがない・わけではない」の整理",
+  "meaningVi": "So sánh hai mẫu: 「わけがない」 là phủ định hoàn toàn (tuyệt đối không). 「わけではない」 là phủ định một phần (không phải lúc nào cũng / không hẳn là).",
+  "connection": [],
+  "notes": [
+   "わけがない = 絶対{ぜったい}に〜ない.",
+   "わけではない = 〜というわけではない: không hẳn là, không phải lúc nào cũng vậy."
+  ],
+  "examples": [
+   {
+    "ja": "こんな高{たか}いレストランで毎日{まいにち}食事{しょくじ}できるわけがない。（＝絶対{ぜったい}に毎日{まいにち}食事{しょくじ}できない）",
+    "vi": "Không thể nào ngày nào cũng ăn ở nhà hàng đắt thế này được. (= tuyệt đối không thể)",
+    "hl": "わけがない"
+   },
+   {
+    "ja": "料理{りょうり}はするが、毎日{まいにち}するわけではない。（＝料理{りょうり}は時々{ときどき}作{つく}る）",
+    "vi": "Tôi có nấu ăn, nhưng không phải ngày nào cũng nấu. (= thỉnh thoảng mới nấu)",
+    "hl": "わけではない"
+   }
+  ]
+ },
+ {
+  "id": "1-6",
+  "lesson": 1,
+  "no": 6,
+  "extra": false,
+  "pattern": "名詞修飾節の「が」→「の」",
+  "meaningVi": "Trong mệnh đề bổ nghĩa cho danh từ, chủ ngữ đứng sau 「が」 có thể đổi thành 「の」.",
+  "connection": [
+   "自分{じぶん}が好{す}きな音楽{おんがく} → 自分{じぶん}の好{す}きな音楽{おんがく}"
+  ],
+  "notes": [],
+  "examples": [
+   {
+    "ja": "自分{じぶん}の好{す}きな音楽{おんがく}を聞{き}くことこそ、心{こころ}のいやしになるのである。",
+    "vi": "Chính việc nghe loại nhạc mình thích mới là liều thuốc xoa dịu tâm hồn.",
+    "hl": "の"
+   },
+   {
+    "ja": "私{わたし}の住{す}む町{まち}について説明{せつめい}しましょう。",
+    "vi": "Tôi xin giới thiệu về thị trấn nơi tôi sống.",
+    "hl": "の"
+   }
+  ]
+ },
+ {
+  "id": "1-7",
+  "lesson": 1,
+  "no": 7,
+  "extra": false,
+  "pattern": "Vルこと／N こそ",
+  "meaningVi": "Diễn tả sự nhấn mạnh: chính là ~, đúng là ~ mới.",
+  "connection": [
+   "V辞書形 + こと + こそ",
+   "N + こそ"
+  ],
+  "notes": [],
+  "examples": [
+   {
+    "ja": "自分{じぶん}の好{す}きな音楽{おんがく}を聞{き}くことこそ、心{こころ}のいやしになるのである。",
+    "vi": "Chính việc nghe loại nhạc mình thích mới là liều thuốc xoa dịu tâm hồn.",
+    "hl": "こそ"
+   },
+   {
+    "ja": "漢字{かんじ}は毎日{まいにち}書{か}くことこそ、覚{おぼ}える秘訣{ひけつ}だ。",
+    "vi": "Viết chữ Hán mỗi ngày chính là bí quyết để nhớ.",
+    "hl": "こそ"
+   },
+   {
+    "ja": "今度{こんど}の試験{しけん}こそ頑張{がんば}りたい。",
+    "vi": "Kỳ thi lần này tôi nhất định muốn cố gắng.",
+    "hl": "こそ"
+   }
+  ]
+ },
+ {
+  "id": "1-8",
+  "lesson": 1,
+  "no": 8,
+  "extra": false,
+  "pattern": "動詞の省略",
+  "meaningVi": "Lược bỏ động từ: khi hai vế có cùng động từ, động từ ở vế trước có thể được lược đi (trong ngoặc là động từ bị lược).",
+  "connection": [],
+  "notes": [
+   "Phần trong ( ) là động từ được hiểu ngầm, thường lược ở vế trước."
+  ],
+  "examples": [
+   {
+    "ja": "クラシックが好{す}きな人{ひと}はクラシックを（聞{き}き）、演歌{えんか}が好{す}きな人{ひと}は演歌{えんか}を聞{き}くのが効果的{こうかてき}な方法{ほうほう}だ。",
+    "vi": "Người thích nhạc cổ điển thì (nghe) nhạc cổ điển, người thích enka thì nghe enka, đó là cách hiệu quả.",
+    "hl": "を（聞き）、"
+   },
+   {
+    "ja": "お酒{さけ}が飲{の}める人{ひと}はお酒{さけ}を（注文{ちゅうもん}し）、飲{の}めない人{ひと}はジュースを注文{ちゅうもん}した。",
+    "vi": "Người uống được rượu thì (gọi) rượu, người không uống được thì gọi nước ép.",
+    "hl": "を（注文し）、"
+   },
+   {
+    "ja": "学校{がっこう}にはいつもは歩{ある}いて（通{かよ}い）、雨{あめ}の日{ひ}はバスで学校{がっこう}に通{かよ}っている。",
+    "vi": "Bình thường tôi đi bộ (đến) trường, những ngày mưa thì đi học bằng xe buýt.",
+    "hl": "（通い）、"
+   }
+  ]
+ },
+ {
+  "id": "1-9",
+  "lesson": 1,
+  "no": 9,
+  "extra": false,
+  "pattern": "より〜",
+  "meaningVi": "Nhiều hơn trước, hơn nữa (= 以前{いぜん}よりもっと). Dùng 「より」 như trạng từ đứng trước tính từ / động từ.",
+  "connection": [
+   "より + A / V"
+  ],
+  "notes": [],
+  "examples": [
+   {
+    "ja": "音楽{おんがく}・音{おと}がどのような効果{こうか}をもたらすか、今後{こんご}、より注目{ちゅうもく}されていくだろう。",
+    "vi": "Âm nhạc và âm thanh mang lại hiệu quả như thế nào, từ nay về sau có lẽ sẽ càng được chú ý hơn.",
+    "hl": "より"
+   },
+   {
+    "ja": "日本語{にほんご}の勉強{べんきょう}は中級{ちゅうきゅう}に入{はい}ると、より難{むずか}しくなる。",
+    "vi": "Học tiếng Nhật khi lên trình độ trung cấp thì càng trở nên khó hơn.",
+    "hl": "より"
+   },
+   {
+    "ja": "リサイクル運動{うんどう}をより多{おお}くの人{ひと}に知{し}ってもらいたい。",
+    "vi": "Tôi muốn nhiều người hơn nữa biết đến phong trào tái chế.",
+    "hl": "より"
+   }
+  ]
+ },
+ {
+  "id": "2-1",
+  "lesson": 2,
+  "no": 1,
+  "extra": false,
+  "pattern": "〜というN",
+  "meaningVi": "Thể hiện nội dung, ví dụ cụ thể, hoặc định nghĩa của N (danh từ đứng sau).",
+  "connection": [
+   "普通形 / N₁ + という + N / N₂"
+  ],
+  "notes": [
+   "Danh từ N đứng sau 「という」 (ô vuông trong sách) là danh từ chỉ nội dung như 数字{すうじ}, 意見{いけん}, 予想{よそう}."
+  ],
+  "examples": [
+   {
+    "ja": "ベトナムでは、「4」という数字{すうじ}はいい数字{すうじ}の1つだと考{かんが}えられている。",
+    "vi": "Ở Việt Nam, con số “4” được cho là một trong những con số tốt.",
+    "hl": "という"
+   },
+   {
+    "ja": "この計画{けいかく}には賛成{さんせい}できないという意見{いけん}が多{おお}い。",
+    "vi": "Có nhiều ý kiến cho rằng không thể tán thành kế hoạch này.",
+    "hl": "という"
+   },
+   {
+    "ja": "昨日{きのう}、今年{ことし}の冬{ふゆ}は暖冬{だんとう}だという予想{よそう}が発表{はっぴょう}された。",
+    "vi": "Hôm qua đã công bố dự báo rằng mùa đông năm nay sẽ ấm.",
+    "hl": "という"
+   }
+  ]
+ },
+ {
+  "id": "2-1a",
+  "lesson": 2,
+  "no": 1,
+  "extra": true,
+  "pattern": "〜っていうN",
+  "meaningVi": "Trong văn nói, 「〜というN」 thường được nói thành 「〜って（いう）N」.",
+  "connection": [
+   "普通形 / N + って（いう） + N"
+  ],
+  "notes": [
+   "Dạng văn nói của 「〜というN」."
+  ],
+  "examples": [
+   {
+    "ja": "A：山田{やまだ}さんっていう人{ひと}知{し}っている？ B：ううん、誰{だれ}？",
+    "vi": "A: Cậu có biết người tên là Yamada không? B: Không, ai vậy?",
+    "hl": "っていう"
+   }
+  ]
+ },
+ {
+  "id": "2-2",
+  "lesson": 2,
+  "no": 2,
+  "extra": false,
+  "pattern": "Vルこと／N ほど〜は ない・いない",
+  "meaningVi": "Diễn tả mức độ cao nhất (so sánh nhất): không có gì / không ai ~ bằng.",
+  "connection": [
+   "V辞書形 + こと / N + ほど〜はない・いない"
+  ],
+  "notes": [
+   "Dùng 「ない」 với vật, 「いない」 với người."
+  ],
+  "examples": [
+   {
+    "ja": "中国語圏{ちゅうごくごけん}ほど「いい数字{すうじ}」にこだわるところはない。",
+    "vi": "Không có nơi nào chú trọng “con số tốt” bằng vùng nói tiếng Trung.",
+    "hl": "ほど"
+   },
+   {
+    "ja": "本{ほん}を読{よ}むことほど楽{たの}しいことはない。",
+    "vi": "Không có gì vui bằng việc đọc sách.",
+    "hl": "ほど"
+   },
+   {
+    "ja": "佐藤{さとう}さんほどまじめに勉強{べんきょう}する人{ひと}はいない。",
+    "vi": "Không có ai học nghiêm túc bằng anh Sato.",
+    "hl": "ほど"
+   }
+  ]
+ },
+ {
+  "id": "2-3",
+  "lesson": 2,
+  "no": 3,
+  "extra": false,
+  "pattern": "Vル／Vナイない ほど",
+  "meaningVi": "Dùng ví dụ cụ thể hoặc so sánh ẩn dụ để diễn tả mức độ của hành động, trạng thái: đến mức ~.",
+  "connection": [
+   "V辞書形 / Vない形 + ほど"
+  ],
+  "notes": [],
+  "examples": [
+   {
+    "ja": "数千万円{すうせんまんえん}以上{いじょう}というびっくりするほどの値段{ねだん}がついた。",
+    "vi": "Nó được định giá đến mức đáng kinh ngạc, hơn mấy chục triệu yên.",
+    "hl": "ほど"
+   },
+   {
+    "ja": "友達{ともだち}の引{ひ}っ越{こ}しを手伝{てつだ}って、死{し}ぬほど疲{つか}れた。",
+    "vi": "Tôi giúp bạn chuyển nhà nên mệt đến chết đi được.",
+    "hl": "ほど"
+   },
+   {
+    "ja": "大{おお}きな地震{じしん}で立{た}っていられないほど揺{ゆ}れた。",
+    "vi": "Trận động đất lớn rung lắc đến mức không đứng nổi.",
+    "hl": "ほど"
+   }
+  ]
+ },
+ {
+  "id": "2-3a",
+  "lesson": 2,
+  "no": 3,
+  "extra": true,
+  "pattern": "Vル／Vナイない ぐらい・くらい",
+  "meaningVi": "Hay dùng khi nói. Nghĩa giống 「ほど」, nhưng 「ぐらい」 không dùng cho các so sánh cực đoan.",
+  "connection": [
+   "V辞書形 / Vない形 + ぐらい・くらい"
+  ],
+  "notes": [
+   "Ví dụ sai: × 「死{し}ぬぐらい疲{つか}れた」 (so sánh quá cực đoan nên không dùng 「ぐらい」)."
+  ],
+  "examples": [
+   {
+    "ja": "数千万円{すうせんまんえん}以上{いじょう}というびっくりするぐらいの値段{ねだん}がついた。",
+    "vi": "Nó được định giá đến mức đáng kinh ngạc, hơn mấy chục triệu yên.",
+    "hl": "ぐらい"
+   },
+   {
+    "ja": "昨日{きのう}一日中{いちにちじゅう}歩{ある}いたので、今朝{けさ}は足{あし}が痛{いた}くて、立{た}てないぐらいだ。",
+    "vi": "Hôm qua tôi đi bộ cả ngày nên sáng nay chân đau đến mức không đứng nổi.",
+    "hl": "ぐらい"
+   }
+  ]
+ },
+ {
+  "id": "2-4",
+  "lesson": 2,
+  "no": 4,
+  "extra": false,
+  "pattern": "Nからすると",
+  "meaningVi": "Phán đoán từ N thì / suy nghĩ từ lập trường của N thì.",
+  "connection": [
+   "N + からすると"
+  ],
+  "notes": [],
+  "examples": [
+   {
+    "ja": "日本人{にほんじん}からすると、考{かんが}えられないことだ。",
+    "vi": "Đối với người Nhật thì đó là chuyện không thể tưởng tượng được.",
+    "hl": "からすると"
+   },
+   {
+    "ja": "あの服装{ふくそう}からすると、彼{かれ}は会社員{かいしゃいん}ではないようだ。",
+    "vi": "Nhìn từ cách ăn mặc đó thì có vẻ anh ta không phải nhân viên công ty.",
+    "hl": "からすると"
+   }
+  ]
+ },
+ {
+  "id": "2-5",
+  "lesson": 2,
+  "no": 5,
+  "extra": false,
+  "pattern": "〔疑問語疑問文〕より、〜",
+  "meaningVi": "Dùng 「（từ nghi vấn）か + より」: thay vì (câu hỏi “~ như thế nào”) thì điều quan trọng hơn là ~. Dùng để so sánh và nhấn mạnh vế sau.",
+  "connection": [
+   "疑問詞 … 普通形 + か + より、〜"
+  ],
+  "notes": [
+   "Vế sau 「より」 là điều được coi trọng hơn."
+  ],
+  "examples": [
+   {
+    "ja": "どんな車{くるま}を持{も}っているかより、どんな番号{ばんごう}のプレートをつけているかを重要視{じゅうようし}する。",
+    "vi": "Họ coi trọng việc gắn biển số mang con số nào hơn là việc có chiếc xe loại gì.",
+    "hl": "かより"
+   },
+   {
+    "ja": "仕事{しごと}は給料{きゅうりょう}がいくらかより、内容{ないよう}が大切{たいせつ}だ。",
+    "vi": "Về công việc, nội dung quan trọng hơn là lương bao nhiêu.",
+    "hl": "かより"
+   }
+  ]
+ },
+ {
+  "id": "2-6",
+  "lesson": 2,
+  "no": 6,
+  "extra": false,
+  "pattern": "「数字」について読む・聞く",
+  "meaningVi": "Mục luyện đọc và nghe về chủ đề “con số”. Không có mẫu câu mới; làm theo bài tập trong sách.",
+  "connection": [],
+  "notes": [
+   "Mục này là phần luyện kỹ năng, không có mẫu ngữ pháp riêng."
+  ],
+  "examples": []
+ },
+ {
+  "id": "3-1",
+  "lesson": 3,
+  "no": 1,
+  "extra": false,
+  "pattern": "Vテ／N 以来",
+  "meaningVi": "Suốt kể từ khi ~ (từ một mốc trong quá khứ cho đến nay, trạng thái cứ tiếp diễn).",
+  "connection": [
+   "Vて / N + 以来{いらい}"
+  ],
+  "notes": [
+   "Vế sau thường là hành động, trạng thái kéo dài liên tục hoặc phủ định kéo dài (ずっと〜ていない)."
+  ],
+  "examples": [
+   {
+    "ja": "日本{にほん}に来{き}て以来{いらい}、「面白{おもしろ}い」という言葉{ことば}を何回{なんかい}も聞{き}いている。",
+    "vi": "Kể từ khi đến Nhật, tôi đã nghe từ “omoshiroi” nhiều lần.",
+    "hl": "以来"
+   },
+   {
+    "ja": "入社{にゅうしゃ}以来{いらい}、彼{かれ}とは友人{ゆうじん}として何{なん}でも相談{そうだん}しあっている。",
+    "vi": "Kể từ khi vào công ty, tôi và anh ấy là bạn bè và việc gì cũng bàn bạc với nhau.",
+    "hl": "以来"
+   },
+   {
+    "ja": "半年前{はんとしまえ}に家族{かぞく}と電話{でんわ}で話{はな}して以来{いらい}、ずっと連絡{れんらく}していない。",
+    "vi": "Từ lần nói chuyện điện thoại với gia đình nửa năm trước, tôi vẫn chưa liên lạc lần nào.",
+    "hl": "以来"
+   }
+  ]
+ },
+ {
+  "id": "3-2",
+  "lesson": 3,
+  "no": 2,
+  "extra": false,
+  "pattern": "何〜も",
+  "meaningVi": "Diễn tả số lượng nhiều: bao nhiêu ~ (nhiều lắm).",
+  "connection": [
+   "何 + 助数詞（回・人・年…）+ も"
+  ],
+  "notes": [
+   "Ví dụ: 何回{なんかい}も (nhiều lần), 何人{なんにん}も (nhiều người), 何年{なんねん}も (nhiều năm)."
+  ],
+  "examples": [
+   {
+    "ja": "「面白{おもしろ}い」という言葉{ことば}を何回{なんかい}も聞{き}いている。",
+    "vi": "Tôi đã nghe từ “omoshiroi” rất nhiều lần.",
+    "hl": "何回も"
+   },
+   {
+    "ja": "今朝{けさ}電車{でんしゃ}の事故{じこ}があり、何人{なんにん}も遅刻{ちこく}した。",
+    "vi": "Sáng nay có sự cố tàu điện nên nhiều người bị đến muộn.",
+    "hl": "何人も"
+   },
+   {
+    "ja": "彼{かれ}には何年{なんねん}も会{あ}っていない。",
+    "vi": "Tôi đã không gặp anh ấy nhiều năm rồi.",
+    "hl": "何年も"
+   }
+  ]
+ },
+ {
+  "id": "3-2a",
+  "lesson": 3,
+  "no": 2,
+  "extra": true,
+  "pattern": "何〜か",
+  "meaningVi": "Diễn tả số lượng ít: vài ~ (một ít).",
+  "connection": [
+   "何 + 助数詞 + か"
+  ],
+  "notes": [
+   "Trái nghĩa về số lượng với 「何〜も」."
+  ],
+  "examples": [
+   {
+    "ja": "試験{しけん}の結果{けっか}が悪{わる}く、何人{なんにん}かの学生{がくせい}が落第{らくだい}した。",
+    "vi": "Kết quả kỳ thi kém nên có vài sinh viên bị trượt.",
+    "hl": "何人か"
+   }
+  ]
+ },
+ {
+  "id": "3-3",
+  "lesson": 3,
+  "no": 3,
+  "extra": false,
+  "pattern": "文章の中の「こ・そ」",
+  "meaningVi": "Chỉ sự vật đã xuất hiện ở câu trước. 「こ」 dùng khi nói về điều thuộc về người nói hoặc điều người nói cảm thấy gần gũi, thân thuộc.",
+  "connection": [
+   "これ・この・こう / それ・その・そう + …"
+  ],
+  "notes": [
+   "こ: điều thuộc về người nói / cảm thấy gần.",
+   "そ: chỉ điều ở câu trước một cách khách quan."
+  ],
+  "examples": [
+   {
+    "ja": "「あなたは面白{おもしろ}いね。」とよく言{い}われる。これは褒{ほ}められているのだろうか。",
+    "vi": "Tôi hay bị nói “Cậu thú vị nhỉ”. Không biết đó có phải là lời khen không.",
+    "hl": "これ"
+   },
+   {
+    "ja": "彼{かれ}は記憶力{きおくりょく}が非常{ひじょう}に優{すぐ}れている。だが、それを自慢{じまん}することはない。",
+    "vi": "Anh ấy có trí nhớ cực kỳ tốt. Nhưng anh ấy không hề khoe điều đó.",
+    "hl": "それ"
+   }
+  ]
+ },
+ {
+  "id": "3-3a",
+  "lesson": 3,
+  "no": 3,
+  "extra": true,
+  "pattern": "会話の中の「そ・あ」",
+  "meaningVi": "Trong hội thoại: nếu cả người nói lẫn người nghe đều biết → dùng 「あ」. Nếu chỉ một trong hai người biết → dùng 「そ」.",
+  "connection": [
+   "双方が知っている → あ",
+   "一方だけが知っている → そ"
+  ],
+  "notes": [
+   "Cả hai cùng biết: あの〜, ああ. Chỉ một bên biết: その〜, それ."
+  ],
+  "examples": [
+   {
+    "ja": "A：昨日{きのう}花山公園{はなやまこうえん}に行{い}ったんだ。 B：それ、どこにあるの？",
+    "vi": "A: Hôm qua tớ đi công viên Hanayama. B: Chỗ đó ở đâu vậy?",
+    "hl": "それ"
+   },
+   {
+    "ja": "A：あした横浜{よこはま}の花火大会{はなびたいかい}を見{み}に行{い}くんだ。 B：ああ、あの花火大会{はなびたいかい}はすごく有名{ゆうめい}だよね。",
+    "vi": "A: Ngày mai tớ đi xem lễ hội pháo hoa Yokohama. B: À, lễ hội pháo hoa đó nổi tiếng lắm nhỉ.",
+    "hl": "あの"
+   }
+  ]
+ },
+ {
+  "id": "3-4",
+  "lesson": 3,
+  "no": 4,
+  "extra": false,
+  "pattern": "普通形ということだ",
+  "meaningVi": "Từ một sự thật nào đó, rút ra kết luận rồi nêu ra (nghĩa là ~, tức là ~). Trong hội thoại có thể nói 「〜っていうことですか」 để xác nhận.",
+  "connection": [
+   "普通形 + ということだ"
+  ],
+  "notes": [
+   "Hội thoại: 〜っていうことですか = Nghĩa là ~ phải không?"
+  ],
+  "examples": [
+   {
+    "ja": "この言葉{ことば}は好意的{こういてき}な言葉{ことば}であって、否定的{ひていてき}なものではないということだ。",
+    "vi": "Nghĩa là: từ này mang ý thiện chí chứ không phải ý tiêu cực.",
+    "hl": "ということだ"
+   },
+   {
+    "ja": "A：これが事実{じじつ}です。 B：つまり、あの話{はなし}はうそだったということですね。",
+    "vi": "A: Đây là sự thật. B: Nghĩa là câu chuyện đó là nói dối nhỉ.",
+    "hl": "ということです"
+   },
+   {
+    "ja": "A：Cさんはベジタリアンです。 B：じゃ、肉{にく}も魚{さかな}も食{た}べないっていうことですか。",
+    "vi": "A: C là người ăn chay. B: Vậy nghĩa là cả thịt lẫn cá đều không ăn à?",
+    "hl": "っていうことです"
+   }
+  ]
+ },
+ {
+  "id": "3-5",
+  "lesson": 3,
+  "no": 5,
+  "extra": false,
+  "pattern": "Vルまでもない・Vルまでもなく〜",
+  "meaningVi": "Không cần phải ~ (= する必要{ひつよう}はない / ないが〜). Vì quá rõ ràng nên không cần làm.",
+  "connection": [
+   "V辞書形 + までもない / までもなく"
+  ],
+  "notes": [],
+  "examples": [
+   {
+    "ja": "言{い}うまでもなく、まじめな日本{にほん}。",
+    "vi": "Không cần phải nói, Nhật Bản là một đất nước nghiêm túc.",
+    "hl": "までもなく"
+   },
+   {
+    "ja": "これは誰{だれ}でも知{し}っていることだから、わざわざ説明{せつめい}するまでもない。",
+    "vi": "Đây là điều ai cũng biết nên không cần phải cất công giải thích.",
+    "hl": "までもない"
+   },
+   {
+    "ja": "ドラえもんを例{れい}に出{だ}すまでもなく、日本{にほん}のアニメは多{おお}くの人{ひと}に知{し}られている。",
+    "vi": "Không cần nêu ví dụ như Doraemon, anime Nhật đã được nhiều người biết đến.",
+    "hl": "までもなく"
+   }
+  ]
+ },
+ {
+  "id": "3-6",
+  "lesson": 3,
+  "no": 6,
+  "extra": false,
+  "pattern": "疑問語＋Nであろうと",
+  "meaningVi": "(= 「疑問語＋N」でも) Dù là ~ đi nữa thì ~. Ngôn ngữ viết.",
+  "connection": [
+   "疑問語 + N + であろうと"
+  ],
+  "notes": [
+   "Văn viết. Dạng văn nói tương đương: 疑問語 + N + でも."
+  ],
+  "examples": [
+   {
+    "ja": "どこの国{くに}であろうと、面白{おもしろ}い発見{はっけん}があると思{おも}う。",
+    "vi": "Dù là nước nào, tôi nghĩ cũng có những khám phá thú vị.",
+    "hl": "であろうと"
+   },
+   {
+    "ja": "どんな人{ひと}であろうと、良心{りょうしん}はあるはずだ。",
+    "vi": "Dù là người như thế nào đi nữa thì chắc chắn cũng có lương tâm.",
+    "hl": "であろうと"
+   },
+   {
+    "ja": "どんな時{とき}であろうと、自分{じぶん}を見失{みうしな}わないようにしたい。",
+    "vi": "Dù trong hoàn cảnh nào, tôi cũng muốn không đánh mất chính mình.",
+    "hl": "であろうと"
+   }
+  ]
+ },
+ {
+  "id": "3-6a",
+  "lesson": 3,
+  "no": 6,
+  "extra": true,
+  "pattern": "N₁であろうと、N₂であろうと",
+  "meaningVi": "(= N₁ も N₂ も) Áp dụng cho cả N₁ lẫn N₂: dù là N₁ hay N₂ đi nữa.",
+  "connection": [
+   "N₁ + であろうと、N₂ + であろうと"
+  ],
+  "notes": [],
+  "examples": [
+   {
+    "ja": "ペットを捨{す}てる人{ひと}がいる。しかし、人{ひと}であろうと、動物{どうぶつ}であろうと、その命{いのち}は同{おな}じように大切{たいせつ}にするべきだ。",
+    "vi": "Có những người vứt bỏ thú cưng. Nhưng dù là người hay động vật, sinh mạng đều phải được trân trọng như nhau.",
+    "hl": "であろうと、動物であろうと"
+   }
+  ]
+ },
+ {
+  "id": "3-7",
+  "lesson": 3,
+  "no": 7,
+  "extra": false,
+  "pattern": "V（移動動詞）テいる（移動後の状態）",
+  "meaningVi": "Diễn tả trạng thái sau khi di chuyển (đã đến / đã đi / đã quay lại và đang ở đó). Động từ di chuyển: 行{い}く・来{く}る・戻{もど}る・帰{かえ}る.",
+  "connection": [
+   "V（移動動詞）て + いる"
+  ],
+  "notes": [
+   "Ví dụ động từ di chuyển: 行く・来る・戻る・帰る."
+  ],
+  "examples": [
+   {
+    "ja": "私{わたし}は地球{ちきゅう}の反対側{はんたいがわ}から来{き}ている。",
+    "vi": "Tôi đến từ phía bên kia của trái đất (và hiện đang ở đây).",
+    "hl": "来ている"
+   },
+   {
+    "ja": "A：担当者{たんとうしゃ}はもう会場{かいじょう}に行{い}っていますね。 B：はい、会場{かいじょう}で資料{しりょう}をチェックしていると連絡{れんらく}がありました。",
+    "vi": "A: Người phụ trách đã đến hội trường rồi nhỉ. B: Vâng, họ có báo là đang kiểm tra tài liệu ở hội trường.",
+    "hl": "行っています"
+   },
+   {
+    "ja": "彼{かれ}はもう会社{かいしゃ}に戻{もど}っている。",
+    "vi": "Anh ấy đã quay lại công ty rồi.",
+    "hl": "戻っている"
+   }
+  ]
+ },
+ {
+  "id": "3-7a",
+  "lesson": 3,
+  "no": 7,
+  "extra": true,
+  "pattern": "V（移動動詞）テいる（状況の変化）",
+  "meaningVi": "Diễn tả sự biến đổi của tình trạng (đã trở lại / đã thay đổi so với trước).",
+  "connection": [
+   "V（移動動詞）て + いる"
+  ],
+  "notes": [
+   "Dùng 「戻{もど}る」 theo nghĩa trở lại trạng thái cũ."
+  ],
+  "examples": [
+   {
+    "ja": "先週{せんしゅう}体調{たいちょう}を崩{くず}したが、今{いま}は元{もと}の状態{じょうたい}に戻{もど}っている。",
+    "vi": "Tuần trước tôi bị ốm, nhưng giờ đã trở lại trạng thái ban đầu.",
+    "hl": "戻っている"
+   }
+  ]
+ },
+ {
+  "id": "4-1",
+  "lesson": 4,
+  "no": 1,
+  "extra": false,
+  "pattern": "Vタとたん",
+  "meaningVi": "(= 〜するとすぐに) Vừa mới ~ thì ngay lập tức ~. Vế sau là sự việc không lường trước được, xảy ra liền sau đó, không có khoảng cách thời gian.",
+  "connection": [
+   "V過去形（た形）+ とたん（に）"
+  ],
+  "notes": [
+   "Vế sau thường là sự việc bất ngờ, không phải ý chí của người nói.",
+   "Không dùng cho hành động có chủ ý của chính người nói."
+  ],
+  "examples": [
+   {
+    "ja": "まぶしいと感{かん}じたとたん、「はくしょん」とくしゃみが飛{と}びだす。",
+    "vi": "Vừa cảm thấy chói mắt là lập tức hắt xì “hắt xì” một cái.",
+    "hl": "たとたん"
+   },
+   {
+    "ja": "学生{がくせい}たちは終了{しゅうりょう}ベルが鳴{な}ったとたん、教室{きょうしつ}を出{で}て行{い}った。",
+    "vi": "Các sinh viên vừa nghe chuông kết thúc là lập tức ra khỏi lớp.",
+    "hl": "たとたん"
+   },
+   {
+    "ja": "彼{かれ}は布団{ふとん}に入{はい}ったとたん、寝{ね}てしまった。",
+    "vi": "Anh ấy vừa chui vào chăn là ngủ mất ngay.",
+    "hl": "たとたん"
+   }
+  ]
+ },
+ {
+  "id": "4-2",
+  "lesson": 4,
+  "no": 2,
+  "extra": false,
+  "pattern": "複合動詞（Vマス＋だす・込む）",
+  "meaningVi": "Động từ ghép tạo bằng V thể ます (bỏ ます) + だす / 込{こ}む. 〜だす diễn tả sự xuất hiện trong không gian (đưa ra, lao ra). 〜込{こ}む diễn tả sự di chuyển trong không gian vào bên trong.",
+  "connection": [
+   "Vます + だす",
+   "Vます + 込む"
+  ],
+  "notes": [
+   "〜だす（空間的出現）: 飛{と}びだす (nhảy/lao ra), 取{と}りだす (lấy ra).",
+   "〜込{こ}む（空間的移動・内{うち}に）: 吸{す}い込{こ}む (hít vào), 飛{と}び込{こ}む (nhảy vào)."
+  ],
+  "examples": [
+   {
+    "ja": "まぶしいと感{かん}じたとたん、くしゃみが飛{と}びだす。",
+    "vi": "Vừa thấy chói mắt là hắt xì bật ra.",
+    "hl": "飛びだす"
+   },
+   {
+    "ja": "電車{でんしゃ}に乗{の}ったとたん、彼{かれ}はかばんからタブレットを取{と}りだした。",
+    "vi": "Vừa lên tàu, anh ấy liền lấy máy tính bảng ra khỏi cặp.",
+    "hl": "取りだした"
+   },
+   {
+    "ja": "冷{つめ}たい空気{くうき}を吸{す}い込{こ}む。",
+    "vi": "Hít sâu không khí lạnh vào.",
+    "hl": "吸い込む"
+   },
+   {
+    "ja": "とても暑{あつ}いので、プールに飛{と}び込{こ}んだ。",
+    "vi": "Vì trời nóng quá nên tôi nhảy xuống hồ bơi.",
+    "hl": "飛び込んだ"
+   }
+  ]
+ },
+ {
+  "id": "4-2a",
+  "lesson": 4,
+  "no": 2,
+  "extra": true,
+  "pattern": "〜だす（開始）・〜込む（十分に）",
+  "meaningVi": "〜だす: bắt đầu (開始{かいし}) một hành động. 〜込{こ}む: làm đủ, làm hết sức, làm kỹ (十分{じゅうぶん}に).",
+  "connection": [
+   "Vます + だす（bắt đầu）",
+   "Vます + 込む（hết sức, thấm sâu）"
+  ],
+  "notes": [
+   "降{ふ}りだす = bắt đầu mưa.",
+   "走{はし}り込{こ}む = luyện tập chạy thật nhiều, thật kỹ."
+  ],
+  "examples": [
+   {
+    "ja": "突然{とつぜん}雨{あめ}が降{ふ}りだした。",
+    "vi": "Đột nhiên trời bắt đầu mưa.",
+    "hl": "降りだした"
+   },
+   {
+    "ja": "マラソンの選手{せんしゅ}たちは大会{たいかい}のために毎日{まいにち}練習{れんしゅう}し、走{はし}り込{こ}んでいる。",
+    "vi": "Các vận động viên marathon luyện tập mỗi ngày và chạy rất nhiều cho giải đấu.",
+    "hl": "走り込んで"
+   }
+  ]
+ },
+ {
+  "id": "4-3",
+  "lesson": 4,
+  "no": 3,
+  "extra": false,
+  "pattern": "Nとともに",
+  "meaningVi": "(= 〜と一緒{いっしょ}に) Cùng với N, cùng một lúc với N.",
+  "connection": [
+   "N + とともに"
+  ],
+  "notes": [],
+  "examples": [
+   {
+    "ja": "鼻{はな}に入{はい}った異物{いぶつ}を鼻水{はなみず}とともに外{そと}に押{お}しだそうとする。",
+    "vi": "Cơ thể cố đẩy dị vật lọt vào mũi ra ngoài cùng với nước mũi.",
+    "hl": "とともに"
+   },
+   {
+    "ja": "ボランティアの仲間{なかま}とともに、町{まち}のイベントを成功{せいこう}させた。",
+    "vi": "Cùng với các bạn tình nguyện viên, tôi đã làm cho sự kiện của thị trấn thành công.",
+    "hl": "とともに"
+   }
+  ]
+ },
+ {
+  "id": "4-3a",
+  "lesson": 4,
+  "no": 3,
+  "extra": true,
+  "pattern": "Vルとともに（＝〜と同時に）",
+  "meaningVi": "(= 〜と同時{どうじ}に) Vừa ~ đồng thời cũng ~ (hai việc xảy ra song song).",
+  "connection": [
+   "V辞書形 + とともに"
+  ],
+  "notes": [],
+  "examples": [
+   {
+    "ja": "電車{でんしゃ}の事故{じこ}があった。会社{かいしゃ}は事故原因{じこげんいん}を調{しら}べるとともに、電車{でんしゃ}の復旧作業{ふっきゅうさぎょう}を進{すす}めている。",
+    "vi": "Đã xảy ra sự cố tàu điện. Công ty vừa điều tra nguyên nhân sự cố, vừa tiến hành công việc khôi phục tàu.",
+    "hl": "とともに"
+   }
+  ]
+ },
+ {
+  "id": "4-3b",
+  "lesson": 4,
+  "no": 3,
+  "extra": true,
+  "pattern": "Vル／N とともに（＝〜に伴って）",
+  "meaningVi": "(= 〜に伴{ともな}って, xem bài 9 trong 『中級へ行こう』) Diễn tả khi một bên thay đổi thì bên kia cũng thay đổi theo.",
+  "connection": [
+   "V辞書形 / N + とともに"
+  ],
+  "notes": [
+   "Diễn tả sự thay đổi song song, kéo theo nhau."
+  ],
+  "examples": [
+   {
+    "ja": "人口{じんこう}が増{ふ}えるとともに、ごみ問題{もんだい}が起{お}きている。",
+    "vi": "Cùng với việc dân số tăng, vấn đề rác thải đang nảy sinh.",
+    "hl": "とともに"
+   },
+   {
+    "ja": "景気{けいき}の回復{かいふく}とともに、家{いえ}を買{か}う人{ひと}が増{ふ}えている。",
+    "vi": "Cùng với sự phục hồi của nền kinh tế, số người mua nhà đang tăng lên.",
+    "hl": "とともに"
+   }
+  ]
+ },
+ {
+  "id": "4-4",
+  "lesson": 4,
+  "no": 4,
+  "extra": false,
+  "pattern": "助詞＋「の」　での・からの・までの・との・への",
+  "meaningVi": "Khi danh từ bị bổ nghĩa bằng trợ từ, ta thêm 「の」 vào sau trợ từ: で→での, から→からの, まで→までの, と→との, へ→への, [người/nơi chốn]に→への. Không dùng 「がの・をの」.",
+  "connection": [
+   "で→での",
+   "から→からの",
+   "まで→までの",
+   "と→との",
+   "へ→への",
+   "[人・場所]に→への"
+  ],
+  "notes": [
+   "「がの」「をの」 không được sử dụng."
+  ],
+  "examples": [
+   {
+    "ja": "目{め}からの「まぶしい」という信号{しんごう}が脳{のう}に伝{つた}わる。",
+    "vi": "Tín hiệu “chói” từ mắt truyền đến não.",
+    "hl": "からの"
+   },
+   {
+    "ja": "両親{りょうしん}との暮{く}らしが懐{なつ}かしい。",
+    "vi": "Tôi nhớ cuộc sống cùng với bố mẹ.",
+    "hl": "との"
+   },
+   {
+    "ja": "タイへの卒業旅行{そつぎょうりょこう}を楽{たの}しみにしている。",
+    "vi": "Tôi đang mong chờ chuyến du lịch tốt nghiệp đến Thái Lan.",
+    "hl": "への"
+   }
+  ]
+ },
+ {
+  "id": "4-5",
+  "lesson": 4,
+  "no": 5,
+  "extra": false,
+  "pattern": "Vル／Nの 途中",
+  "meaningVi": "Đang giữa chừng ~, trên đường ~.",
+  "connection": [
+   "V辞書形 + 途中{とちゅう}（で）",
+   "N の + 途中{とちゅう}（で）"
+  ],
+  "notes": [],
+  "examples": [
+   {
+    "ja": "目{め}からの信号{しんごう}が脳{のう}に伝{つた}わる途中{とちゅう}でなぜか鼻{はな}がむずむずして、くしゃみが出{で}る。",
+    "vi": "Trên đường tín hiệu từ mắt truyền lên não, không hiểu sao mũi bỗng ngứa ngáy rồi hắt xì.",
+    "hl": "途中"
+   },
+   {
+    "ja": "帰宅{きたく}の途中{とちゅう}、図書館{としょかん}で本{ほん}を借{か}りた。",
+    "vi": "Trên đường về nhà, tôi đã mượn sách ở thư viện.",
+    "hl": "途中"
+   }
+  ]
+ },
+ {
+  "id": "4-6",
+  "lesson": 4,
+  "no": 6,
+  "extra": false,
+  "pattern": "擬音語・擬態語",
+  "meaningVi": "Từ tượng thanh (擬音語{ぎおんご}: diễn tả âm thanh, tiếng nói) và từ tượng hình (擬態語{ぎたいご}: diễn tả trạng thái, ở đây là về cơ thể).",
+  "connection": [
+   "A：〔むずむず・どきどき・にこにこ・はらはら・むかむか・がんがん・ひりひり〕する",
+   "B：〔ぺこぺこ・からから・くたくた〕だ"
+  ],
+  "notes": [
+   "擬音語: はくしょん, ワンワン.",
+   "擬態語 nhóm A đi với する, nhóm B đi với だ."
+  ],
+  "examples": [
+   {
+    "ja": "まぶしいと感{かん}じたとたん、「はくしょん」とくしゃみが飛{と}びだす。",
+    "vi": "Vừa cảm thấy chói mắt là hắt xì “hắt xì” một cái.",
+    "hl": "はくしょん"
+   },
+   {
+    "ja": "隣{となり}の家{いえ}の犬{いぬ}が「ワンワン」とほえて、うるさい。",
+    "vi": "Con chó nhà bên sủa “gâu gâu” ồn ào quá.",
+    "hl": "ワンワン"
+   },
+   {
+    "ja": "鼻{はな}がむずむずして、くしゃみが出{で}る。",
+    "vi": "Mũi ngứa ngáy rồi hắt xì.",
+    "hl": "むずむず"
+   },
+   {
+    "ja": "朝{あさ}から何{なに}も食{た}べていない。おなかがぺこぺこだ。",
+    "vi": "Từ sáng tôi chưa ăn gì cả. Bụng đói meo.",
+    "hl": "ぺこぺこ"
+   }
+  ]
+ },
+ {
+  "id": "4-7",
+  "lesson": 4,
+  "no": 7,
+  "extra": false,
+  "pattern": "〜ことに",
+  "meaningVi": "Mẫu câu nêu cảm xúc, cảm nghĩ của người nói ra trước, rồi mới nói sự việc ở vế sau.",
+  "connection": [
+   "Vた / Aい / Naな + ことに"
+  ],
+  "notes": [
+   "Hay đi với: 面白{おもしろ}い, 困{こま}った, 残念{ざんねん}な, 驚{おどろ}いた…"
+  ],
+  "examples": [
+   {
+    "ja": "面白{おもしろ}いことに、くしゃみの音{おと}が親子{おやこ}でそっくりであるという話{はなし}がある。",
+    "vi": "Thú vị là có chuyện nói rằng tiếng hắt xì của cha mẹ và con cái giống hệt nhau.",
+    "hl": "ことに"
+   },
+   {
+    "ja": "困{こま}ったことに、この町{まち}のごみの捨{す}て方{かた}がよく分{わ}からない。",
+    "vi": "Phiền một nỗi là tôi không hiểu rõ cách vứt rác ở thị trấn này.",
+    "hl": "ことに"
+   },
+   {
+    "ja": "残念{ざんねん}なことに、体育祭{たいいくさい}は台風{たいふう}で中止{ちゅうし}になった。",
+    "vi": "Đáng tiếc là hội thao đã bị hủy do bão.",
+    "hl": "ことに"
+   }
+  ]
+ },
+ {
+  "id": "5-1",
+  "lesson": 5,
+  "no": 1,
+  "extra": false,
+  "pattern": "Vマスつつある",
+  "meaningVi": "(= だんだん〜ている) Đang dần dần ~. Dùng trong văn viết. Diễn tả một hành động hay tác dụng đang biến đổi theo một hướng nào đó.",
+  "connection": [
+   "Vます + つつある"
+  ],
+  "notes": [
+   "Thường đi với các động từ chỉ biến đổi: 変化{へんか}する, 変{か}わる, 増加{ぞうか}する, 増{ふ}える, 減少{げんしょう}する, 減{へ}る, なる."
+  ],
+  "examples": [
+   {
+    "ja": "三井公園{みついこうえん}も秋{あき}の気配{けはい}を見{み}せつつあります。",
+    "vi": "Công viên Mitsui cũng đang dần cho thấy dấu hiệu của mùa thu.",
+    "hl": "つつあります"
+   },
+   {
+    "ja": "事故{じこ}の原因{げんいん}は明{あき}らかになりつつある。",
+    "vi": "Nguyên nhân của vụ tai nạn đang dần được làm rõ.",
+    "hl": "つつある"
+   },
+   {
+    "ja": "仕事{しごと}の価値観{かちかん}が変化{へんか}しつつある。",
+    "vi": "Giá trị quan về công việc đang dần thay đổi.",
+    "hl": "つつある"
+   }
+  ]
+ },
+ {
+  "id": "5-2",
+  "lesson": 5,
+  "no": 2,
+  "extra": false,
+  "pattern": "Nを中心に",
+  "meaningVi": "(= 〜を基点{きてん}にして) Lấy N làm trung tâm, xoay quanh N.",
+  "connection": [
+   "N + を中心{ちゅうしん}に"
+  ],
+  "notes": [],
+  "examples": [
+   {
+    "ja": "公園{こうえん}は大小{だいしょう}2つの池{いけ}を中心{ちゅうしん}に造{つく}られています。",
+    "vi": "Công viên được xây dựng xoay quanh hai cái hồ, một lớn một nhỏ.",
+    "hl": "を中心に"
+   },
+   {
+    "ja": "日本{にほん}は東京{とうきょう}を中心{ちゅうしん}に経済{けいざい}が発展{はってん}している。",
+    "vi": "Nhật Bản phát triển kinh tế lấy Tokyo làm trung tâm.",
+    "hl": "を中心に"
+   },
+   {
+    "ja": "若{わか}い女性{じょせい}を中心{ちゅうしん}に日本酒{にほんしゅ}が注目{ちゅうもく}されている。",
+    "vi": "Rượu sake đang được chú ý, chủ yếu là ở phụ nữ trẻ.",
+    "hl": "を中心に"
+   }
+  ]
+ },
+ {
+  "id": "5-3",
+  "lesson": 5,
+  "no": 3,
+  "extra": false,
+  "pattern": "Vタところに",
+  "meaningVi": "(= 場所{ばしょ}に) Ở chỗ (sau khi đã đi / làm ~ một đoạn) thì có ~. Dùng để chỉ vị trí, địa điểm.",
+  "connection": [
+   "V過去形（た形）+ ところに"
+  ],
+  "notes": [
+   "Nghĩa là “ở chỗ sau khi V (đi một đoạn…)”."
+  ],
+  "examples": [
+   {
+    "ja": "池沿{いけぞ}いの小道{こみち}を少{すこ}し行{い}ったところにベンチがあります。",
+    "vi": "Đi dọc con đường nhỏ ven hồ một đoạn thì có một chiếc ghế dài.",
+    "hl": "ところに"
+   },
+   {
+    "ja": "まっすぐ行{い}ったところにトイレがある。",
+    "vi": "Đi thẳng một đoạn là có nhà vệ sinh.",
+    "hl": "ところに"
+   }
+  ]
+ },
+ {
+  "id": "5-3a",
+  "lesson": 5,
+  "no": 3,
+  "extra": true,
+  "pattern": "Vタところで",
+  "meaningVi": "(= 場所{ばしょ}で) Tại chỗ (sau khi đã làm ~), làm gì đó.",
+  "connection": [
+   "V過去形（た形）+ ところで"
+  ],
+  "notes": [
+   "Phân biệt: 「ところに」 chỉ nơi tồn tại, 「ところで」 chỉ nơi hành động diễn ra."
+  ],
+  "examples": [
+   {
+    "ja": "次{つぎ}の信号{しんごう}を渡{わた}ったところで、止{と}めてください。",
+    "vi": "Hãy dừng lại ở chỗ sau khi qua đèn tín hiệu tiếp theo.",
+    "hl": "ところで"
+   }
+  ]
+ },
+ {
+  "id": "5-4",
+  "lesson": 5,
+  "no": 4,
+  "extra": false,
+  "pattern": "「意志動詞・無意志動詞」の整理",
+  "meaningVi": "Phân biệt động từ ý chí và động từ vô ý chí. 意志動詞{いしどうし}: tự mình quyết định làm hay không làm. 無意志動詞{むいしどうし}: không thể tự quyết định (xảy ra tự nhiên).",
+  "connection": [
+   "意志動詞: 行{い}く・作{つく}る・相談{そうだん}する…",
+   "無意志動詞: ある・分{わ}かる・できる・行{い}ける・見{み}える・（雨{あめ}が）降{ふ}る・（風{かぜ}が）吹{ふ}く"
+  ],
+  "notes": [
+   "Động từ ý chí dùng được với thể ý chí (〜よう) và thể mong muốn (〜たい); động từ vô ý chí thì không."
+  ],
+  "examples": [
+   {
+    "ja": "休日{きゅうじつ}の朝{あさ}、よく公園{こうえん}へ行{い}きます。",
+    "vi": "Sáng ngày nghỉ, tôi thường đi công viên. (động từ ý chí)",
+    "hl": "行きます"
+   },
+   {
+    "ja": "いつか自分{じぶん}の会社{かいしゃ}を作{つく}りたい。",
+    "vi": "Một ngày nào đó tôi muốn lập công ty của riêng mình. (động từ ý chí)",
+    "hl": "作りたい"
+   },
+   {
+    "ja": "明日{あす}、先輩{せんぱい}に仕事{しごと}について相談{そうだん}しようと思{おも}っている。",
+    "vi": "Ngày mai tôi định bàn với tiền bối về công việc. (động từ ý chí)",
+    "hl": "相談しよう"
+   },
+   {
+    "ja": "小道{こみち}を少{すこ}し行{い}ったところにベンチがあります。",
+    "vi": "Đi dọc con đường nhỏ một đoạn thì có ghế dài. (động từ vô ý chí)",
+    "hl": "あります"
+   },
+   {
+    "ja": "ここから海{うみ}が見{み}える。",
+    "vi": "Từ đây có thể nhìn thấy biển. (động từ vô ý chí)",
+    "hl": "見える"
+   },
+   {
+    "ja": "ゆうべから強{つよ}い風{かぜ}が吹{ふ}いている。",
+    "vi": "Từ tối qua gió thổi mạnh. (động từ vô ý chí)",
+    "hl": "吹いている"
+   }
+  ]
+ },
+ {
+  "id": "5-5",
+  "lesson": 5,
+  "no": 5,
+  "extra": false,
+  "pattern": "Nらしい・Nらしさ・Nらしく",
+  "meaningVi": "Trông đúng là như vậy, mang tính điển hình của N, đúng chất N.",
+  "connection": [
+   "N + らしい / らしさ / らしく"
+  ],
+  "notes": [
+   "〜らしい: đúng kiểu ~; 〜らしさ: nét đặc trưng của ~; 〜らしく: một cách đúng chất ~."
+  ],
+  "examples": [
+   {
+    "ja": "落{お}ち葉{ば}がいっぱいで、何{なん}だか秋{あき}らしい景色{けしき}でしょう。",
+    "vi": "Lá rụng đầy đường, cảnh sắc trông thật là mùa thu nhỉ.",
+    "hl": "らしい"
+   },
+   {
+    "ja": "学生{がくせい}なら学生{がくせい}らしく勉強{べんきょう}しなさい。",
+    "vi": "Đã là học sinh thì hãy học hành cho ra dáng học sinh.",
+    "hl": "らしく"
+   },
+   {
+    "ja": "この幼稚園{ようちえん}では子供{こども}らしさを大切{たいせつ}にしています。",
+    "vi": "Ở trường mẫu giáo này, người ta coi trọng nét hồn nhiên đúng chất trẻ con.",
+    "hl": "らしさ"
+   }
+  ]
+ },
+ {
+  "id": "5-6",
+  "lesson": 5,
+  "no": 6,
+  "extra": false,
+  "pattern": "〜げ",
+  "meaningVi": "(= そう（様態{ようたい}）) Có vẻ ~, trông như ~. Không dùng với người bậc trên. Từ có 「げ」 là tính từ đuôi な.",
+  "connection": [
+   "Aい（bỏ い）/ Naだ（bỏ だ）+ げ"
+  ],
+  "notes": [
+   "Ví dụ: 楽{たの}しげ, 悲{かな}しげ, 寂{さび}しげ, 恥{は}ずかしげ, 得意{とくい}げ.",
+   "Không dùng khi nói về người bậc trên (目上{めうえ}の人{ひと})."
+  ],
+  "examples": [
+   {
+    "ja": "子供{こども}たちが楽{たの}しげに遊{あそ}んでいます。",
+    "vi": "Bọn trẻ đang chơi đùa trông có vẻ vui vẻ.",
+    "hl": "げ"
+   },
+   {
+    "ja": "彼{かれ}は得意{とくい}げな顔{かお}で最新{さいしん}のゲームソフトを見{み}せた。",
+    "vi": "Anh ấy khoe phần mềm game mới nhất với gương mặt đầy vẻ tự hào.",
+    "hl": "げ"
+   }
+  ]
+ },
+ {
+  "id": "6-1",
+  "lesson": 6,
+  "no": 1,
+  "extra": false,
+  "pattern": "話し言葉",
+  "meaningVi": "Dạng văn nói (rút gọn) của các mẫu thường gặp: ではない→じゃない, てしまった→ちゃった, でしまった→じゃった, なければ→なきゃ, ています→てます, ている→てる, ておく→とく, ておいて→といて, しかし/だが/が→だけど/けど, けれども→でも, ですから→だから, のだ→んだ.",
+  "connection": [
+   "本{ほん}ではない → 本{ほん}じゃない",
+   "食{た}べてしまった → 食{た}べちゃった",
+   "飲{の}んでしまった → 飲{の}んじゃった",
+   "食{た}べなければ → 食{た}べなきゃ",
+   "食{た}べています → 食{た}べてます",
+   "食{た}べている → 食{た}べてる",
+   "食{た}べておく → 食{た}べとく",
+   "食{た}べておいて → 食{た}べといて",
+   "しかし・だが・が → だけど・けど",
+   "けれども → でも",
+   "ですから → だから",
+   "食{た}べるのだ → 食{た}べるんだ"
+  ],
+  "notes": [
+   "Chỉ dùng trong hội thoại thân mật, không dùng trong văn viết trang trọng."
+  ],
+  "examples": [
+   {
+    "ja": "この日{ひ}に食{た}べなきゃ、意味{いみ}がない。",
+    "vi": "Nếu không ăn vào ngày này thì chẳng có ý nghĩa gì.",
+    "hl": "なきゃ"
+   },
+   {
+    "ja": "あっ、宿題{しゅくだい}忘{わす}れちゃった。",
+    "vi": "A, tôi quên mất bài tập về nhà rồi.",
+    "hl": "ちゃった"
+   },
+   {
+    "ja": "これは私{わたし}のボールペンじゃない。",
+    "vi": "Đây không phải bút bi của tôi.",
+    "hl": "じゃない"
+   }
+  ]
+ },
+ {
+  "id": "6-2",
+  "lesson": 6,
+  "no": 2,
+  "extra": false,
+  "pattern": "Nにとって",
+  "meaningVi": "Xét từ lập trường của ~ thì ~. Vế sau là sự phán đoán hoặc đánh giá.",
+  "connection": [
+   "N + にとって"
+  ],
+  "notes": [
+   "Vế sau thường là phán đoán, đánh giá như 大切{たいせつ}だ, 問題{もんだい}だ, 難{むずか}しい…"
+  ],
+  "examples": [
+   {
+    "ja": "多{おお}くの人{ひと}にとって、土用{どよう}のうしの日{ひ}は「うなぎを食{た}べずにはいられない日{ひ}」ということだろう。",
+    "vi": "Đối với nhiều người, ngày Ushi trong tiết Doyo có lẽ là “ngày không thể không ăn lươn”.",
+    "hl": "にとって"
+   },
+   {
+    "ja": "留学生{りゅうがくせい}にとって日本{にほん}の物価{ぶっか}が高{たか}いのは問題{もんだい}だ。",
+    "vi": "Đối với du học sinh, vật giá ở Nhật cao là một vấn đề.",
+    "hl": "にとって"
+   },
+   {
+    "ja": "あなたにとって一番{いちばん}大切{たいせつ}なことは何{なん}ですか。",
+    "vi": "Đối với bạn, điều quan trọng nhất là gì?",
+    "hl": "にとって"
+   }
+  ]
+ },
+ {
+  "id": "6-3",
+  "lesson": 6,
+  "no": 3,
+  "extra": false,
+  "pattern": "Vナイずに（は）いられない",
+  "meaningVi": "(= 〜ないではいられない) Không thể không ~, không thể kiềm chế được mà phải ~. Với する thì dùng せずに.",
+  "connection": [
+   "Vない形（bỏ ない）+ ずに（は）いられない",
+   "する → せずには いられない"
+  ],
+  "notes": [
+   "する → せずにはいられない."
+  ],
+  "examples": [
+   {
+    "ja": "「土用{どよう}のうしの日{ひ}」にはうなぎを食{た}べずにはいられない。",
+    "vi": "Vào “ngày Ushi trong tiết Doyo”, tôi không thể không ăn lươn.",
+    "hl": "ずにはいられない"
+   },
+   {
+    "ja": "彼女{かのじょ}の悲{かな}しい話{はなし}を聞{き}いた時{とき}、涙{なみだ}を流{なが}さずにはいられなかった。",
+    "vi": "Khi nghe câu chuyện buồn của cô ấy, tôi không thể không rơi nước mắt.",
+    "hl": "ずにはいられなかった"
+   },
+   {
+    "ja": "入院{にゅういん}した友人{ゆうじん}を思{おも}うと、心配{しんぱい}せずにいられない。",
+    "vi": "Nghĩ đến người bạn đang nằm viện, tôi không thể không lo lắng.",
+    "hl": "ずにいられない"
+   }
+  ]
+ },
+ {
+  "id": "6-4",
+  "lesson": 6,
+  "no": 4,
+  "extra": false,
+  "pattern": "〜らしい",
+  "meaningVi": "Phán đoán hoặc nghe đồn dựa trên thông tin đã có. Mang cảm giác xa cách, như chuyện của người khác đối với sự việc đang nói.",
+  "connection": [
+   "普通形（Na／N だ は bỏ）+ らしい"
+  ],
+  "notes": [
+   "Khác với 「Nらしい」 (đúng chất N) ở bài 5."
+  ],
+  "examples": [
+   {
+    "ja": "うなぎを食{た}べる習慣{しゅうかん}は江戸時代{えどじだい}の宣伝{せんでん}コピーから生{う}まれたらしい。",
+    "vi": "Nghe nói thói quen ăn lươn bắt nguồn từ một câu quảng cáo thời Edo.",
+    "hl": "らしい"
+   },
+   {
+    "ja": "うわさでは、あの2人{ふたり}は結婚{けっこん}するらしい。",
+    "vi": "Theo lời đồn, hai người đó sắp kết hôn.",
+    "hl": "らしい"
+   },
+   {
+    "ja": "あの交差点{こうさてん}に人{ひと}がたくさん集{あつ}まっている。事故{じこ}らしい。",
+    "vi": "Có rất nhiều người tụ tập ở ngã tư đó. Có vẻ là tai nạn.",
+    "hl": "らしい"
+   }
+  ]
+ },
+ {
+  "id": "6-5",
+  "lesson": 6,
+  "no": 5,
+  "extra": false,
+  "pattern": "〜としたら",
+  "meaningVi": "Điều kiện giả định: nếu giả sử ~ thì ~.",
+  "connection": [
+   "普通形 + としたら"
+  ],
+  "notes": [],
+  "examples": [
+   {
+    "ja": "本当{ほんとう}だとしたら、200年{ねん}以上{いじょう}もその効果{こうか}が続{つづ}いていることになる。",
+    "vi": "Nếu là sự thật thì có nghĩa hiệu quả đó đã kéo dài hơn 200 năm.",
+    "hl": "としたら"
+   },
+   {
+    "ja": "生{う}まれ変{か}わるとしたら、女性{じょせい}がいいですか、男性{だんせい}がいいですか。",
+    "vi": "Nếu được đầu thai lại, bạn muốn làm nữ hay nam?",
+    "hl": "としたら"
+   },
+   {
+    "ja": "今年{ことし}も留学{りゅうがく}するのが無理{むり}だとしたら、今度{こんど}こそ就職{しゅうしょく}しなければならない。",
+    "vi": "Nếu năm nay vẫn không thể đi du học thì lần này nhất định phải đi làm.",
+    "hl": "としたら"
+   }
+  ]
+ },
+ {
+  "id": "6-6",
+  "lesson": 6,
+  "no": 6,
+  "extra": false,
+  "pattern": "Vル／Vナイない（という）ことになる",
+  "meaningVi": "Kết quả của sự suy đoán, suy luận: như vậy có nghĩa là ~, rốt cuộc là ~.",
+  "connection": [
+   "V辞書形 / Vない形 + （という）ことになる"
+  ],
+  "notes": [],
+  "examples": [
+   {
+    "ja": "本当{ほんとう}だとしたら、200年{ねん}以上{いじょう}もその効果{こうか}が続{つづ}いていることになる。",
+    "vi": "Nếu là sự thật thì tức là hiệu quả đó đã kéo dài hơn 200 năm.",
+    "hl": "ことになる"
+   },
+   {
+    "ja": "このままうなぎの漁獲量{ぎょかくりょう}が減{へ}り続{つづ}けたら、土用{どよう}のうしの日{ひ}にうなぎが食{た}べられないことになるだろう。",
+    "vi": "Nếu sản lượng đánh bắt lươn cứ giảm mãi thế này thì rồi sẽ đến lúc không còn lươn để ăn vào ngày Ushi.",
+    "hl": "ことになる"
+   },
+   {
+    "ja": "彼{かれ}からパーティー参加{さんか}の返事{へんじ}が今日中{きょうじゅう}に来{こ}なかったら、彼{かれ}は参加{さんか}しないということになる。",
+    "vi": "Nếu trong hôm nay không có hồi âm của anh ấy về việc dự tiệc thì tức là anh ấy không tham gia.",
+    "hl": "ということになる"
+   }
+  ]
+ },
+ {
+  "id": "6-6a",
+  "lesson": 6,
+  "no": 6,
+  "extra": true,
+  "pattern": "〜ことになっている",
+  "meaningVi": "Diễn tả việc đã được người khác quyết định, như quy tắc, quy định: được quy định là ~, theo lệ thường là ~.",
+  "connection": [
+   "V辞書形 / Vない形 + ことになっている"
+  ],
+  "notes": [
+   "Nội dung do người/tổ chức khác quyết định, không phải do bản thân."
+  ],
+  "examples": [
+   {
+    "ja": "私{わたし}の会社{かいしゃ}では夏休{なつやす}みは1週間{しゅうかん}取{と}れることになっている。",
+    "vi": "Ở công ty tôi, quy định là kỳ nghỉ hè được nghỉ một tuần.",
+    "hl": "ことになっている"
+   }
+  ]
+ },
+ {
+  "id": "6-6b",
+  "lesson": 6,
+  "no": 6,
+  "extra": true,
+  "pattern": "〜ことにしている",
+  "meaningVi": "Diễn tả thói quen mang tính cá nhân do bản thân quyết định: tôi đã quyết định là cứ ~ (thành thói quen).",
+  "connection": [
+   "V辞書形 / Vない形 + ことにしている"
+  ],
+  "notes": [
+   "Khác với 「ことになっている」: ở đây là bản thân tự quyết định."
+  ],
+  "examples": [
+   {
+    "ja": "私{わたし}は夕方{ゆうがた}1時間{じかん}、健康{けんこう}のためにジョギングをすることにしている。",
+    "vi": "Tôi có thói quen chạy bộ một tiếng vào buổi chiều để giữ sức khỏe.",
+    "hl": "ことにしている"
+   }
+  ]
+ },
+ {
+  "id": "6-7",
+  "lesson": 6,
+  "no": 7,
+  "extra": false,
+  "pattern": "グラフの言葉",
+  "meaningVi": "Từ ngữ dùng khi mô tả biểu đồ. Với biểu đồ tròn (円{えん}グラフ): 〜％を占{し}める (chiếm ~%), 〜割{わり}を占{し}める (chiếm ~ phần mười).",
+  "connection": [
+   "〜％を占める",
+   "〜割を占める"
+  ],
+  "notes": [
+   "Dùng khi mô tả tỉ lệ trong biểu đồ tròn."
+  ],
+  "examples": [
+   {
+    "ja": "朝何{あさなに}も食{た}べない人{ひと}は、60代{だい}の男性{だんせい}では1.6%だが、20代{だい}の男性{だんせい}では18.3%を占{し}めている。",
+    "vi": "Số người không ăn gì vào buổi sáng chỉ chiếm 1,6% ở nam giới độ tuổi 60, nhưng ở nam giới độ tuổi 20 thì chiếm tới 18,3%.",
+    "hl": "を占めている"
+   }
+  ]
+ },
+ {
+  "id": "7-1",
+  "lesson": 7,
+  "no": 1,
+  "extra": false,
+  "pattern": "Nだらけ",
+  "meaningVi": "Trạng thái không tốt khi có rất nhiều những thứ cùng loại tồn tại (đầy ~, toàn là ~).",
+  "connection": [
+   "N + だらけ"
+  ],
+  "notes": [
+   "Mang ý tiêu cực, chê trách hoặc than phiền."
+  ],
+  "examples": [
+   {
+    "ja": "砂{すな}だらけ傷{きず}だらけになって頑張{がんば}る。",
+    "vi": "Người dính đầy cát, đầy vết thương mà vẫn cố gắng.",
+    "hl": "だらけ"
+   },
+   {
+    "ja": "大雨{おおあめ}の中{なか}を歩{ある}いたので、靴{くつ}が泥{どろ}だらけになった。",
+    "vi": "Vì đi bộ trong trận mưa lớn nên giày dính đầy bùn.",
+    "hl": "だらけ"
+   },
+   {
+    "ja": "上司{じょうし}に「間違{まちが}いだらけのレポートだ」と叱{しか}られた。",
+    "vi": "Tôi bị sếp mắng là “báo cáo toàn là lỗi”.",
+    "hl": "だらけ"
+   }
+  ]
+ },
+ {
+  "id": "7-2",
+  "lesson": 7,
+  "no": 2,
+  "extra": false,
+  "pattern": "Vナイないと、Vナイないからだ",
+  "meaningVi": "Mẫu nêu lý do: sở dĩ như vậy là vì nếu không làm ~ thì sẽ không thể ~ (hoặc sẽ gặp kết quả xấu).",
+  "connection": [
+   "Vない形 + ないと、〜ないからだ"
+  ],
+  "notes": [
+   "Sách không kèm giải thích riêng cho mục này, phần nghĩa được suy ra từ các câu ví dụ.",
+   "Vế đầu (「〜のは」 hoặc 「その理由は」) nêu sự việc; 「〜ないと、〜ないからだ」 nêu lý do."
+  ],
+  "examples": [
+   {
+    "ja": "これは体{からだ}を休{やす}めないと、太{ふと}れないからだ。",
+    "vi": "Sở dĩ vậy là vì nếu không nghỉ ngơi thì sẽ không tăng cân được.",
+    "hl": "ないと、"
+   },
+   {
+    "ja": "大好{だいす}きな酒{さけ}をやめたのは、やめないと、命{いのち}の保証{ほしょう}がないからだ。",
+    "vi": "Tôi bỏ rượu dù rất thích là vì nếu không bỏ thì không đảm bảo được tính mạng.",
+    "hl": "ないからだ"
+   },
+   {
+    "ja": "ここは車{くるま}の普及率{ふきゅうりつ}が高{たか}い。その理由{りゆう}は交通{こうつう}が不便{ふべん}で、車{くるま}がないと、生活{せいかつ}できないからだ。",
+    "vi": "Ở đây tỉ lệ sở hữu ô tô cao. Lý do là giao thông bất tiện, không có xe thì không thể sinh hoạt được.",
+    "hl": "ないからだ"
+   }
+  ]
+ },
+ {
+  "id": "7-3",
+  "lesson": 7,
+  "no": 3,
+  "extra": false,
+  "pattern": "Vル／Nの たびに",
+  "meaningVi": "(= 〜の時{とき}はいつも) Mỗi khi ~, cứ mỗi lần ~ thì ~. Không dùng cho việc hiển nhiên mang tính thường nhật.",
+  "connection": [
+   "V辞書形 + たびに",
+   "N の + たびに"
+  ],
+  "notes": [
+   "Ví dụ sai: × 朝{あさ}起{お}きるたびに、顔{かお}を洗{あら}う。 (việc quá bình thường, thường nhật)."
+  ],
+  "examples": [
+   {
+    "ja": "新人{しんじん}の弟子{でし}たちは朝{あさ}が来{く}るたびに、同{おな}じことを繰{く}り返{かえ}す。",
+    "vi": "Các đệ tử mới mỗi khi sáng đến lại lặp đi lặp lại cùng một việc.",
+    "hl": "たびに"
+   },
+   {
+    "ja": "私{わたし}は試験{しけん}のたびに、胃{い}が痛{いた}くなる。",
+    "vi": "Mỗi lần thi, tôi lại đau dạ dày.",
+    "hl": "たびに"
+   },
+   {
+    "ja": "この映画{えいが}は見{み}るたびに、涙{なみだ}が出{で}る。",
+    "vi": "Mỗi lần xem bộ phim này, tôi lại rơi nước mắt.",
+    "hl": "たびに"
+   }
+  ]
+ },
+ {
+  "id": "7-4",
+  "lesson": 7,
+  "no": 4,
+  "extra": false,
+  "pattern": "〜に加え（て）",
+  "meaningVi": "Thêm một thứ khác vào cái đã có sẵn từ trước (không những ~ mà còn ~). Dùng trong văn viết.",
+  "connection": [
+   "V辞書形 / Vない形 / Vた形・Aい・Naな + の + に加{くわ}え（て）",
+   "N + に加{くわ}え（て）"
+  ],
+  "notes": [
+   "Ngôn ngữ viết."
+  ],
+  "examples": [
+   {
+    "ja": "食事{しょくじ}に加{くわ}え、体重{たいじゅう}が少{すく}ない新人力士{しんじんりきし}は寝{ね}る前{まえ}にお茶漬{ちゃづ}けとバナナを食{た}べるように言{い}われる。",
+    "vi": "Ngoài bữa ăn thông thường, các võ sĩ sumo mới nhẹ cân còn được dặn phải ăn cơm chan trà và chuối trước khi ngủ.",
+    "hl": "に加え"
+   },
+   {
+    "ja": "A氏{し}は働{はたら}く意欲{いよく}が欠{か}けているのに加{くわ}え、社会常識{しゃかいじょうしき}もない。",
+    "vi": "Ông A không những thiếu ý chí làm việc mà còn không có cả kiến thức xã hội thông thường.",
+    "hl": "に加え"
+   },
+   {
+    "ja": "日本{にほん}の夏{なつ}は暑{あつ}いのに加{くわ}えて、湿度{しつど}が高{たか}いので、過{す}ごしにくい。",
+    "vi": "Mùa hè ở Nhật không chỉ nóng mà độ ẩm lại cao nên rất khó chịu.",
+    "hl": "に加えて"
+   }
+  ]
+ },
+ {
+  "id": "7-5",
+  "lesson": 7,
+  "no": 5,
+  "extra": false,
+  "pattern": "（数字）は",
+  "meaningVi": "Trị số tối thiểu cần thiết: ít nhất cũng phải có chừng ấy. Dùng 「は」 sau con số.",
+  "connection": [
+   "数字 + 助数詞 + は"
+  ],
+  "notes": [
+   "Thường đi với 最低{さいてい}, 少{すく}なくとも."
+  ],
+  "examples": [
+   {
+    "ja": "新人力士{しんじんりきし}は寝{ね}る前{まえ}に、最低{さいてい}お茶漬{ちゃづ}け2杯{はい}とバナナ10本{ぽん}は食{た}べる。",
+    "vi": "Các võ sĩ sumo mới, trước khi ngủ ít nhất cũng ăn 2 bát cơm chan trà và 10 quả chuối.",
+    "hl": "10本は"
+   },
+   {
+    "ja": "小{ちい}さい子供{こども}は毎日{まいにち}10時間{じかん}は寝{ね}たほうがいい。",
+    "vi": "Trẻ nhỏ mỗi ngày nên ngủ ít nhất 10 tiếng.",
+    "hl": "10時間は"
+   }
+  ]
+ },
+ {
+  "id": "7-6",
+  "lesson": 7,
+  "no": 6,
+  "extra": false,
+  "pattern": "Vル／Vナイない ように",
+  "meaningVi": "Nêu nội dung của lời nhờ vả, mệnh lệnh hoặc cấm đoán (để / hãy ~, đừng ~).",
+  "connection": [
+   "V辞書形 / Vない形 + ように + 言{い}う・頼{たの}む・注意{ちゅうい}する…"
+  ],
+  "notes": [
+   "Thường đi với 言{い}われる, 注意{ちゅうい}される, 頼{たの}む."
+  ],
+  "examples": [
+   {
+    "ja": "最低{さいてい}バナナ10本{ぽん}は食{た}べるように言{い}われる。",
+    "vi": "Họ được bảo là ít nhất cũng phải ăn 10 quả chuối.",
+    "hl": "ように"
+   },
+   {
+    "ja": "学生{がくせい}たちは先生{せんせい}に遅刻{ちこく}しないように何度{なんど}も注意{ちゅうい}された。",
+    "vi": "Các sinh viên nhiều lần bị thầy cô nhắc nhở là không được đến muộn.",
+    "hl": "ないように"
+   }
+  ]
+ },
+ {
+  "id": "7-7",
+  "lesson": 7,
+  "no": 7,
+  "extra": false,
+  "pattern": "Vテくる",
+  "meaningVi": "Diễn tả sự xuất hiện của sự vật mà trước nay chưa từng có hoặc chưa từng nhìn thấy (bắt đầu hiện ra, xuất hiện).",
+  "connection": [
+   "V（変化・出現）て + くる"
+  ],
+  "notes": [],
+  "examples": [
+   {
+    "ja": "頑張{がんば}ったことが形{かたち}になって表{あらわ}れてくる。",
+    "vi": "Những gì đã cố gắng dần hiện ra thành hình hài cụ thể.",
+    "hl": "てくる"
+   },
+   {
+    "ja": "春{はる}になると、木{き}の芽{め}がたくさん出{で}てくる。",
+    "vi": "Khi mùa xuân đến, nhiều chồi non nhú ra trên cây.",
+    "hl": "てくる"
+   }
+  ]
+ },
+ {
+  "id": "7-8",
+  "lesson": 7,
+  "no": 8,
+  "extra": false,
+  "pattern": "「接続詞・副詞」の整理",
+  "meaningVi": "Tổng hợp liên từ (接続詞{せつぞくし}) và phó từ (副詞{ふくし}) hay gặp. Liên từ: だから, すると, したがって, そのため, しかし, だが. Phó từ: まず, 再{ふたた}び, ようやく, たっぷり, 大量{たいりょう}に, さらに, はっきり.",
+  "connection": [
+   "接続詞: だから・すると・したがって・そのため・しかし・だが",
+   "副詞: まず・再{ふたた}び・ようやく・たっぷり・大量{たいりょう}に・さらに・はっきり"
+  ],
+  "notes": [
+   "Liên từ nối các câu; phó từ bổ nghĩa cho động từ, tính từ."
+  ],
+  "examples": [
+   {
+    "ja": "稽古{けいこ}を重{かさ}ねる。すると、もっと勝{か}てるようになる。",
+    "vi": "Cứ luyện tập liên tục. Nhờ vậy sẽ thắng được nhiều hơn.",
+    "hl": "すると"
+   },
+   {
+    "ja": "「ちゃんこ」と呼{よ}ばれる料理{りょうり}をたっぷり食{た}べる。",
+    "vi": "Ăn thật nhiều món gọi là “chanko”.",
+    "hl": "たっぷり"
+   }
+  ]
+ },
+ {
+  "id": "8-1",
+  "lesson": 8,
+  "no": 1,
+  "extra": false,
+  "pattern": "〜にすぎない",
+  "meaningVi": "Nhấn mạnh mức độ thấp về chất hoặc lượng: chỉ là ~, chẳng qua chỉ ~ mà thôi.",
+  "connection": [
+   "普通形（Na／N だ→（である））+ にすぎない"
+  ],
+  "notes": [
+   "Với Na / N, だ có thể đổi thành である hoặc bỏ đi."
+  ],
+  "examples": [
+   {
+    "ja": "言語的{げんごてき}な要素{ようそ}から相手{あいて}を判断{はんだん}する人{ひと}はわずか数{すう}パーセントにすぎない。",
+    "vi": "Số người đánh giá đối phương dựa vào yếu tố ngôn ngữ chỉ chiếm vài phần trăm mà thôi.",
+    "hl": "にすぎない"
+   },
+   {
+    "ja": "彼{かれ}のスピーチは他{ほか}の人{ひと}のまねをしたにすぎない。",
+    "vi": "Bài phát biểu của anh ấy chẳng qua chỉ là bắt chước người khác.",
+    "hl": "にすぎない"
+   },
+   {
+    "ja": "アルバイトの収入{しゅうにゅう}は1か月{げつ}2万円{まんえん}（である）にすぎない。",
+    "vi": "Thu nhập từ việc làm thêm chỉ có 20.000 yên một tháng mà thôi.",
+    "hl": "にすぎない"
+   }
+  ]
+ },
+ {
+  "id": "8-2",
+  "lesson": 8,
+  "no": 2,
+  "extra": false,
+  "pattern": "Nさえ〜ば／〜なら",
+  "meaningVi": "Giả định điều kiện duy nhất: chỉ cần N là đủ, chỉ cần ~ thì ~.",
+  "connection": [
+   "N + さえ + 〜ば（条件形）／〜なら"
+  ],
+  "notes": [],
+  "examples": [
+   {
+    "ja": "服装{ふくそう}さえ気{き}をつければいい。",
+    "vi": "Chỉ cần chú ý đến trang phục là được.",
+    "hl": "さえ"
+   },
+   {
+    "ja": "天気{てんき}さえよければ、ここから島{しま}が見{み}える。",
+    "vi": "Chỉ cần trời đẹp thì từ đây có thể nhìn thấy hòn đảo.",
+    "hl": "さえ"
+   },
+   {
+    "ja": "体{からだ}さえ丈夫{じょうぶ}なら、どんなことでもできる。",
+    "vi": "Chỉ cần cơ thể khỏe mạnh thì việc gì cũng làm được.",
+    "hl": "さえ"
+   }
+  ]
+ },
+ {
+  "id": "8-3",
+  "lesson": 8,
+  "no": 3,
+  "extra": false,
+  "pattern": "「さえ・しか・こそ」の整理",
+  "meaningVi": "Tổng hợp ba trợ từ: さえ (ngay cả / chỉ cần), しか (chỉ, đi với phủ định), こそ (chính là, nhấn mạnh).",
+  "connection": [
+   "N + さえ（〜ば）",
+   "N + しか + 〜ない",
+   "N + こそ"
+  ],
+  "notes": [
+   "さえ: chỉ cần ~ (điều kiện tối thiểu).",
+   "しか〜ない: chỉ có ~, ngoài ra không.",
+   "こそ: chính ~ mới là (nhấn mạnh)."
+  ],
+  "examples": [
+   {
+    "ja": "ひらがなさえ読{よ}めれば、この絵本{えほん}は読{よ}める。",
+    "vi": "Chỉ cần đọc được hiragana là có thể đọc cuốn truyện tranh này.",
+    "hl": "さえ"
+   },
+   {
+    "ja": "ひらがなしか読{よ}めない。",
+    "vi": "Tôi chỉ đọc được hiragana thôi.",
+    "hl": "しか"
+   },
+   {
+    "ja": "漢字学習{かんじがくしゅう}こそ大切{たいせつ}だと思{おも}っている学生{がくせい}がいる。",
+    "vi": "Có những sinh viên cho rằng chính việc học chữ Hán mới là quan trọng.",
+    "hl": "こそ"
+   }
+  ]
+ },
+ {
+  "id": "8-4",
+  "lesson": 8,
+  "no": 4,
+  "extra": false,
+  "pattern": "〜というものではない・〜というものでもない",
+  "meaningVi": "(= 〜わけではない・〜わけでもない) Không phải lúc nào cũng vậy / không nhất thiết phải như vậy. Phủ định một quan niệm cho rằng điều đó luôn đúng.",
+  "connection": [
+   "普通形（Na／N（だ））+ というものではない／というものでもない"
+  ],
+  "notes": [
+   "Gần nghĩa với 「わけではない」 ở bài 1."
+  ],
+  "examples": [
+   {
+    "ja": "服装{ふくそう}さえ気{き}をつければいいというものではない。",
+    "vi": "Không phải cứ chú ý đến trang phục là đủ.",
+    "hl": "というものではない"
+   },
+   {
+    "ja": "外国語{がいこくご}はその国{くに}に住{す}めば上手{じょうず}になるというものではない。",
+    "vi": "Không phải cứ sống ở đất nước đó thì ngoại ngữ sẽ giỏi lên.",
+    "hl": "というものではない"
+   },
+   {
+    "ja": "有名{ゆうめい}な大学{だいがく}を卒業{そつぎょう}した人{ひと}が優秀{ゆうしゅう}（だ）というものでもない。",
+    "vi": "Cũng không hẳn người tốt nghiệp đại học nổi tiếng thì ưu tú.",
+    "hl": "というものでもない"
+   }
+  ]
+ },
+ {
+  "id": "8-5",
+  "lesson": 8,
+  "no": 5,
+  "extra": false,
+  "pattern": "Vマスかねない",
+  "meaningVi": "Có khả năng sẽ xảy ra kết quả xấu từ một nguyên nhân nào đó (có thể sẽ ~, e rằng sẽ ~).",
+  "connection": [
+   "Vます（bỏ ます）+ かねない"
+  ],
+  "notes": [
+   "Chỉ dùng với kết quả không tốt."
+  ],
+  "examples": [
+   {
+    "ja": "椅子{いす}の背{せ}もたれに寄{よ}りかかりすぎると、威圧感{いあつかん}を与{あた}えかねない。",
+    "vi": "Nếu tựa lưng vào ghế quá mức thì có thể tạo cảm giác áp đảo, khiến người đối diện thấy bị uy hiếp.",
+    "hl": "かねない"
+   },
+   {
+    "ja": "そんなことを言{い}うと、誤解{ごかい}を招{まね}きかねない。",
+    "vi": "Nói như vậy thì có thể dẫn đến hiểu lầm.",
+    "hl": "かねない"
+   },
+   {
+    "ja": "栄養{えいよう}のバランスを考{かんが}えないで食事{しょくじ}をしていると、病気{びょうき}になりかねない。",
+    "vi": "Nếu ăn uống mà không nghĩ đến cân bằng dinh dưỡng thì có thể sẽ bị bệnh.",
+    "hl": "かねない"
+   }
+  ]
+ },
+ {
+  "id": "8-6",
+  "lesson": 8,
+  "no": 6,
+  "extra": false,
+  "pattern": "〜ものの",
+  "meaningVi": "(= けれども) Tuy ~ nhưng ~. Vế sau nói điều trái với dự đoán từ vế trước.",
+  "connection": [
+   "普通形（Na だ→な／である、N だ→である）+ ものの"
+  ],
+  "notes": [],
+  "examples": [
+   {
+    "ja": "「人間{にんげん}は中身{なかみ}が大切{たいせつ}だ」と言{い}われているものの、見{み}た目{め}や話{はな}し方{かた}が人{ひと}の第一印象{だいいちいんしょう}を左右{さゆう}する。",
+    "vi": "Tuy người ta nói “con người quan trọng ở bên trong”, nhưng vẻ ngoài và cách nói chuyện lại chi phối ấn tượng đầu tiên.",
+    "hl": "ものの"
+   },
+   {
+    "ja": "今{いま}の会社{かいしゃ}は給料{きゅうりょう}はあまり高{たか}くないものの、人間関係{にんげんかんけい}はいいので、満足{まんぞく}している。",
+    "vi": "Công ty hiện tại tuy lương không cao lắm nhưng quan hệ đồng nghiệp tốt nên tôi hài lòng.",
+    "hl": "ものの"
+   },
+   {
+    "ja": "彼{かれ}は言葉遣{ことばづか}いは丁寧{ていねい}なものの、態度{たいど}がよくないので、印象{いんしょう}が悪{わる}い。",
+    "vi": "Anh ta tuy ăn nói lịch sự nhưng thái độ không tốt nên để lại ấn tượng xấu.",
+    "hl": "ものの"
+   }
+  ]
+ }
+]

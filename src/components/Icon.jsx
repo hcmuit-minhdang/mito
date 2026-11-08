@@ -8,6 +8,7 @@ const PATHS = {
   home: <><path d="M3 10.5 12 3l9 7.5" /><path d="M5 9.5V20h14V9.5" /><path d="M10 20v-6h4v6" /></>,
   vocab: <><rect x="4" y="3" width="16" height="18" rx="2" /><path d="M8 8h8M8 12h8M8 16h5" /></>,
   kanji: <><rect x="3.5" y="3.5" width="17" height="17" rx="2" /><path d="M12 3.5v17M3.5 12h17" strokeDasharray="2 2.4" /><path d="M8 8.5h8M12 8.5v7" /></>,
+  grammar: <><rect x="3.5" y="4" width="17" height="16" rx="2" /><path d="M7.5 8.5h9M7.5 12h5" /><path d="m14 13.5 2 2 3.5-3.5" /></>,
   reading: <><path d="M3 5.5C5.5 4 9 4 12 6c3-2 6.5-2 9-.5V19c-2.5-1.5-6-1.5-9 .5-3-2-6.5-2-9-.5z" /><path d="M12 6v13.5" /></>,
   moon: <path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z" />,
   sun: <><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" /></>,

@@ -6,6 +6,7 @@ import { useReveal } from '../lib/useReveal';
 import Ruby from '../components/Ruby';
 import Icon from '../components/Icon';
 import CountUp from '../components/CountUp';
+import './grammar/home-grammar.css';
 import heroImg from '../assets/hero-maple.jpg';
 import toriiImg from '../assets/torii.svg';
 import sakuraA from '../assets/sakura-a.svg';
@@ -63,8 +64,12 @@ export default function Home() {
     () =>
       lessons.map((lesson) => {
         const st = stats.getLessonStats(lesson.id);
-        const touched = st.vocabKnown + st.kanjiKnown > 0 || st.readingScore != null;
-        const done = st.vocabPercent >= 100 && st.kanjiPercent >= 100 && st.readingScore != null;
+        const touched = st.vocabKnown + st.kanjiKnown + st.grammarKnown > 0 || st.readingScore != null;
+        const done =
+          st.vocabPercent >= 100 &&
+          st.kanjiPercent >= 100 &&
+          st.grammarPercent >= 100 &&
+          st.readingScore != null;
         return { lesson, st, status: done ? 'done' : touched ? 'doing' : 'todo' };
       }),
     [stats]
@@ -92,6 +97,10 @@ export default function Home() {
   function handleResumeRecent() {
     if (!recent) return;
     if (recent.type === 'reading' && recent.lessonId) navigate(`/reading/${recent.lessonId}`);
+    else if (recent.type === 'grammar') {
+      if (recent.lessonId) navigate(`/grammar?lesson=${recent.lessonId}`);
+      else navigate('/grammar');
+    }
     else if (recent.type === 'vocab') navigate('/vocab');
     else if (recent.type === 'kanji') navigate('/kanji');
     else navigate('/reading');
@@ -119,6 +128,18 @@ export default function Home() {
       text: (
         <>
           <CountUp to={stats.knownKanjiCount} duration={900} />/{stats.totalKanjiCount} chữ đã thuộc
+        </>
+      ),
+    },
+    {
+      to: '/grammar',
+      title: 'Ngữ pháp',
+      desc: '56 mẫu câu chính và 13 mục mở rộng kèm công thức, lưu ý, ví dụ và luyện tập trắc nghiệm.',
+      tags: [`${stats.totalGrammarCount} mẫu`, 'Công thức', 'Luyện tập'],
+      value: stats.grammarPercent,
+      text: (
+        <>
+          <CountUp to={stats.knownGrammarCount} duration={900} />/{stats.totalGrammarCount} mẫu đã thuộc
         </>
       ),
     },
@@ -175,12 +196,13 @@ export default function Home() {
             Chinh phục tiếng Nhật trung cấp, <span lang="ja">中級を学ぼう</span>
           </h1>
           <p className="hero-lead m-hero-enter" style={{ animationDelay: '180ms' }}>
-            Từ vựng, chữ Hán và đọc hiểu theo từng bài của giáo trình — mỗi ngày một ít, tiến độ được lưu ngay trên máy bạn.
+            Từ vựng, chữ Hán, ngữ pháp và đọc hiểu theo từng bài của giáo trình — mỗi ngày một ít, tiến độ được lưu ngay trên máy bạn.
           </p>
           <div className="hero-actions m-hero-enter" style={{ animationDelay: '270ms' }}>
             {recent ? (
               <button type="button" className="btn btn-primary btn-large" onClick={handleResumeRecent}>
-                Học tiếp: {recent.title || 'bài gần nhất'} →
+                Học tiếp: {recent.title || (recent.type === 'grammar' ? 'Ngữ pháp' : 'bài gần nhất')}
+                {recent.type === 'grammar' && recent.lessonId ? ` Bài ${recent.lessonId}` : ''} →
               </button>
             ) : (
               <Link to="/reading/1" className="btn btn-primary btn-large">Bắt đầu từ bài 1 →</Link>
@@ -196,7 +218,7 @@ export default function Home() {
           <section className="home-section" aria-labelledby="skills-title">
             <div className="section-head">
               <div>
-                <h2 id="skills-title" className="section-heading">Ba kỹ năng chính</h2>
+                <h2 id="skills-title" className="section-heading">Bốn kỹ năng chính</h2>
                 <p className="section-sub">Chọn một kỹ năng để bắt đầu luyện hôm nay.</p>
               </div>
             </div>
@@ -246,6 +268,7 @@ export default function Home() {
                     <li><Link className="tag tag-link" to="/vocab?src=index">#Từ索引 ({counts.index})</Link></li>
                     <li><Link className="tag tag-link" to="/vocab?src=extra">#N3N2 ({counts.extra})</Link></li>
                     <li><Link className="tag tag-link" to="/kanji">#HánViệt</Link></li>
+                    <li><Link className="tag tag-link" to="/grammar">#NgữPháp ({stats.totalGrammarCount})</Link></li>
                     <li><Link className="tag tag-link" to="/reading/1">#Furigana</Link></li>
                   </ul>
 
@@ -260,7 +283,7 @@ export default function Home() {
                             <span className="suggest-thumb" aria-hidden="true" lang="ja">{firstKanji}</span>
                             <span className="suggest-text">
                               <span className="suggest-title"><span className="sr-only">Bài {lesson.id}: </span><Ruby text={lesson.title} show={false} /></span>
-                              <span className="suggest-meta">Bài {lesson.id} · {st.vocabTotal} từ · {st.kanjiTotal} kanji</span>
+                              <span className="suggest-meta">Bài {lesson.id} · {st.vocabTotal} từ · {st.kanjiTotal} kanji · {st.grammarTotal} ngữ pháp</span>
                             </span>
                           </Link>
                         </li>
@@ -288,7 +311,7 @@ export default function Home() {
             <section className="home-main" id="muc-luc" aria-labelledby="toc-title">
               <div className="section-head section-head-col">
                 <h2 id="toc-title" className="section-heading">Mục lục 8 bài</h2>
-                <p className="section-sub">Mỗi bài có từ vựng, kanji và bài đọc riêng.</p>
+                <p className="section-sub">Mỗi bài có từ vựng, kanji, ngữ pháp và bài đọc riêng.</p>
               </div>
 
               <div className="chip-row" role="group" aria-label="Lọc bài học theo tiến độ">
@@ -333,6 +356,12 @@ export default function Home() {
                         tone="seal"
                       />
                       <Meter
+                        label="Ngữ pháp"
+                        value={st.grammarPercent}
+                        text={<><CountUp to={st.grammarKnown} duration={900} />/{st.grammarTotal}</>}
+                        tone="grammar"
+                      />
+                      <Meter
                         label="Đọc hiểu"
                         value={st.readingPercent || 0}
                         text={st.readingScore != null ? <><CountUp to={st.readingScore} duration={900} />/{st.readingTotal}</> : '—'}
@@ -343,6 +372,7 @@ export default function Home() {
                     <div className="post-actions">
                       <Link to="/vocab" className="pill-link" aria-label={`Từ vựng bài ${lesson.id}`}><Icon name="vocab" size={16} /> Từ vựng</Link>
                       <Link to="/kanji" className="pill-link" aria-label={`Kanji bài ${lesson.id}`}><Icon name="kanji" size={16} /> Kanji</Link>
+                      <Link to={`/grammar?lesson=${lesson.id}`} className="pill-link" aria-label={`Ngữ pháp bài ${lesson.id}`}><Icon name="grammar" size={16} /> Ngữ pháp</Link>
                       <Link to={`/reading/${lesson.id}`} className="pill-link pill-link-strong" aria-label={`Đọc hiểu bài ${lesson.id}`}><Icon name="reading" size={16} /> Đọc hiểu</Link>
                     </div>
                   </li>

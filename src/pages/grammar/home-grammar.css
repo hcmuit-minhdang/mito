@@ -1,0 +1,42 @@
+/* ==========================================================================
+   Home Grammar Additions (Job B)
+   Supports 4 skill cards, 4 meters per lesson, and grammar tone
+   ========================================================================== */
+
+/* Lưới 4 thẻ kỹ năng (.featured-grid) và 4 thanh tiến độ (.toc-meters) nằm trong src/index.css.
+   Không đặt lại ở đây: CSS của trang được nạp TRƯỚC index.css nên quy tắc trùng độ ưu tiên sẽ thua. */
+
+/* Tone for Grammar Meter */
+.tone-grammar {
+  background: #b85d18;
+}
+
+[data-theme="dark"] .tone-grammar {
+  background: #e07a2a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .tone-grammar {
+    background: #e07a2a;
+  }
+}
+
+/* Post Actions (4 skill shortcuts) */
+.post-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+}
+
+.post-actions .pill-link {
+  min-height: 44px;
+}
+
+@media (max-width: 500px) {
+  .post-actions .pill-link {
+    flex: 1 1 calc(50% - var(--s-2));
+    justify-content: center;
+    padding: 0 0.75rem;
+    font-size: var(--fs-xs);
+  }
+}

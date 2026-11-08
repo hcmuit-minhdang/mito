@@ -1,4 +1,4 @@
-# SPEC: Web học tiếng Nhật trung cấp (từ vựng / kanji / đọc hiểu)
+# SPEC: Web học tiếng Nhật trung cấp (từ vựng / kanji / ngữ pháp / đọc hiểu)
 
 Nguồn nội dung: giáo trình 『中級を学ぼう 中級前期 第2版』(8 bài). Dữ liệu đã được trích sẵn ra JSON trong `src/data/`. **Không sửa file dữ liệu**, chỉ đọc.
 Người dùng: người Việt học tiếng Nhật, giao diện (nhãn, nút, hướng dẫn) viết bằng **tiếng Việt**; nội dung học bằng tiếng Nhật.
@@ -44,10 +44,23 @@ Chấm điểm theo từng item con (mỗi item đúng = 1 điểm). Nút "Chấ
 ```
 Tổng 193 chữ. `on` có thể rỗng, `kun` có thể rỗng.
 
+### `grammar.json` (thêm 09/11/2026)
+Nguồn: sách ngữ pháp đi kèm (PDF `日本語の文型と表現56`, các trang 学習項目 của 8 bài). Một file `src/data/grammar.json` là mảng 69 mục: 56 mục chính + 13 mục mở rộng (☆ trong sách, `extra: true`).
+```
+{ id: "3-6a",            // `${lesson}-${no}` (+ "a"/"b" cho mục mở rộng)
+  lesson, no, extra,
+  pattern,               // mẫu câu, có thể có furigana markup
+  meaningVi,             // giải thích tiếng Việt (nghĩa / cách dùng)
+  connection: [string],  // công thức kết hợp, mỗi dòng một công thức (có thể rỗng)
+  notes: [string],       // lưu ý (có thể rỗng)
+  examples: [ { ja, vi, hl } ] }  // ja có furigana markup; vi do AI dịch; hl = phần mẫu câu in đậm (chữ thuần, nằm trong câu)
+```
+`examples` có thể rỗng (mục 2-6, chỉ là phần luyện đọc-nghe). Không sửa tay sau khi đã đối chiếu với sách.
+
 ## Trang & tính năng
 
 ### Chung
-- Header cố định: logo/tên "中級を学ぼう" + điều hướng (Trang chủ · Từ vựng · Kanji · Đọc hiểu), nút đổi giao diện sáng/tối (mặc định theo `prefers-color-scheme`, lưu lựa chọn).
+- Header cố định: logo/tên "中級を学ぼう" + điều hướng (Trang chủ · Từ vựng · Kanji · Ngữ pháp · Đọc hiểu), nút đổi giao diện sáng/tối (mặc định theo `prefers-color-scheme`, lưu lựa chọn).
 - Footer nhỏ: ghi chú "Nghĩa tiếng Việt và đáp án câu hỏi do AI soạn từ nội dung sách (sách gốc không kèm bản dịch và đáp án trong file này), hãy đối chiếu lại với sách/giáo viên."
 - Mọi từ tiếng Nhật có nút 🔊 đọc bằng Web Speech API (`speechSynthesis`, lang `ja-JP`); ẩn nút nếu trình duyệt không hỗ trợ.
 - Responsive từ 360px; không cuộn ngang; vùng bấm tối thiểu 44px; focus rõ ràng; hỗ trợ bàn phím; tôn trọng `prefers-reduced-motion`.
@@ -84,6 +97,12 @@ Chế độ (tab):
   - Mục **Câu hỏi** (ngay dưới bài, `questions` của bài) với 6 kiểu như mô tả; hiện tổng điểm; lưu điểm cao nhất.
   - Chế độ **Ẩn furigana để tự kiểm tra** chính là công tắc Furigana tắt; đồng thời cho phép bấm một từ có furigana khi đang tắt để xem đọc (nice-to-have, bỏ qua nếu phức tạp).
   - Nút bài trước / bài sau.
+
+### `/grammar` Ngữ pháp
+- Bộ lọc: bài (nhiều bài), tìm kiếm (mẫu câu, nghĩa, công thức, câu ví dụ), loại (Tất cả / Mục chính / Mở rộng α), "chỉ hiện mục chưa thuộc"; hỗ trợ `?lesson=N` và `?q=`.
+- Tab **Tra cứu**: thẻ theo từng bài (mẫu câu, huy hiệu Mục / Mở rộng, nút "Đã thuộc", nghĩa, cách kết hợp, lưu ý, ví dụ có furigana + bản dịch + 🔊, phần hl được tô đậm); công tắc Furigana và Bản dịch; tiến độ đã thuộc.
+- Tab **Luyện tập**: (1) *Điền chỗ trống*: che phần hl của một câu ví dụ, chọn 1 trong 4 mẫu; (2) *Nghĩa → Mẫu câu*: cho nghĩa, chọn mẫu câu. 10/20/tất cả câu; kết quả cuối, danh sách câu sai, "Ôn lại các câu sai". Sai → "chưa thuộc"; đúng 2 lần liên tiếp cùng một mục → "đã thuộc".
+- Tiến độ: `grammarKnown: { "3-6a": true }` trong khóa `tn:v1` (dữ liệu cũ thiếu trường vẫn chạy). Trang chủ có thẻ kỹ năng "Ngữ pháp" và thanh tiến độ ngữ pháp trong mỗi thẻ bài.
 
 ## Tiến độ (`src/lib/progress.js`)
 Một khóa `localStorage` `tn:v1` chứa JSON: `{ vocabKnown: {"1:0": true,...}, kanjiKnown: {"音": true,...}, readingScore: {"1": {score, total}}, settings: {theme, furigana, fontSize, showTranslation}, recent: {...} }`. Cung cấp hook `useProgress()` (có `useSyncExternalStore` hoặc context) để mọi trang đồng bộ. Có nút "Xóa toàn bộ tiến độ" (xác nhận) ở trang chủ hoặc footer.

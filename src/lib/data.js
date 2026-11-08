@@ -18,6 +18,8 @@ import k6 from '../data/kanji6.json';
 import k7 from '../data/kanji7.json';
 import k8 from '../data/kanji8.json';
 
+import grammarData from '../data/grammar.json';
+
 export const lessons = [l1, l2, l3, l4, l5, l6, l7, l8].sort((a, b) => a.id - b.id);
 export const kanjiLessons = [k1, k2, k3, k4, k5, k6, k7, k8].sort((a, b) => a.lesson - b.lesson);
 
@@ -124,3 +126,31 @@ export function getLessonTotalQuestions(lessonId) {
   }
   return total;
 }
+
+/**
+ * Flattened array of all grammar items (69 items: 56 main + 13 extra).
+ * Preserves all fields, adds lessonId = lesson.
+ * Sorted by lesson, then no, then main item before extra.
+ */
+export const allGrammar = [...grammarData]
+  .map((g) => ({
+    ...g,
+    lessonId: g.lesson,
+  }))
+  .sort((a, b) => {
+    if (a.lesson !== b.lesson) return a.lesson - b.lesson;
+    if (a.no !== b.no) return a.no - b.no;
+    if (a.extra !== b.extra) return a.extra ? 1 : -1;
+    return a.id.localeCompare(b.id);
+  });
+
+/**
+ * Get grammar items for one or more lessons.
+ * @param {number|number[]} lessonIds
+ */
+export function getGrammarByLesson(lessonIds) {
+  if (lessonIds == null) return allGrammar;
+  const ids = Array.isArray(lessonIds) ? lessonIds.map(Number) : [Number(lessonIds)];
+  return allGrammar.filter((g) => ids.includes(g.lessonId));
+}
+

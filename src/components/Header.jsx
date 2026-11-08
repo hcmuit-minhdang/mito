@@ -7,6 +7,7 @@ const NAV = [
   { to: '/', label: 'Trang chủ', icon: 'home', end: true },
   { to: '/vocab', label: 'Từ vựng', icon: 'vocab' },
   { to: '/kanji', label: 'Kanji', icon: 'kanji' },
+  { to: '/grammar', label: 'Ngữ pháp', icon: 'grammar' },
   { to: '/reading', label: 'Đọc hiểu', icon: 'reading' },
 ];
 

@@ -1,6 +1,6 @@
 // Progress management and React Context
 import React, { createContext, useContext, useState, useEffect, useMemo, useCallback } from 'react';
-import { allVocab, allKanji, getVocabByLesson, getKanjiByLesson, getLessonTotalQuestions } from './data';
+import { allVocab, allKanji, allGrammar, getVocabByLesson, getKanjiByLesson, getGrammarByLesson, getLessonTotalQuestions } from './data';
 
 const STORAGE_KEY = 'tn:v1';
 
@@ -14,9 +14,10 @@ const DEFAULT_SETTINGS = {
 const DEFAULT_PROGRESS = {
   vocabKnown: {},    // { "1:0": true }
   kanjiKnown: {},    // { "音": true }
+  grammarKnown: {},  // { "3-6a": true }
   readingScore: {},  // { "1": { score: 10, total: 12 } }
   settings: DEFAULT_SETTINGS,
-  recent: null,      // { type: 'reading' | 'vocab' | 'kanji', lessonId: 1, title: string, timestamp: number }
+  recent: null,      // { type: 'reading' | 'vocab' | 'kanji' | 'grammar', lessonId: 1, title: string, timestamp: number }
 };
 
 function loadStorage() {
@@ -27,6 +28,7 @@ function loadStorage() {
     return {
       vocabKnown: parsed.vocabKnown && typeof parsed.vocabKnown === 'object' ? parsed.vocabKnown : {},
       kanjiKnown: parsed.kanjiKnown && typeof parsed.kanjiKnown === 'object' ? parsed.kanjiKnown : {},
+      grammarKnown: parsed.grammarKnown && typeof parsed.grammarKnown === 'object' ? parsed.grammarKnown : {},
       readingScore: parsed.readingScore && typeof parsed.readingScore === 'object' ? parsed.readingScore : {},
       settings: { ...DEFAULT_SETTINGS, ...(parsed.settings || {}) },
       recent: parsed.recent || null,
@@ -133,6 +135,33 @@ export function ProgressProvider({ children }) {
     });
   }, []);
 
+  // Grammar helpers
+  const isGrammarKnown = useCallback((id) => Boolean(data.grammarKnown[id]), [data.grammarKnown]);
+
+  const toggleGrammarKnown = useCallback((id) => {
+    setData((prev) => {
+      const nextKnown = { ...prev.grammarKnown };
+      if (nextKnown[id]) {
+        delete nextKnown[id];
+      } else {
+        nextKnown[id] = true;
+      }
+      return { ...prev, grammarKnown: nextKnown };
+    });
+  }, []);
+
+  const setGrammarKnown = useCallback((id, known) => {
+    setData((prev) => {
+      const nextKnown = { ...prev.grammarKnown };
+      if (known) {
+        nextKnown[id] = true;
+      } else {
+        delete nextKnown[id];
+      }
+      return { ...prev, grammarKnown: nextKnown };
+    });
+  }, []);
+
   // Reading score helpers
   const getReadingScore = useCallback((lessonId) => {
     return data.readingScore[String(lessonId)] || null;
@@ -208,11 +237,16 @@ export function ProgressProvider({ children }) {
     const totalKanjiCount = allKanji.length;
     const knownKanjiCount = Object.keys(data.kanjiKnown).filter((k) => data.kanjiKnown[k]).length;
 
+    const totalGrammarCount = allGrammar.length;
+    const knownGrammarCount = Object.keys(data.grammarKnown).filter((id) => data.grammarKnown[id]).length;
+
     function getLessonStats(lessonId) {
       const lVocab = getVocabByLesson(lessonId);
       const lKanji = getKanjiByLesson(lessonId);
+      const lGrammar = getGrammarByLesson(lessonId);
       const lVocabKnown = lVocab.filter((v) => data.vocabKnown[v.id]).length;
       const lKanjiKnown = lKanji.filter((k) => data.kanjiKnown[k.k]).length;
+      const lGrammarKnown = lGrammar.filter((g) => data.grammarKnown[g.id]).length;
       const reading = data.readingScore[String(lessonId)] || null;
       const totalQuestions = getLessonTotalQuestions(lessonId);
 
@@ -223,6 +257,9 @@ export function ProgressProvider({ children }) {
         kanjiKnown: lKanjiKnown,
         kanjiTotal: lKanji.length,
         kanjiPercent: lKanji.length ? Math.round((lKanjiKnown / lKanji.length) * 100) : 0,
+        grammarKnown: lGrammarKnown,
+        grammarTotal: lGrammar.length,
+        grammarPercent: lGrammar.length ? Math.round((lGrammarKnown / lGrammar.length) * 100) : 0,
         readingScore: reading ? reading.score : null,
         readingTotal: totalQuestions,
         readingPercent: reading && totalQuestions ? Math.round((reading.score / totalQuestions) * 100) : 0,
@@ -236,9 +273,12 @@ export function ProgressProvider({ children }) {
       totalKanjiCount,
       knownKanjiCount,
       kanjiPercent: totalKanjiCount ? Math.round((knownKanjiCount / totalKanjiCount) * 100) : 0,
+      totalGrammarCount,
+      knownGrammarCount,
+      grammarPercent: totalGrammarCount ? Math.round((knownGrammarCount / totalGrammarCount) * 100) : 0,
       getLessonStats,
     };
-  }, [data.vocabKnown, data.kanjiKnown, data.readingScore]);
+  }, [data.vocabKnown, data.kanjiKnown, data.grammarKnown, data.readingScore]);
 
   const value = useMemo(
     () => ({
@@ -251,6 +291,9 @@ export function ProgressProvider({ children }) {
       isKanjiKnown,
       toggleKanjiKnown,
       setKanjiKnown,
+      isGrammarKnown,
+      toggleGrammarKnown,
+      setGrammarKnown,
       getReadingScore,
       saveReadingScore,
       updateSettings,
@@ -267,6 +310,9 @@ export function ProgressProvider({ children }) {
       isKanjiKnown,
       toggleKanjiKnown,
       setKanjiKnown,
+      isGrammarKnown,
+      toggleGrammarKnown,
+      setGrammarKnown,
       getReadingScore,
       saveReadingScore,
       updateSettings,

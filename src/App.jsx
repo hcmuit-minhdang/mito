@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Vocab from './pages/Vocab';
 import Kanji from './pages/Kanji';
+import Grammar from './pages/Grammar';
 import ReadingList from './pages/ReadingList';
 import Reading from './pages/Reading';
 
@@ -29,6 +30,7 @@ function AnimatedRoutes() {
         <Route path="/" element={<Home />} />
         <Route path="/vocab" element={<Vocab />} />
         <Route path="/kanji" element={<Kanji />} />
+        <Route path="/grammar" element={<Grammar />} />
         <Route path="/reading" element={<ReadingList />} />
         <Route path="/reading/:id" element={<Reading />} />
         <Route path="*" element={<Home />} />

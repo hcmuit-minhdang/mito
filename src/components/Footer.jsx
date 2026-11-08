@@ -30,6 +30,7 @@ export default function Footer() {
             <Link to="/">Trang chủ</Link>
             <Link to="/vocab">Từ vựng</Link>
             <Link to="/kanji">Kanji</Link>
+            <Link to="/grammar">Ngữ pháp</Link>
             <Link to="/reading">Đọc hiểu</Link>
           </div>
 
@@ -38,6 +39,7 @@ export default function Footer() {
             <span>Từ trong bài (ことば)</span>
             <span>Từ trong bảng 索引</span>
             <span>Bổ sung N3–N2</span>
+            <span>Ngữ pháp 8 bài</span>
           </div>
 
           <div className="footer-col">
@@ -51,7 +53,7 @@ export default function Footer() {
         <p className="footer-disclaimer">
           <Icon name="warning" size={16} className="footer-warn-icon" />
           <span>
-            Nghĩa tiếng Việt, đáp án câu hỏi, âm Hán Việt và mẹo nhớ do AI soạn (sách gốc không kèm bản dịch và đáp án trong file này). Từ có nhãn 索引 lấy từ bảng tra cuối sách; từ nhãn N3–N2 là phần bổ sung ngoài sách. Hãy đối chiếu lại với sách/giáo viên.
+            Nghĩa tiếng Việt, đáp án câu hỏi, âm Hán Việt, mẹo nhớ và bản dịch tiếng Việt của câu ví dụ ngữ pháp do AI soạn từ nội dung sách (sách gốc không kèm bản dịch và đáp án trong file này). Từ có nhãn 索引 lấy từ bảng tra cuối sách; từ nhãn N3–N2 là phần bổ sung ngoài sách. Hãy đối chiếu lại với sách/giáo viên.
           </span>
         </p>
       </div>
@@ -67,7 +69,7 @@ export default function Footer() {
           >
             <h3 id="confirm-reset-title">Xác nhận xóa toàn bộ tiến độ?</h3>
             <p>
-              Tất cả các từ vựng đã thuộc, kanji đã đánh dấu và điểm số đọc hiểu sẽ bị xóa về trạng thái ban đầu.
+              Tất cả các từ vựng đã thuộc, kanji đã đánh dấu, ngữ pháp đã học và điểm số đọc hiểu sẽ bị xóa về trạng thái ban đầu.
             </p>
             <div className="modal-actions">
               <button type="button" className="btn btn-secondary" onClick={() => setShowConfirm(false)}>
